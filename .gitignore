@@ -1,0 +1,8 @@
+#ignore slurm files
+slurm-*.out
+
+#ignore objects
+*.o 
+
+#ignore txt (typically output) files
+*.txt
