@@ -3,7 +3,6 @@
 #SBATCH -t 05:00
 #SBATCH -N 1 --ntasks-per-node=4
 #SBATCH -p dev_q
-#SBATCH -A arcadm
 #
 #
 module reset
