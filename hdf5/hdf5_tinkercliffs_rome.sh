@@ -11,13 +11,13 @@ module load HDF5
 #
 echo "HDF5_TINKERCLIFFS ROME: Normal beginning of execution."
 #
-h5cc -c hdf5_test.c
+h5pcc -c hdf5_test.c
 if [ $? -ne 0 ]; then
   echo "HDF5_TINKERCLIFFS ROME: Compile error."
   exit 1
 fi
 #
-h5cc -o hdf5_test hdf5_test.o
+h5pcc -o hdf5_test hdf5_test.o
 if [ $? -ne 0 ]; then
   echo "HDF5_TINKERCLIFFS ROME: Load error."
   exit 1
