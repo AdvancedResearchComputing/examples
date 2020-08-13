@@ -4,3 +4,5 @@ Usage examples for computing resources offered by Advanced Research Computing at
 where 
 - `yourallocation` is the allocation associated with your research project or class 
 - `software_system.sh` is the submission script (e.g., `openblas_tinkercliffs_rome.sh`)
+
+Most examples here were put together by former ARC Computational Scientist John Burkardt (see, e.g., https://people.sc.fsu.edu/~jburkardt/) and later updated to the Slurm scheduler and newer clusters.
