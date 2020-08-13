@@ -14,7 +14,7 @@ $ECHO "This example shows how to use pw.x to calculate the total energy and"
 $ECHO "the band structure of four simple systems: Si, Al, Cu, Ni."
 
 # set the needed environment variables
-source ./environment_variables
+. ./environment_variables
 
 # required executables and pseudopotentials
 BIN_LIST="pw.x"
@@ -74,7 +74,7 @@ $ECHO
 $ECHO "  running pw.x as: $PW_COMMAND"
 $ECHO
 
-for diago in david cg ; do
+for diago in david cg ppcg ; do
 
     # self-consistent calculation
     cat > si.scf.$diago.in << EOF
@@ -99,7 +99,7 @@ for diago in david cg ; do
  /
 ATOMIC_SPECIES
  Si  28.086  Si.pz-vbc.UPF
-ATOMIC_POSITIONS
+ATOMIC_POSITIONS alat
  Si 0.00 0.00 0.00
  Si 0.25 0.25 0.25
 K_POINTS
@@ -137,7 +137,7 @@ EOF
  /
 ATOMIC_SPECIES
  Si  28.086  Si.pz-vbc.UPF
-ATOMIC_POSITIONS
+ATOMIC_POSITIONS alat
  Si 0.00 0.00 0.00
  Si 0.25 0.25 0.25
 K_POINTS
@@ -202,7 +202,7 @@ EOF
  /
 ATOMIC_SPECIES
  Al  26.98 Al.pz-vbc.UPF
-ATOMIC_POSITIONS
+ATOMIC_POSITIONS alat
  Al 0.00 0.00 0.00
 K_POINTS
   60
@@ -289,7 +289,7 @@ EOF
  /
 ATOMIC_SPECIES
  Al  26.98 Al.pz-vbc.UPF
-ATOMIC_POSITIONS
+ATOMIC_POSITIONS alat
  Al 0.00 0.00 0.00
 K_POINTS
  28
@@ -346,7 +346,7 @@ EOF
  &system
     ibrav = 2, celldm(1) =6.73, nat= 1, ntyp= 1,
     ecutwfc = 25.0, ecutrho = 300.0
-    occupations='smearing', smearing='gaussian', degauss=0.02
+    occupations='smearing', smearing='marzari-vanderbilt', degauss=0.02
  /
  &electrons
     diagonalization='$diago'
@@ -355,7 +355,7 @@ EOF
  /
 ATOMIC_SPECIES
  Cu 63.55 Cu.pz-d-rrkjus.UPF
-ATOMIC_POSITIONS
+ATOMIC_POSITIONS alat
  Cu 0.0 0.0 0.0
 K_POINTS (automatic)
  8 8 8 0 0 0
@@ -382,7 +382,7 @@ EOF
  /
 ATOMIC_SPECIES
  Cu  63.55 Cu.pz-d-rrkjus.UPF
-ATOMIC_POSITIONS
+ATOMIC_POSITIONS alat
  Cu 0.0 0.0 0.0
 K_POINTS
  28
@@ -440,7 +440,7 @@ EOF
     ibrav=2, celldm(1) =6.48, nat=1, ntyp=1,
     nspin = 2,  starting_magnetization(1)=0.7,
     ecutwfc = 24.0, ecutrho = 288.0,
-    occupations='smearing', smearing='methfessel-paxton', degauss=0.02
+    occupations='smearing', smearing='marzari-vanderbilt', degauss=0.02
  /
  &electrons
     diagonalization='$diago'
@@ -449,7 +449,7 @@ EOF
  /
 ATOMIC_SPECIES
  Ni 58.69 Ni.pz-nd-rrkjus.UPF
-ATOMIC_POSITIONS
+ATOMIC_POSITIONS alat
  Ni 0.0 0.0 0.0
 K_POINTS
  60
@@ -537,7 +537,7 @@ EOF
  /
 ATOMIC_SPECIES
  Ni 58.69 Ni.pz-nd-rrkjus.UPF
-ATOMIC_POSITIONS
+ATOMIC_POSITIONS alat
  Ni 0.0 0.0 0.0
 K_POINTS
  28

@@ -17,11 +17,10 @@ export LC_ALL
 
 # The following should be good for most cases 
 
-PREFIX=$EBROOTQUANTUMESPRESSO
-BIN_DIR=$PREFIX/bin
-PSEUDO_DIR=$PWD/pseudo
+BIN_DIR=$EBROOTQUANTUMESPRESSO/bin
+PSEUDO_DIR=`pwd`/pseudo
 # Beware: everything in $TMP_DIR will be destroyed !
-TMP_DIR=$PWD/tempdir
+TMP_DIR=$TMPDIR #use local disk
 
 # There should be no need to change anything below this line
 
@@ -56,8 +55,8 @@ fi
 # a small number of processors; do not use tests and examples to benchmark
 # parallelism, do not run on too many processors
 
-PARA_PREFIX="mpirun -np 2"
 PARA_PREFIX=" "
+PARA_PREFIX="mpirun -np $SLURM_NTASKS"
 #
 # available flags: 
 #                  -ni n        number of images        (or -nimage)
@@ -84,8 +83,8 @@ check_failure () {
     # usage: check_failure $?
     if test $1 != 0
     then
-        $ECHO "Error condition encountered during test: exit status = $1"
-        $ECHO "Aborting"
+        echo "Error condition encountered during test: exit status = $1"
+        echo "Aborting"
         exit 1
     fi
 }
