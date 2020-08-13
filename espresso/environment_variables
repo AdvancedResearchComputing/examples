@@ -17,11 +17,11 @@ export LC_ALL
 
 # The following should be good for most cases 
 
-PREFIX=$ESPRESSO_PATH
+PREFIX=$EBROOTQUANTUMESPRESSO
 BIN_DIR=$PREFIX/bin
-PSEUDO_DIR=/home/burkardt/examples/espresso/pseudo
+PSEUDO_DIR=$PWD/pseudo
 # Beware: everything in $TMP_DIR will be destroyed !
-TMP_DIR=/home/burkardt/examples/espresso/tempdir
+TMP_DIR=$PWD/tempdir
 
 # There should be no need to change anything below this line
 
