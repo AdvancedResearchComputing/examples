@@ -1,0 +1,13 @@
+   ISTART = 0
+   ICHARG = 2
+
+ general:
+   SYSTEM = CO adsorption on Ni(111)
+   ENMAX  = 400
+   ISMEAR =    2  ; SIGMA = 0.2
+   ALGO= Fast
+
+ dynamic:
+   NSW=100
+   POTIM = 0.2
+   IBRION = 1
