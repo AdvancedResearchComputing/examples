@@ -8,6 +8,12 @@
 #
 module reset
 module load gaussian
+module list
+
+# Set Gaussian's scratch directory to local disk
+# Could also try tmpfs ($TMPFS) to provide fastest performance
+# But will consume memory
+export GAUSS_SCRDIR=$TMPFS
 #
 echo "GAUSSIAN_TINKERCLIFFS ROME: Normal beginning of execution."
 #
