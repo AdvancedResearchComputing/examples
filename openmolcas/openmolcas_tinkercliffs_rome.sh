@@ -15,7 +15,7 @@ echo "OPENMOLCAS_TINKERCLIFFS ROME: Normal beginning of execution."
 #
 #  Run.
 #
-molcas water.input -f
+pymolcas water.input -f
 if [ $? -ne 0 ]; then
   echo "OPENMOLCAS_TINKERCLIFFS ROME: Run error!"
   exit 1
