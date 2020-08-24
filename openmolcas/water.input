@@ -1,0 +1,5 @@
+&GATEWAY
+ coord=water.xyz
+ basis=sto-3g
+&SEWARD
+&SCF
