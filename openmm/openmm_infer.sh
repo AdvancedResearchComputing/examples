@@ -1,13 +1,13 @@
 #! /bin/bash
 #
 #SBATCH -t 00:05:00
-#SBATCH -N1 --ntasks-per-node=32 --gres=gpu:1
+#SBATCH -N1 --ntasks-per-node=1 --gres=gpu:1
 #SBATCH -p t4_dev_q
 #
 
 #
 module reset
-module load OpenMM/7.4.1-fosscuda-2019b-Python-3.7.4
+module load OpenMM/7.5.0-fosscuda-2019b-Python-3.7.4
 #
 
 
