@@ -7,7 +7,7 @@
 
 #
 module reset
-module load OpenMM/7.5.0-fosscuda-2019b-Python-3.7.4
+module load OpenMM/7.5.0-fosscuda-2020b-Python-3.8.6
 #
 
 
