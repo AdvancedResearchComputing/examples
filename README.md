@@ -6,3 +6,5 @@ where
 - `software_system.sh` is the submission script (e.g., `openblas_tinkercliffs_rome.sh`)
 
 Most examples here were put together by former ARC Computational Scientist John Burkardt (see, e.g., https://people.sc.fsu.edu/~jburkardt/) and later updated to the Slurm scheduler and newer clusters.
+
+If you are an ARC user and would like a new example for a particular software package, please contact us: https://arc.vt.edu/help
