@@ -10,6 +10,6 @@ module reset
 module load MATLAB
 
 ## Start MATLAB and call the script
-matlab -r prime_batch_local
+matlab -batch prime_batch_local
 
 exit 0
