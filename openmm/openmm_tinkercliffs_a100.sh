@@ -7,7 +7,7 @@
 
 #
 module reset
-module load OpenMM/7.5.0-fosscuda-2020b
+module load OpenMM/7.5.1-fosscuda-2020b
 #
 
 
