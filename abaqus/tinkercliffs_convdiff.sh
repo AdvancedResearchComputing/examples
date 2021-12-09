@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=16
-#SBATCH --cpus-per-task=8
+#SBATCH --cpus-per-task=1
 #SBATCH --partition=dev_q
 #SBATCH --time=1:00:00
 ## Replace "YOURACCOUNT" with the name of your slurm account
