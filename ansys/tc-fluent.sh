@@ -1,10 +1,13 @@
 #!/bin/bash
-#SBATCH -t 02:00:00
+## tc-fluent.sh  -  demo Ansys Fluent batch job for Tinkercliffs
+## Usage: set input file below, then "sbatch tc-fluent.sh"
+#SBATCH --time=02:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=128
 #SBATCH --cpus-per-task=1
-#SBATCH --partition=dev_q
+#SBATCH --partition=normal_q
 #SBATCH --account=<your account>
+
 
 module reset
 module load ANSYS/22.1
