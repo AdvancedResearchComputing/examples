@@ -9,7 +9,7 @@
 
 module load containers/singularity/3.8.5
 
-#Ensure shell variable USER is set correctly
+#Ensure shell variable USER is set correctly and that /fastsractch directory is set up.
 USER=`whoami`
 
 #Set which container sif to use
@@ -17,9 +17,9 @@ USER=`whoami`
 #  "sinsingularity pull --dir /localscratch/brownm12/ cuquantum-appliance_22.07-cirq.sif docker://nvcr.io/nvidia/cuquantum-appliance_22.07-cirq"
 CTNR=/global/arcsingularity/cuquantum-appliance_22.07-cirq.sif
 
-
 #Set bind options to map directories into the container
-BOPTS="--bind /home/$USER,/fastscratch/$USER,/projects"
+BOPTS="--bind /home/$USER,/projects"
+[[ -d /fastscratch/$USER ]] && BOPTS="$BOPTS,/fastscratch/$USER"
 
 cd $SLURM_SUBMIT_DIR
 
