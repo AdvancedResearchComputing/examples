@@ -29,8 +29,11 @@ cd $SLURM_SUBMIT_DIR
 # BOPTS and CTNR are expanded to values set above
 # /workspace/examples is a directory inside the container supplied by Nvidia
 
-echo "running three examples in the Nvidia cuQuantum container"
+echo "Running three examples in the Nvidia cuQuantum container"
 echo "jobid: $SLURM_JOBID, working directory: `pwd`"
 apptainer exec --nv $BOPTS $CTNR python /workspace/examples/ghz.py --nqubits 20 --nsamples 10000 --ngpus 1 > ghz_out.$SLURM_JOBID.txt
+echo "Ran GHZ example, output written to ghz_out.$SLURM_JOBID.txt"
 apptainer exec --nv $BOPTS $CTNR python /workspace/examples/hidden_shift.py --nqubits 20 --nsamples 100000 --ngpus 1 > hidden_shift_out.$SLURM_JOBID.txt
+echo "Ran Hidden-Shift example, output written to hidden_shift_out.$SLURM_JOBID.txt"
 apptainer exec --nv $BOPTS $CTNR python /workspace/examples/simon.py --nbits 15 --ngpus 1 > simon_out.$SLURM_JOBID.txt
+echo "Ran Simon example, output written to simon_out.$SLURM_JOBID.txt"
