@@ -1,9 +1,8 @@
 #!/bin/bash
-#SBATCH --account=arcadm
+#SBATCH --account=<your Slurm account>
 #SBATCH --partition=dgx_normal_q
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
-#SBATCH --exclusive
 #SBATCH --ntasks-per-node=16
 #SBATCH --cpus-per-task=1
 #SBATCH --time=1-00:00:00
@@ -45,8 +44,7 @@ echo "HHBLITS CPUS=$ALPHAFOLD_HHBLITS_N_CPU and HMMR CPUS=$ALPHAFOLD_JACKHMMER_N
 
 TMPDIR=$TMPNVME
 echo "TMPDIR set to $TMPDIR"
-alphafold --benchmark \
-          --model_preset=multimer \
+alphafold --model_preset=multimer \
           --test_tmpdir=$TMPNVME \
           --fasta_paths=./$INPUTFASTA \
           --output_dir=./output \
