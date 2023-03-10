@@ -26,6 +26,7 @@ ls -l
 # Start background process to log GPU utilization to a file
 /apps/useful_scripts/bin/gpumon > $SLURM_SUBMIT_DIR/job-${SLURM_JOB_ID}-gpu.log &
 
+tinker9 info
 # Run the example
 echo "-------- Starting tinker9: `date` -------"
 tinker9 dynamic dhfr2.xyz 5000 2 1 2 298
