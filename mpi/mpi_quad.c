@@ -126,7 +126,7 @@ int main ( int argc, char *argv[] )
   The master process broadcasts, and the other processes receive,
   the number of intervals N.
 */
-  ierr = MPI_Bcast ( &n, 1, MPI_INT, master, MPI_COMM_WORLD );
+  ierr = MPI_Bcast ( &n, 1, MPI_LONG, master, MPI_COMM_WORLD );
 /*
   Every process integrates F(X) over a subinterval determined by its process ID.
 */
