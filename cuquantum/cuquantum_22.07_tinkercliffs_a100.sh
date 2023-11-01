@@ -3,23 +3,23 @@
 #SBATCH --partition=a100_normal_q
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
-#SBATCH --cpus-per-task=16
+#SBATCH --cpus-per-task=8
 #SBATCH --account=<your slurm account here>
-## This requests 1 node from the a100_normal_q partition, 1 gpu on that node, and 16 cores which provides 500GB memory
+## This requests 1 node from the a100_normal_q partition, 1 gpu on that node, and 8 cores which provides 256GB memory
 
-module load containers/singularity/3.8.5
+module load containers/apptainer
 
-#Ensure shell variable USER is set correctly and that /fastsractch directory is set up.
+#Ensure shell variable USER is set correctly and that /globalscratch directory is set up.
 USER=`whoami`
 
 #Set which container sif to use
 #  This container was created on 8/23/2022 from Nvidia's docker registry using the following command:
-#  "sinsingularity pull --dir /localscratch/brownm12/ cuquantum-appliance_22.07-cirq.sif docker://nvcr.io/nvidia/cuquantum-appliance_22.07-cirq"
+#  "apptainer pull --dir /localscratch/brownm12/ cuquantum-appliance_22.07-cirq.sif docker://nvcr.io/nvidia/cuquantum-appliance_22.07-cirq"
 CTNR=/global/arcsingularity/cuquantum-appliance_22.07-cirq.sif
 
 #Set bind options to map directories into the container
 BOPTS="--bind /home/$USER,/projects"
-[[ -d /fastscratch/$USER ]] && BOPTS="$BOPTS,/fastscratch/$USER"
+[[ -d /globalscratch/$USER ]] && BOPTS="$BOPTS,/globalscratch/$USER"
 
 cd $SLURM_SUBMIT_DIR
 

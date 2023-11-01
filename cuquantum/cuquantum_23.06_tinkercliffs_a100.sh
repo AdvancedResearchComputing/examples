@@ -1,6 +1,7 @@
 #!/bin/bash
+# Copy of cuquantum_23.06_tinkercliffs_dgx.sh which is our current, most recent example script
 #SBATCH --job-name=cuquantum
-#SBATCH --partition=dgx_normal_q
+#SBATCH --partition=a100_normal_q
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
@@ -13,9 +14,8 @@ module load containers/apptainer
 USER=`whoami`
 
 #Set which container sif to use
-#  This container was created on 11/01/2023 from Nvidia's docker registry using the following command:
-#  "apptainer pull cuquantum-appliance_23.06.sif docker://nvcr.io/nvidia/cuquantum-appliance:23.06"
-# More information is here: https://catalog.ngc.nvidia.com/orgs/nvidia/containers/cuquantum-appliance
+#  This container was created on 8/23/2022 from Nvidia's docker registry using the following command:
+#  "sinsingularity pull --dir /localscratch/brownm12/ cuquantum-appliance_22.07-cirq.sif docker://nvcr.io/nvidia/cuquantum-appliance_22.07-cirq"
 CTNR=/global/arcsingularity/cuquantum-appliance_23.06.sif
 
 #Set bind options to map directories into the container
