@@ -7,7 +7,7 @@
 #SBATCH --account=<your slurm account here>
 ## This requests 1 node from the dgx_normal_q partition, 1 gpu on that node, and 16 cores which provides 500GB memory
 
-module load containers/apptainer/1.1.0-rc.2
+module load containers/apptainer
 
 #Ensure shell variable USER is set correctly and that /fastsractch directory is set up.
 USER=`whoami`
