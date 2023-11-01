@@ -3,9 +3,9 @@
 #SBATCH --partition=dgx_normal_q
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
-#SBATCH --cpus-per-task=16
+#SBATCH --cpus-per-task=8
 #SBATCH --account=<your slurm account here>
-## This requests 1 node from the dgx_normal_q partition, 1 gpu on that node, and 16 cores which provides 500GB memory
+## This requests 1 node from the dgx_normal_q partition, 1 gpu on that node, and 8 cores which provides 256GB memory
 
 module load containers/apptainer
 
@@ -19,7 +19,7 @@ CTNR=/global/arcsingularity/cuquantum-appliance_22.07-cirq.sif
 
 #Set bind options to map directories into the container
 BOPTS="--bind /home/$USER,/projects"
-[[ -d /fastscratch/$USER ]] && BOPTS="$BOPTS,/fastscratch/$USER"
+[[ -d /globalscratch/$USER ]] && BOPTS="$BOPTS,/globalscratch/$USER"
 
 cd $SLURM_SUBMIT_DIR
 
