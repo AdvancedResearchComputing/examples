@@ -1,21 +1,21 @@
 #!/bin/bash
-# Copy of cuquantum_23.06_tinkercliffs_dgx.sh which is our current, most recent example script
 #SBATCH --job-name=cuquantum
 #SBATCH --partition=a100_normal_q
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --account=<your slurm account here>
-## This requests 1 node from the dgx_normal_q partition, 1 gpu on that node, and 8 cores which provides 256GB memory
+## This requests 1 node from the a100_normal_q partition, 1 gpu on that node, and 8 cores which provides 256GB memory
 
 module load containers/apptainer
 
-#Ensure shell variable USER is set correctly and that /fastsractch directory is set up.
+#Ensure shell variable USER is set correctly and that /globalscratch directory is set up.
 USER=`whoami`
 
 #Set which container sif to use
-#  This container was created on 8/23/2022 from Nvidia's docker registry using the following command:
-#  "sinsingularity pull --dir /localscratch/brownm12/ cuquantum-appliance_22.07-cirq.sif docker://nvcr.io/nvidia/cuquantum-appliance_22.07-cirq"
+#  This container was created on 11/01/2023 from Nvidia's docker registry using the following command:
+#  "apptainer pull cuquantum-appliance_23.06.sif docker://nvcr.io/nvidia/cuquantum-appliance:23.06"
+# More information is here: https://catalog.ngc.nvidia.com/orgs/nvidia/containers/cuquantum-appliance
 CTNR=/global/arcsingularity/cuquantum-appliance_23.06.sif
 
 #Set bind options to map directories into the container
@@ -28,7 +28,7 @@ cd $SLURM_SUBMIT_DIR
 # "exec" runs the requested commands inside the container and then exits
 # "--nv" turns on singularity's nvidia GPU support which maps libraries and variables into the container
 # BOPTS and CTNR are expanded to values set above
-# /workspace/examples is a directory inside the container supplied by Nvidia
+# /home/cuquantum/examples is a directory inside the container supplied by Nvidia
 
 # Set the path to the working directory inside the container
 WORKDIR=/home/cuquantum/examples

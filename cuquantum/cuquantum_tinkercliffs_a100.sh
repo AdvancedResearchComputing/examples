@@ -1,12 +1,12 @@
 #!/bin/bash
-# Copy of cuquantum_23.06_tinkercliffs_dgx.sh which is our current, latest version of the script
+# Copy of cuquantum_23.06_tinkercliffs_a100.sh which is our current, latest version of the script
 #SBATCH --job-name=cuquantum
-#SBATCH --partition=dgx_normal_q
+#SBATCH --partition=a100_normal_q
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --account=<your slurm account here>
-## This requests 1 node from the dgx_normal_q partition, 1 gpu on that node, and 8 cores which provides 256GB memory
+## This requests 1 node from the a100_normal_q partition, 1 gpu on that node, and 8 cores which provides 256GB memory
 
 module load containers/apptainer
 

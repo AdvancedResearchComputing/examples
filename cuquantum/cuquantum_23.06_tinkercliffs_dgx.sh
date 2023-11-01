@@ -9,7 +9,7 @@
 
 module load containers/apptainer
 
-#Ensure shell variable USER is set correctly and that /fastsractch directory is set up.
+#Ensure shell variable USER is set correctly and that /globalscratch directory is set up.
 USER=`whoami`
 
 #Set which container sif to use
@@ -28,7 +28,7 @@ cd $SLURM_SUBMIT_DIR
 # "exec" runs the requested commands inside the container and then exits
 # "--nv" turns on singularity's nvidia GPU support which maps libraries and variables into the container
 # BOPTS and CTNR are expanded to values set above
-# /workspace/examples is a directory inside the container supplied by Nvidia
+# /home/cuquantum/examples is a directory inside the container supplied by Nvidia
 
 # Set the path to the working directory inside the container
 WORKDIR=/home/cuquantum/examples

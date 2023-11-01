@@ -9,12 +9,12 @@
 
 module load containers/apptainer
 
-#Ensure shell variable USER is set correctly and that /fastsractch directory is set up.
+#Ensure shell variable USER is set correctly and that /globalscratch directory is set up.
 USER=`whoami`
 
 #Set which container sif to use
 #  This container was created on 8/23/2022 from Nvidia's docker registry using the following command:
-#  "sinsingularity pull --dir /localscratch/brownm12/ cuquantum-appliance_22.07-cirq.sif docker://nvcr.io/nvidia/cuquantum-appliance_22.07-cirq"
+#  "singularity pull --dir /localscratch/brownm12/ cuquantum-appliance_22.07-cirq.sif docker://nvcr.io/nvidia/cuquantum-appliance_22.07-cirq"
 CTNR=/global/arcsingularity/cuquantum-appliance_22.07-cirq.sif
 
 #Set bind options to map directories into the container
