@@ -21,12 +21,12 @@ module reset
 module load tinkercliffs-rome/su2
 
 # We will use it, so make sure the USERNAME variable is set correctly
-if [ "$USERNAME" != `id -un` ]; then
-  USERNAME=`id -un`
+if [ "$USER" != `id -un` ]; then
+  USER=`id -un`
 fi
 
 # Make a directory on /scratch for the test if it doesn't already exist
-WORKDIR="/scratch/${USERNAME}/su2-tut"
+WORKDIR="/scratch/${USER}/su2-tut"
 if [ ! -d "$WORKDIR" ]; then
   mkdir -p $WORKDIR
 fi
