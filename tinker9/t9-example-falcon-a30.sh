@@ -1,19 +1,27 @@
 #!/bin/bash
 #SBATCH --account=<your account>
-#SBATCH --partition=v100_normal_q
+#SBATCH --partition=a30_normal_q
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
-#SBATCH --ntasks-per-node=12
-#SBATCH --cpus-per-task=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=4
 #SBATCH --time=0-1:00:00
 
 # Each node type has different modules avilable. Resetting makes the appropriate stack available
 module reset
-module load infer-skylake_v100/tinker9/1.4.0-nvhpc-21.11
+module load falcon-sapphirerapids/tinker9/1.4.0-nvhpc-23.7
 
-# V100 nodes have local SSD drives which are much faster than HOME or PROJECTS
-# Using this scratch storage as the working directory for the job
-cd $TMPSSD
+# We will use it, so make sure the USERNAME variable is set correctly
+if [ "$USER" != `id -un` ]; then
+  USER=`id -un`
+fi
+
+# Make a directory on /scratch for the test if it doesn't already exist
+# /scratch is preferred over /home or /projects for staging and running jobs
+WORKDIR="/scratch/${USER}/t9-example"
+if [ ! -d "$WORKDIR" ]; then
+  mkdir -p $WORKDIR
+fi
 
 # Tinker9 installation has example files. Copying them to working directory
 cp -vr $EBROOTTINKER9/tinker9/{example,params} .
@@ -27,11 +35,7 @@ ls -l
 /apps/useful_scripts/bin/gpumon > $SLURM_SUBMIT_DIR/job-${SLURM_JOB_ID}-gpu.log &
 
 tinker9 info
-# Run the example. Expected runtime for this example is 1 minute on a V100 GPU
+# Run the example. Expected runtime for this example is 1 minute on a A30 GPU
 echo "-------- Starting tinker9: `date` -------"
 tinker9 dynamic dhfr2.xyz 5000 2 1 2 298
 echo "------- tinker9 has exited: `date` --------"
-
-# Copy result files from local scratch (TMPSSD) back to job directory
-# Local scratch is erased when the job ends
-cp $TMPSSD/example/dhfr2.arc $SLURM_SUBMIT_DIR
