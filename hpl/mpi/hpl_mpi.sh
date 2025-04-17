@@ -39,7 +39,7 @@ gbpercore=2  #gb ram per core
 export OMP_NUM_THREADS=1
 
 #intel
-module reset; module unload gcc; module load HPL/2.3-intel-2019b
+module reset; module load hpl/2.3
 # echo "LOG: intel | mpi-only | launch with mpirun"
 # mpirun -np $hplnp xhpl
 echo "LOG: intel | mpi-only | launch with mpirun (map & bind to core)"
