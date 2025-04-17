@@ -1,5 +1,9 @@
-OpenFOAM 12 
+OpenFOAM 
 
-This is a simple incompressible Fluid example provided with the installation. The necessary data is copied and the blockMeshDict and decomposeParDict files for parallelization are provided here. This example is designed to run with 4 processes in parallel; thus the job requests 4 CPU processors (aka “cores” or “chips”).
+Multiple versions of OpenFOAM are available on ARC clusters.
 
-Alternatively, this example can be run in an interactive job. See the attached documentation `desktop.pdf` for running this example with the Desktop App on the owl cluster.
+The examples here are provided with the installation. Different versions have different working environments and input definitions. The parallelization and mesh-blocking setup for OpenFOAM must be well designed according to the specific version requirements.
+
+OpenFOAM has a unique way of setting up the working environment. Upon loading the module, $FOAM_BASH is defined and must be sourced. Please see OpenFOAM documentation for proper configuration.
+
+As a numerical integration ("simulation") software, the most efficent way to use this software is in batch mode. Alternatively, jobs can be run in interactively. See the attached documentation `desktop.pdf` for running this example with the Desktop App on the owl cluster.
