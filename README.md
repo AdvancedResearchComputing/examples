@@ -1,4 +1,4 @@
-# examples
+## examples
 Usage examples for computing resources offered by Advanced Research Computing at Virginia Tech (https://www.arc.vt.edu). All examples can be run with
 `sbatch -Ayourallocation software_system.sh`
 where 
