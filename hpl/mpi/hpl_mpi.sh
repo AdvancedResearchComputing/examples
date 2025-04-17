@@ -39,7 +39,7 @@ gbpercore=2  #gb ram per core
 export OMP_NUM_THREADS=1
 
 #intel
-module reset; module load hpl/2.3
+module reset; module load hpl/2.3-intel-2024a
 # echo "LOG: intel | mpi-only | launch with mpirun"
 # mpirun -np $hplnp xhpl
 echo "LOG: intel | mpi-only | launch with mpirun (map & bind to core)"
@@ -50,7 +50,7 @@ echo "LOG: intel | mpi-only | launch with srun (bind to cores)"
 srun -n $hplnp --cpu-bind=cores xhpl
 
 #gcc
-module reset; module unload gcc; module load HPL/2.3-foss-2020a
+module reset; module load hpl/2.3-foss-2024a
 # echo "LOG: gcc   | mpi-only | launch with mpirun"
 # mpirun -np $hplnp -x OMP_NUM_THREADS=1 xhpl
 # echo "LOG: gcc   | mpi-only | launch with mpirun (bind to core)"
