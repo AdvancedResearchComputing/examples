@@ -1,12 +1,12 @@
-#! /bin/bash
+#!/bin/bash
+#SBATCH --account=personal
+#SBATCH --partition=normal_q
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=4
+#SBATCH --cpus-per-task=1
+#SBATCH --output=output.log
+#SBATCH --time=0-00:30:00
 
-#SBATCH --nodes=1 
-#SBATCH --ntasks=4
-#SBATCH -p normal_q
-
-#SBATCH -A personal
-#SBATCH -J test_foam
-#SBATCH -o ./job_outputs/slurm-%j-%x.out
 
 module load OpenFOAM/12-foss-2023a
 
@@ -28,7 +28,6 @@ cp -r $EBROOTOPENFOAM/OpenFOAM-12/$my_tutorial .
 # Reference: https://openfoamwiki.net/index.php/DecomposePar
 cp /home/$USER/MyTests/foam12/blockMeshDict $my_example/system/blockMeshDict
 cp /home/$USER/MyTests/foam12/decomposeParDict $my_example/system/decomposeParDict
-
 
 cd $my_example
 
