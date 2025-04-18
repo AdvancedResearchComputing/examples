@@ -1,12 +1,14 @@
 #!/bin/bash
+#########################################################################################
 #SBATCH --account=personal     # edit this to specify another Slurm account if desired
 #SBATCH --partition=normal_q
-#SBATCH --timelimit=0-0:10:00  # 10 minutes - more than enough for this helloworld job
+#SBATCH --time=0-0:10:00  # 10 minutes - more than enough for this helloworld job
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=1G               # this minimal example needs very little memory
-## end of slurm options #################################################################
-# usage:
+########################## end of slurm options #########################################
+# Description: Slurm batch job to run a "hello world" code written in Julia
+# Usage:
 # sbatch helloworld.sh
 #########################################################################################
 date  #print the date and time in the output file
