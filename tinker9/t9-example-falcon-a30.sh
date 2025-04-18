@@ -32,6 +32,7 @@ echo "working in `pwd`"
 ls -l
 
 # Start background process to log GPU utilization to a file
+# This example should run at about 97% GPU utilization and <1GB of device memory while running
 /apps/useful_scripts/bin/gpumon > $SLURM_SUBMIT_DIR/job-${SLURM_JOB_ID}-gpu.log &
 
 tinker9 info
