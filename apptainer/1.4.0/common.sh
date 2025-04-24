@@ -8,5 +8,5 @@
 #SBATCH --time=0-00:30:00
 
 module load apptainer
-CTNR=/common/containers/cp2k_2025.1_openmpi_generic_psmp.sif
+CTNR=/common/containers/cp2k_latest.sif
 apptainer run $CTNR cp2k -i H2O_GW100_def2-QZVP.inp
