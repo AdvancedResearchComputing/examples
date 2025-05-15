@@ -1,0 +1,6 @@
+/file/read-case inlet.cas
+/file/read-data inlet.dat
+/solve/iterate 100
+/file/write-case-data results_inlet
+/exit
+yes
