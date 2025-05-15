@@ -3,7 +3,7 @@
 ########################################
 # Job Identification & Runtime         #
 ########################################
-#SBATCH --job-name=seaborn-example          # Job name
+#SBATCH --job-name=miniconda-example        # Job name
 #SBATCH --account=personal                  # Account name
 #SBATCH --time=01:00:00                     # Time limit (HH:MM:SS)
 #SBATCH --partition=normal_q                # Partition name
@@ -18,15 +18,35 @@
 #SBATCH --mem=64G                           # Memory per node
 ########################## end of slurm options #########################################
 
-# Description: This is an example slurm batch job script to run seaborn in python
-# Usage: To run this script, run the command 'sbatch example.slurm'
+# Description: SLURM job script to create conda env, install numpy, and run Python code
+# Usage: sbatch example.slurm
 
 #########################################################################################
 # Resets module system (recommended)
 module reset
 
-# Load Seaborn
- module load Seaborn
+# Load Miniconda
+module load Miniconda3
 
-# Run the Python script
-python seaborn_plot.py
+# Define environment name
+ENV_NAME="numpy_env"
+
+# Create environment if not already present
+if ! conda env list | grep -q "$ENV_NAME"; then
+    echo "Creating conda environment: $ENV_NAME"
+    conda create -y -n "$ENV_NAME" python=3.10
+fi
+
+# Activate environment
+source activate "$ENV_NAME"
+
+# Check if conda environment is loaded correctly
+echo "You are using python of this conda environment:"
+which python
+
+# Install required package
+pip install --upgrade pip
+pip install numpy
+
+# Run Python script
+python numpy_compute.py
