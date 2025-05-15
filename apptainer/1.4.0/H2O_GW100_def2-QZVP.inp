@@ -1,0 +1,75 @@
+&FORCE_EVAL
+  METHOD Quickstep
+  &DFT
+    BASIS_SET_FILE_NAME BASIS_def2_QZVP_RI_ALL
+    POTENTIAL_FILE_NAME POTENTIAL
+    &MGRID
+      CUTOFF 400
+      REL_CUTOFF 50
+    &END MGRID
+    &QS
+      ! all electron calculation since GW100 is all-electron test
+      METHOD GAPW
+    &END QS
+    &POISSON
+      PERIODIC NONE
+      PSOLVER MT
+    &END
+    &SCF
+      EPS_SCF 1.0E-6
+      SCF_GUESS ATOMIC
+      MAX_SCF 200
+    &END SCF
+    &XC
+      &XC_FUNCTIONAL PBE
+      &END XC_FUNCTIONAL
+      ! GW is part of the WF_CORRELATION section
+      &WF_CORRELATION
+        &RI_RPA
+          ! use 100 points to perform the frequency integration in GW
+          QUADRATURE_POINTS 100
+          &GW
+           ! compute the G0W0@PBE energy of HOMO-9, HOMO-8, ... , HOMO-1, HOMO
+           CORR_OCC   10
+           ! compute the G0W0@PBE energy of LUMO, LUMO+1, ... , LUMO+20
+           CORR_VIRT  20
+          &END GW
+        &END RI_RPA
+      &END
+    &END XC
+  &END DFT
+  &SUBSYS
+    &CELL
+      ABC 10.0 10.0 10.0
+      PERIODIC NONE
+    &END CELL
+    &COORD
+      O  0.0000 0.0000 0.0000
+      H  0.7571 0.0000 0.5861
+      H -0.7571 0.0000 0.5861
+    &END COORD
+    &TOPOLOGY
+      &CENTER_COORDINATES
+      &END
+    &END TOPOLOGY
+    &KIND H
+      ! def2-QZVP is the basis which has been used in the GW100 paper
+      BASIS_SET        def2-QZVP
+      ! just use a very large RI basis to ensure excellent convergence with respect to the RI basis
+      BASIS_SET RI_AUX RI-5Z
+      POTENTIAL ALL
+    &END KIND
+    &KIND O
+      BASIS_SET        def2-QZVP
+      BASIS_SET RI_AUX RI-5Z
+      POTENTIAL ALL
+    &END KIND
+  &END SUBSYS
+&END FORCE_EVAL
+&GLOBAL
+  RUN_TYPE     ENERGY
+  PROJECT      ALL_ELEC
+  PRINT_LEVEL  MEDIUM
+  PREFERRED_DIAG_LIBRARY ScaLAPACK
+&END GLOBAL
+
