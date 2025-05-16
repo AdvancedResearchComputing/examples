@@ -31,7 +31,7 @@ module load  module load MATLAB/R2024b
 To run code.
 
 
-Tested on TC cluster, compute node tc-gpu004, on A100 + DGX.
+Tested on TC cluster, compute node tc-gpu004, on A100 + DGX GPU.
 
 Launch with slurm:  sbatch sbatch.02.slurm
 
@@ -79,7 +79,7 @@ module load  module load MATLAB/R2024b
 To run code.
 
 
-Tested on TC cluster, compute node tc-gpu004, on A100 + DGX.
+Tested on TC cluster, compute node tc-xe004, on H200 GPU.
 
 
 Launch with slurm:  sbatch sbatch.04.slurm
