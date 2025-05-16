@@ -25,32 +25,14 @@ The example is shown on this web page:
 
 https://support.gurobi.com/hc/en-us/articles/14078115039121-Coins-Tutorial-Solving-the-Model-using-gurobi-cl#:~:text=The%20name%20of%20the%20Gurobi,command%2Dline%20window...
 
-----------------------
-To set up to run.
-
-ssh to compute node tc285 on TC. 
-
-Do:
-
-module reset
-
-module load Gurobi/12.0.1-GCCcore-13.3.0
-
 
 ----------------------
 To run code.
 
-We use the command line.
+Type:
 
-First we determine the value of $GUROBI_HOME, according to:
+sh run.01
 
-_echo $GUROBI_HOME_
-
-which is:  /apps/arch/software/Gurobi/12.0.1-GCCcore-13.3.0
-
-Use invocation (this will run VERY fast):
-
-gurobi_cl ResultFile=coins.sol $GUROBI_HOME/examples/data/coins.lp
 
 It will generate this output to stdout.
 
