@@ -13,6 +13,14 @@ Comes from:  /projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-j
 
 Simple vector addition.
 
+This example is meant to be run on falcon and on an L40S gpu node.
+If you run on some other cluster and/or some other compute node type,
+then you have to make the virtual environment (instructions below) in
+that (cluster, compute node) pair.
+And you will have to modify the path to the resulting VE in the julia 
+source code src.01.jl.
+
+
 ----------------------
 To set up to run.
 
@@ -25,6 +33,7 @@ The directions are in the code01 directory, in file:  README.make-env.01.falcon.
 Execute this first.  If you put the VE (virtual environment) in a different directory,
 you will need to change the directory in the src.01.jl julia source code file, at the
 top.
+
 
 
 ----------------------
