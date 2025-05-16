@@ -1,0 +1,15 @@
+You are using python of this conda environment:
+/apps/common/software/Miniconda3/24.7.1-0/envs/statsmodels_env/bin/python
+Requirement already satisfied: pip in /apps/common/software/Miniconda3/24.7.1-0/envs/statsmodels_env/lib/python3.10/site-packages (25.1.1)
+Requirement already satisfied: statsmodels==0.14.4 in /apps/common/software/Miniconda3/24.7.1-0/envs/statsmodels_env/lib/python3.10/site-packages (0.14.4)
+Requirement already satisfied: numpy<3,>=1.22.3 in /apps/common/software/Miniconda3/24.7.1-0/envs/statsmodels_env/lib/python3.10/site-packages (from statsmodels==0.14.4) (2.2.5)
+Requirement already satisfied: scipy!=1.9.2,>=1.8 in /apps/common/software/Miniconda3/24.7.1-0/envs/statsmodels_env/lib/python3.10/site-packages (from statsmodels==0.14.4) (1.15.3)
+Requirement already satisfied: pandas!=2.1.0,>=1.4 in /apps/common/software/Miniconda3/24.7.1-0/envs/statsmodels_env/lib/python3.10/site-packages (from statsmodels==0.14.4) (2.2.3)
+Requirement already satisfied: patsy>=0.5.6 in /apps/common/software/Miniconda3/24.7.1-0/envs/statsmodels_env/lib/python3.10/site-packages (from statsmodels==0.14.4) (1.0.1)
+Requirement already satisfied: packaging>=21.3 in /apps/common/software/Miniconda3/24.7.1-0/envs/statsmodels_env/lib/python3.10/site-packages (from statsmodels==0.14.4) (25.0)
+Requirement already satisfied: python-dateutil>=2.8.2 in /apps/common/software/Miniconda3/24.7.1-0/envs/statsmodels_env/lib/python3.10/site-packages (from pandas!=2.1.0,>=1.4->statsmodels==0.14.4) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /apps/common/software/Miniconda3/24.7.1-0/envs/statsmodels_env/lib/python3.10/site-packages (from pandas!=2.1.0,>=1.4->statsmodels==0.14.4) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /apps/common/software/Miniconda3/24.7.1-0/envs/statsmodels_env/lib/python3.10/site-packages (from pandas!=2.1.0,>=1.4->statsmodels==0.14.4) (2025.2)
+Requirement already satisfied: six>=1.5 in /apps/common/software/Miniconda3/24.7.1-0/envs/statsmodels_env/lib/python3.10/site-packages (from python-dateutil>=2.8.2->pandas!=2.1.0,>=1.4->statsmodels==0.14.4) (1.17.0)
+Requirement already satisfied: numpy in /apps/common/software/Miniconda3/24.7.1-0/envs/statsmodels_env/lib/python3.10/site-packages (2.2.5)
+  execution time (s):  0.008250236511230469
