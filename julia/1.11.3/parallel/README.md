@@ -18,6 +18,14 @@ To set up to run.
 
 We need a virtual environment.
 
+You need only build this virtual environment once.
+
+The directions are in the code01 directory, in file:  README.make-env.01.falcon.l40s.tex
+
+Execute this first.  If you put the VE (virtual environment) in a different directory,
+you will need to change the directory in the src.01.jl julia source code file, at the
+top.
+
 
 ----------------------
 To run code.
