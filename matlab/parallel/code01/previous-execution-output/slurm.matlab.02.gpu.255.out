@@ -1,0 +1,81 @@
+ ------------
+Set of cores job running on: 
+ 
+JobId=255 JobName=matgpu
+   UserId=ckuhlman(1344122) GroupId=ckuhlman(1344122) MCS_label=N/A
+   Priority=5003 Nice=0 Account=arcadm QOS=tc_a100_normal_base
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:02 TimeLimit=01:00:00 TimeMin=N/A
+   SubmitTime=2025-05-16T09:54:01 EligibleTime=2025-05-16T09:54:01
+   AccrueTime=2025-05-16T09:54:01
+   StartTime=2025-05-16T09:54:01 EndTime=2025-05-16T10:54:01 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2025-05-16T09:54:01 Scheduler=Main
+   Partition=a100_normal_q AllocNode:Sid=tc-gpu004:385630
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=tc-gpu004
+   BatchHost=tc-gpu004
+   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=1,mem=16056M,node=1,billing=101,gres/gpu=1
+   AllocTRES=cpu=1,mem=16056M,node=1,billing=101,gres/gpu=1,gres/gpu:a100=1
+   Socks/Node=* NtasksPerN:B:S:C=1:0:*:* CoreSpec=*
+   JOB_GRES=gpu:a100:1
+     Nodes=tc-gpu004 CPU_IDs=64 Mem=16056 GRES=gpu:a100:1(IDX:0)
+   MinCPUsNode=1 MinMemoryCPU=16056M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-matlab/tc/a100+dgx/test02/sbatch.02.slurm
+   WorkDir=/projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-matlab/tc/a100+dgx/test02
+   StdErr=/projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-matlab/tc/a100+dgx/test02/slurm.matlab.02.gpu.255.err
+   StdIn=/dev/null
+   StdOut=/projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-matlab/tc/a100+dgx/test02/slurm.matlab.02.gpu.255.out
+   Power=
+   TresPerNode=gres/gpu:1
+   
+
+ 
+ 
+ 
+ 
+Start file and monitoring of GPU.
+ 
+ 
+ 
+ ------------
+Running IOSTAT
+ ------------
+Running MPSTAT
+ ------------
+Running VMSTAT
+ ------------
+Running executable
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2024 The MathWorks, Inc.
+                  R2024b (24.2.0.2712019) 64-bit (glnxa64)
+                              August 22, 2024
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+arrayLength: 
+     2000000
+
+numIterations: 
+     1000000
+
+
+bogus = 
+
+    "done"
+
+ ------------
+Executable done
+ ------------
+Killing IOSTAT
+ ------------
+Killing MPSTAT
+ ------------
+Killing VMSTAT
