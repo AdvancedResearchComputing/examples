@@ -13,7 +13,7 @@ This is a serial code.
 
 module:  Gurobi/12.0.1-GCCcore-13.3.0
 
-Comes from:  /projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-gurobi/test01
+Comes from:  /projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-gurobi/tc/test01
 
 Cluster:  TC.
 
