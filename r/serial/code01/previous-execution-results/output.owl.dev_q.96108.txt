@@ -1,5 +1,0 @@
-param1
-param2
-param3
-owl.dev_q
-96108
