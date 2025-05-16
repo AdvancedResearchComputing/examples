@@ -1,0 +1,8 @@
+
+
+mycode="src.01.04.jl"
+args="  14 16 18 output.01.04.out"
+
+## Invocation.  Julia.
+julia ${mycode}  $args
+
