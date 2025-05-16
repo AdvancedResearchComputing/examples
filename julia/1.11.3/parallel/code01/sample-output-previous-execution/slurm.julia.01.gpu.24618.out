@@ -1,0 +1,61 @@
+ ------------
+Set of cores job running on: 
+ 
+JobId=24618 JobName=matgpu
+   UserId=ckuhlman(1344122) GroupId=ckuhlman(1344122) MCS_label=N/A
+   Priority=1211 Nice=0 Account=arcadm QOS=normal
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:01 TimeLimit=01:00:00 TimeMin=N/A
+   SubmitTime=2025-05-15T14:16:24 EligibleTime=2025-05-15T14:16:24
+   AccrueTime=2025-05-15T14:16:24
+   StartTime=2025-05-15T14:16:24 EndTime=2025-05-15T15:16:24 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2025-05-15T14:16:24 Scheduler=Main
+   Partition=l40s_normal_q AllocNode:Sid=fal052:267766
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=fal052
+   BatchHost=fal052
+   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=1,mem=7648M,node=1,gres/gpu=1
+   AllocTRES=cpu=1,mem=7648M,node=1,gres/gpu=1,gres/gpu:l40s=1
+   Socks/Node=* NtasksPerN:B:S:C=1:0:*:* CoreSpec=*
+   JOB_GRES=gpu:l40s:1
+     Nodes=fal052 CPU_IDs=0 Mem=7648 GRES=gpu:l40s:1(IDX:0)
+   MinCPUsNode=1 MinMemoryCPU=7648M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   Reservation=HPCMaintTesting
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-julia/falcon/l40s/test10/sbatch.01.slurm
+   WorkDir=/projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-julia/falcon/l40s/test10
+   StdErr=/projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-julia/falcon/l40s/test10/slurm.julia.01.gpu.24618.err
+   StdIn=/dev/null
+   StdOut=/projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-julia/falcon/l40s/test10/slurm.julia.01.gpu.24618.out
+   Power=
+   TresPerNode=gres:gpu:1
+   
+
+ 
+ 
+ 
+ 
+Start file and monitoring of GPU.
+ 
+ 
+ 
+ ------------
+Running IOSTAT
+ ------------
+Running MPSTAT
+ ------------
+Running VMSTAT
+ ------------
+Running executable
+ ------------
+Executable done
+ ------------
+Killing IOSTAT
+ ------------
+Killing MPSTAT
+ ------------
+Killing VMSTAT
