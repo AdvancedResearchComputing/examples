@@ -31,7 +31,7 @@ To run code.
 
 Type:
 
-sh run.01
+sbatch sbatch.01.slurm
 
 
 It will generate this output to stdout.
