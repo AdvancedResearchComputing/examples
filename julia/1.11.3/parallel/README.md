@@ -1,6 +1,6 @@
-# Julia Serial Code
+# Julia Parallel Code
 
-Versio of Julia:  Julia 1.11.3
+Version of Julia:  Julia 1.11.3
 
 ## Codes
 
