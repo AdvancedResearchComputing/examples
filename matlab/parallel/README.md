@@ -1,4 +1,4 @@
-# Julia Parallel Code
+# Matlab Parallel Code
 
 Version of Matlab:  module load MATLAB/R2024b
 
