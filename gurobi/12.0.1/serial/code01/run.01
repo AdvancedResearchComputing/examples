@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # Reset modules and load Gurobi.
-module reset
-module load Gurobi/12.0.1-GCCcore-13.3.0
+## Uncomment these two lines to run this code right from the command line.
+# module reset
+# module load Gurobi/12.0.1-GCCcore-13.3.0
 
 
 # Run code.
