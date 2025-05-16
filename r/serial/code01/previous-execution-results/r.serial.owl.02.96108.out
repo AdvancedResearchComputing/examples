@@ -1,0 +1,45 @@
+date: Fri May 16 11:33:16 AM EDT 2025
+hostname: owl083
+
+
+Checking job details for CPU_IDs...
+JobId=96108 JobName=rserial.02
+   UserId=ckuhlman(1344122) GroupId=ckuhlman(1344122) MCS_label=N/A
+   Priority=1111 Nice=0 Account=arcadm QOS=normal
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:01 TimeLimit=00:10:00 TimeMin=N/A
+   SubmitTime=2025-05-16T11:33:14 EligibleTime=2025-05-16T11:33:15
+   AccrueTime=2025-05-16T11:33:15
+   StartTime=2025-05-16T11:33:15 EndTime=2025-05-16T11:43:15 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2025-05-16T11:33:15 Scheduler=Main
+   Partition=dev_q AllocNode:Sid=owl083:251996
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=owl083
+   BatchHost=owl083
+   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=1,mem=7656M,node=1
+   AllocTRES=cpu=1,mem=7656M,node=1
+   Socks/Node=* NtasksPerN:B:S:C=1:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=owl083 CPU_IDs=0 Mem=7656 GRES=
+   MinCPUsNode=1 MinMemoryCPU=7656M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   Reservation=HPCMaintTesting
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-r/owl/standard/test01/sbatch.02.slurm
+   WorkDir=/projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-r/owl/standard/test01
+   StdErr=/projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-r/owl/standard/test01/r.serial.owl.02.96108.err
+   StdIn=/dev/null
+   StdOut=/projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-r/owl/standard/test01/r.serial.owl.02.96108.out
+   Power=
+   
+
+ 
+[1] "Guten tag, from  owl083 ...   Arguments:    param1   param2   param3   owl.dev_q   96108"
+[1] "param1"
+[1] "param2"
+[1] "param3"
+[1] "owl.dev_q"
+[1] "96108"
