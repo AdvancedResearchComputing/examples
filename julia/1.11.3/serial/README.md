@@ -12,15 +12,21 @@ Comes from:  /projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-j
 Simple print of material.
 
 ----------------------------
+To set up to run interactively.
+
+module load Julia/1.11.3-linux-x86_64
+
+
+----------------------------
 To run code.
 
 Tested on owl083, the dev_q
 
-Launch with slurm:  sbatch sbatch.01.04.slurm
+Launch with slurm:  sbatch sbatch.01.06.slurm
 
-Launch on compute node:  sh run.01.04
+Launch on compute node:  sh run.01.06
 
-Diff output:  diff output.01.04.out output.01.04.out.valid
+Diff output:  diff output.01.06.out output.01.06.out.valid
 
  
 ----------------------------
