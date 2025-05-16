@@ -79,7 +79,7 @@ echo " ------------"
 echo "Running executable"
 
 # Code to execute.
-sh ./run.01.04
+sh ./run.01.06
 
 echo " ------------"
 echo "Executable done"
