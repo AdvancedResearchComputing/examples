@@ -1,0 +1,77 @@
+ ------------
+Set of cores job running on: 
+ 
+JobId=263 JobName=matcpu
+   UserId=ckuhlman(1344122) GroupId=ckuhlman(1344122) MCS_label=N/A
+   Priority=5002 Nice=0 Account=arcadm QOS=tc_normal_base
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:03 TimeLimit=01:00:00 TimeMin=N/A
+   SubmitTime=2025-05-16T10:45:07 EligibleTime=2025-05-16T10:45:07
+   AccrueTime=2025-05-16T10:45:07
+   StartTime=2025-05-16T10:45:07 EndTime=2025-05-16T11:45:07 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2025-05-16T10:45:07 Scheduler=Main
+   Partition=normal_q AllocNode:Sid=tc285:251316
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=tc285
+   BatchHost=tc285
+   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=1,mem=1944M,node=1,billing=1
+   AllocTRES=cpu=1,mem=1944M,node=1,billing=1
+   Socks/Node=* NtasksPerN:B:S:C=1:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=tc285 CPU_IDs=0 Mem=1944 GRES=
+   MinCPUsNode=1 MinMemoryCPU=1944M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=/projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-matlab/tc/amd-rome/test04/sbatch.04.slurm
+   WorkDir=/projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-matlab/tc/amd-rome/test04
+   StdErr=/projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-matlab/tc/amd-rome/test04/slurm.matlab.04.cpu.263.err
+   StdIn=/dev/null
+   StdOut=/projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-matlab/tc/amd-rome/test04/slurm.matlab.04.cpu.263.out
+   Power=
+   
+
+ 
+ 
+ 
+ ------------
+Running IOSTAT
+ ------------
+Running MPSTAT
+ ------------
+Running VMSTAT
+ ------------
+Running executable
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2024 The MathWorks, Inc.
+                  R2024b (24.2.0.2712019) 64-bit (glnxa64)
+                              August 22, 2024
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+arrayLength: 
+    10
+
+numIterations: 
+     1
+
+outfile: 
+mat.out
+
+bogus = 
+
+    "done"
+
+ ------------
+Executable done
+ ------------
+Killing IOSTAT
+ ------------
+Killing MPSTAT
+ ------------
+Killing VMSTAT
