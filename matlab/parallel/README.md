@@ -96,5 +96,40 @@ But there are performance data gathered to ensure gpu is running.
 ------------------------------------------
 ### code03
 
+This is a gpu-based code.
+
+Comes from:  /projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-matlab/falcon/l40s/test02b
+
+Cluster:  Falcon.
+
+Partition:  l40s_normal_q
+
+Compute node:  fal052
 
 
+----------------------
+To set up to run.
+
+For interactive jobs, need:
+module load  module load MATLAB/R2024b
+
+
+----------------------
+To run code.
+
+
+Tested on Falcon cluster, compute node fal052, on L40S GPU.
+
+
+Launch with slurm:  sbatch sbatch.02b.slurm
+
+Launch on compute node:  sh run.02b
+
+Diff output:  diff mat.02b.out mat.02b.out.valid
+
+
+There are performance data gathered to ensure gpu is running.
+
+
+
+------------------------------------------
