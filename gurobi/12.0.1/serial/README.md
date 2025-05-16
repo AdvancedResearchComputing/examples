@@ -40,7 +40,7 @@ module load Gurobi/12.0.1-GCCcore-13.3.0
 ----------------------
 To run code.
 
-We use the Gurobi command line.
+We use the command line.
 
 First we determine the value of $GUROBI_HOME, according to:
 
