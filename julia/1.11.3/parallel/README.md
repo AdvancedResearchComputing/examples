@@ -24,6 +24,8 @@ source code src.01.jl.
 ----------------------
 To set up to run.
 
+module load Julia/1.11.3-linux-x86_64
+
 We need a virtual environment.
 
 You need only build this virtual environment once.
