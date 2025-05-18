@@ -1,0 +1,16 @@
+First, create a minimal input system (water molecule)
+test.leap creates a TIP3P water box. 
+ Run
+     tleap -f test.leap
+will generate test.prmtop (parameter/topology file)and test.inpcrd (coordinates file).
+
+Second, create a simple input file for sander* 
+min.in
+
+Third, run sander with slurm and submit it:
+sbatch run_minimize_cpu.sh
+
+====================================================================================================================
+* sander which stands for Simulated Annealing with Numerical DErivatives of Restraints, is one of the core molecular
+ dynamics (MD) engines in Amber. It’s a CPU-based program used for Energy minimization,Molecular dynamics simulations, 
+NMR refinement and restraints,Thermodynamic integration and Free energy calculations.
