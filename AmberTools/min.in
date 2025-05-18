@@ -1,0 +1,8 @@
+# min.in
+Minimize
+ &cntrl
+  imin=1,      ! Do energy minimization
+  maxcyc=500,  ! Maximum number of minimization cycles
+  ncyc=250,    ! Switch from steepest descent to conjugate gradient after 250 steps
+  cut=8.0,     ! Nonbonded cutoff (Angstroms)
+ &end
