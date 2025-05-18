@@ -1,0 +1,7 @@
+# test.leap
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+model = sequence { ACE ALA NME }
+solvatebox model TIP3PBOX 10.0
+saveamberparm model test.prmtop test.inpcrd
+quit
