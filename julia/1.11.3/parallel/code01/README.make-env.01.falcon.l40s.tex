@@ -1,0 +1,96 @@
+# This is to make the julia virtual environment to run the parallel code.
+
+# Start julia interpreter.
+julia
+
+# Go into package mode.
+]
+
+# Create a new "project" (i.e., environment) by
+# giving the full path and the last "name" is the name
+# of the project and the name of the directory (same thing).
+activate /home/ckuhlman/env-julia/falcon/benchmarking/BenchmarkTools
+
+# Now add as many packages as you want.
+add BenchmarkTools
+add CUDA
+
+# In general, keep adding.
+# ...
+
+# When done adding packages, get out of the "project."
+# To get out of project, type "activate" again.
+# Yes, activate, not deactivate.
+# (Take it up with Julia.)
+activate
+
+# You are still in package mode. But no longer in the project.
+
+# When with package mode, hit cntrl-C at the "pkg" prompt to end "package mode."
+cntrl-c
+
+<< You are now done.  You do not do anything below here; the material below
+is just for reference.  To get out of the julia interpreter, type exit() >>
+
+
+# Now you are back at the julia command line interpreter.
+
+# Aside:
+
+# 1. Look under /home/<user-name>/env-julia/falcon/benchmarking/BenchmarkTools
+#     - to see the new project (environment).
+#     - based on the path I gave above.
+# 2. Look under /home/<username>/.julia/packages 
+#     - to see the new package installed, for use with other projects.
+
+# On the command line, ***within julia interpreter*** (i.e., type julia), to load an env
+# and import julia packages, do these steps:
+# 1. using Pkg
+
+# Below, the project (env) name is BenchmarkTools.  Notice the "/." after it.
+# 2. Pkg.activate("/home/ckuhlman/env-julia/falcon/benchmarking/BenchmarkTools/.")
+# Now you can import, one a time, the packages in the project (env) that you
+# want to use.
+
+# 3. import BenchmarkTools
+
+<< Do NOT do this now.  It is just showing how to add more packages to an existing project/virtual env. >>
+
+# To add more packages (later) to an existing project (env):
+1. julia
+2. ]
+3. activate /home/ckuhlman/env-julia/falcon/benchmarking/BenchmarkTools
+4. # To see the packages in a project (env):
+5. status
+6. add CUDA
+7. status
+8. I get:
+9. Status `~/env-julia/falcon/benchmarking/BenchmarkTools/Project.toml`
+  [6e4b80f9] BenchmarkTools v1.6.0
+  [052768ef] CUDA v5.7.3
+10 # Get out of the env (project).
+11. activate
+12. # Get out of package.
+13. cntrl-C
+14. # Get out of Julia interpreter.
+15. exit()
+
+
+
+
+
+
+
+
+
+
+I got this:
+
+        Info Packages marked with → are not downloaded, use `instantiate` to download
+        Info Packages marked with ⌅ have new versions available but compatibility constraints restrict them from upgrading. To see why use `status --outdated -m`
+  Downloaded artifact: CUDA_Runtime
+Precompiling project...
+  67 dependencies successfully precompiled in 79 seconds. 40 already precompiled.
+
+(BenchmarkTools) pkg> instantiate
+

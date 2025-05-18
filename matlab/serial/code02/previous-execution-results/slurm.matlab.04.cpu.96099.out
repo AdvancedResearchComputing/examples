@@ -1,0 +1,84 @@
+ ------------
+Set of cores job running on: 
+ 
+JobId=96099 JobName=matcpu
+   UserId=ckuhlman(1344122) GroupId=ckuhlman(1344122) MCS_label=N/A
+   Priority=1111 Nice=0 Account=arcadm QOS=normal
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:02 TimeLimit=01:00:00 TimeMin=N/A
+   SubmitTime=2025-05-16T10:59:54 EligibleTime=2025-05-16T10:59:54
+   AccrueTime=2025-05-16T10:59:54
+   StartTime=2025-05-16T10:59:55 EndTime=2025-05-16T11:59:55 Deadline=N/A
+   PreemptEligibleTime=2025-05-16T10:59:55 PreemptTime=None
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2025-05-16T10:59:55 Scheduler=Main
+   Partition=interactive_q AllocNode:Sid=owlmln004:249328
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=owlmln004
+   BatchHost=owlmln004
+   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=1,mem=7976M,node=1
+   AllocTRES=cpu=1,mem=7976M,node=1
+   Socks/Node=* NtasksPerN:B:S:C=1:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=owlmln004 CPU_IDs=0 Mem=7976 GRES=
+   MinCPUsNode=1 MinMemoryCPU=7976M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   Reservation=HPCMaintTesting
+   OverSubscribe=YES Contiguous=0 Licenses=(null) Network=(null)
+   Command=/projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-matlab/owl/interactive_q/test04/sbatch.04.slurm
+   WorkDir=/projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-matlab/owl/interactive_q/test04
+   StdErr=/projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-matlab/owl/interactive_q/test04/slurm.matlab.04.cpu.96099.err
+   StdIn=/dev/null
+   StdOut=/projects/kuhlman-project-storage/system-maint/y2025/2025-05/test-matlab/owl/interactive_q/test04/slurm.matlab.04.cpu.96099.out
+   Power=
+   
+
+ 
+ 
+ 
+ ------------
+Running IOSTAT
+ ------------
+Running MPSTAT
+ ------------
+Running VMSTAT
+ ------------
+Running executable
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2024 The MathWorks, Inc.
+                  R2024b (24.2.0.2712019) 64-bit (glnxa64)
+                              August 22, 2024
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+outfile = 
+
+    "mat.out"
+
+arrayLength: 
+    10
+
+numIterations: 
+     1
+
+outfile: 
+mat.out
+
+bogus = 
+
+    "done"
+
+ ------------
+Executable done
+ ------------
+Killing IOSTAT
+ ------------
+Killing MPSTAT
+ ------------
+Killing VMSTAT

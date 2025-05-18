@@ -1,4 +1,5 @@
 # test_skbio.py
+# Tests scikit-bio by running a simple PERMANOVA (non-parametric statistical test) on a toy distance matrix.
 
 from skbio.stats.distance import DistanceMatrix
 from skbio.stats.distance import permanova

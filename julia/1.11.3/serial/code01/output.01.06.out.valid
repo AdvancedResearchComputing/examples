@@ -1,0 +1,8 @@
+CLA 4: output.01.04.out
+CLA 3: 18
+CLA 2: 16
+CLA 1: 14
+Julia also has argparse
+friendString01: Hello, friend01
+friendString02: Hello, friend02
+arg3String: Hello, 18

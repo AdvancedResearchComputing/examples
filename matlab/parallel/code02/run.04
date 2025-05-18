@@ -1,0 +1,26 @@
+
+## ------- Parameters; CLAs.
+
+## For Owl normal_q
+## (same as for l40s_normal_q )
+arrayLength=2000000
+numIterations=1000000
+## arrayLength=20000000
+## numIterations=10000000
+
+outfile=mat.out
+
+## Code name.
+mycode="code04"
+
+## Invocation.  Matlab syntax in double-quotes.
+## matlab -nodisplay -nosplash -r "bogus = ${mycode}(${arrayLength}, ${numIterations}, ${outfile})"
+matlab -nodisplay -nosplash -r "bogus = ${mycode}(${arrayLength}, ${numIterations})"
+
+
+## If you do not have this command,
+## then you will stay in the matlab
+## environment.
+# exit 0
+# quit(0,"force")
+# quit

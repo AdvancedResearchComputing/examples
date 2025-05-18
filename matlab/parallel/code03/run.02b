@@ -1,0 +1,23 @@
+
+## ------- Parameters; CLAs.
+
+## For t4_normal_q
+## (same as for l40s_normal_q )
+# arrayLength=20000
+# numIterations=100000
+arrayLength=10
+numIterations=1
+
+## Code name.
+mycode="code02b"
+
+## Invocation.  Matlab syntax in double-quotes.
+matlab -nodisplay -nosplash -r "bogus = ${mycode}(${arrayLength}, ${numIterations})"
+
+
+## If you do not have this command,
+## then you will stay in the matlab
+## environment.
+# exit 0
+# quit(0,"force")
+# quit
