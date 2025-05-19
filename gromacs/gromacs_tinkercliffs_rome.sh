@@ -2,12 +2,13 @@
 #
 #SBATCH -t 00:05:00
 #SBATCH -N1 --ntasks-per-node=128
-#SBATCH -p dev_q
-#
+#SBATCH -p normal_q
+#SBATCH --account=personal
 
 #
 module reset
-module load GROMACS
+module load GROMACS/2024.4-foss-2023b-CUDA-12.6.0
+# module load GROMACS/2024.4-foss-2023b-CUDA-12.6.0-PLUMED-2.9.2
 #
 echo "GROMACS_TINKERCLIFFS ROME: Normal beginning of execution."
 #
@@ -109,6 +110,7 @@ fi
 #  mdrun equilibrates under an NVT ensemble.
 #
 gmx mdrun -deffnm nvt &>> gromacs_tinkercliffs_rome.txt
+#gmx mdrun -deffnm nvt -plumed plumed.dat &>> gromacs_tinkercliffs_rome.txt
 if [ $? -ne 0 ]; then
   echo "GROMACS_TINKERCLIFFS ROME: Run error!"
   exit 1

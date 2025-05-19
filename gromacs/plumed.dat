@@ -1,0 +1,3 @@
+# plumed.dat
+gyr: GYRATION ATOMS=1-100
+PRINT ARG=gyr FILE=plumed_output.dat STRIDE=100
