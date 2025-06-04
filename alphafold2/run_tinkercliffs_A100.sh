@@ -7,7 +7,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --time=1-00:00:00
 
-echo "AlphaFold job launched on `hostname`"
+echo "AlphaFold2 job launched on `hostname`"
 
 module reset
 module load AlphaFold/2.3.2-foss-2023a-CUDA-12.1.1
