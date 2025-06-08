@@ -1,0 +1,4 @@
+source leaprc.protein.ff14SB
+m = sequence { ACE ALA NME }
+saveamberparm m ala.top ala.rst7
+quit
