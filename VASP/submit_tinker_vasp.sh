@@ -1,11 +1,12 @@
-#! /bin/bash
-#
-#SBATCH -t 30:00
-#SBATCH -n 4
-#SBATCH -p dev_q
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=4       
+#SBATCH --account=personal
+#SBATCH --partition=normal_q
+#SBATCH --time=00:15:00
 #
 module reset
-module load VASP/5.4.4-intel-2019b
+module load VASP
 module list
 #
 echo "VASP_TINKERCLIFFS ROME: Normal beginning of execution."
@@ -24,4 +25,3 @@ fi
 #
 echo "VASP_TINKERCLIFFS ROME: Normal end of execution."
 exit 0
-
