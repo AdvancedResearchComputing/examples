@@ -3,7 +3,7 @@ OpenMolcas is an open-source quantum chemistry package that provides access to v
 
 ## Contents
 There are three files in this example
-1. `openmolcas_tinkercliffs.sh` is the slurm batch submit script. User may have to change the account name based on what resources are available to them. 
+1. `openmolcas.slurm` is the slurm batch submit script. User may have to change the account name based on what resources are available to them. 
 2. `water.input` is the openmolcas job submission script that holds the inforamtion/parameters for the type of computational chemistry job. Our example is running a simple SCF calculation. 
 3. `water.xyz` is the xyz coordinates for the molecular system which is water in our example.
 
@@ -14,7 +14,7 @@ The following are steps to run our OpenMolcas example. This will give you access
     git clone https://github.com/AdvancedResearchComputing/examples.git
     cd examples
     cd openmolcas
-    sbatch openmolcas_tinkercliffs.sh
+    sbatch openmolcas.slurm
 ```
 
 You then should be able to check the status of the job submission by typing `squeue`. 
