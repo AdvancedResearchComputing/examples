@@ -1,5 +1,0 @@
-The example here is taken from example01 from the Quantum Espresso source tarball.
-Note that we set Espresso's TMP_DIR variable to $TMPDIR, which on ARC systems
-points to the local hard drive. One might also try $TMPFS (memory) for a faster
-calculation, depending on how much temporary storage is required (note that putting 
-TMP_DIR in memory will eat up memory assigned to the job).

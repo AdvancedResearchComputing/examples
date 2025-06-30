@@ -14,7 +14,7 @@ module load OpenMolcas
 module list
 
 #
-echo "OPENMOLCAS_TINKERCLIFF: Normal beginning of execution."
+echo "OPENMOLCAS: Normal beginning of execution."
 #
 #  Run.
 #
@@ -22,9 +22,9 @@ pymolcas water.input -f
 
 
 if [ $? -ne 0 ]; then
-  echo "OPENMOLCAS_TINKERCLIFFS: Run error!"
+  echo "OPENMOLCAS: Run error!"
   exit 1
 fi
 #
-echo "OPENMOLCAS_TINKERCLIFFS: Normal end of execution."
+echo "OPENMOLCAS: Normal end of execution."
 exit 0
