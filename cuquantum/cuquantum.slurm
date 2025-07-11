@@ -5,8 +5,7 @@
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
-#SBATCH --account=arcadm
-##SBATCH --account=<your slurm account here>
+#SBATCH --account=personal
 ## This requests 1 node from the a100_normal_q partition, 1 DGX 8x A100-80G GPU on that node, and 8 cores which provides 125.44GB memory (15.68GB/core)
 
 module load apptainer

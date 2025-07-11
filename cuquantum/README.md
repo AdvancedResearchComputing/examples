@@ -4,8 +4,8 @@ It contains NVIDIA’s cuStateVec, cuTensorNet, and cuDensityMat libraries which
 
 ## Contents
 These are the files included for this example
-2. `cuquantum.slurm` is the slurm batch submit script for the tinkercliffs cluster with the A100 GPUs. User may have to change the account name based on what resources are available to them. 
-3. `benchmark.py` is a local python script for a simple cuQuantum example
+1. `cuquantum.slurm` is the slurm batch submit script for the tinkercliffs cluster with the A100 GPUs. User may have to change the account name based on what resources are available to them. 
+2. `benchmark.py` is a local python script for a simple cuQuantum example
 
 ## How to run
 The following are steps to run our cuQuantum example on tinkercliffs using the a100 gpus. This will give you access to all examples in our GitHub repo. Run these commands once you have logged into a cluster. 
