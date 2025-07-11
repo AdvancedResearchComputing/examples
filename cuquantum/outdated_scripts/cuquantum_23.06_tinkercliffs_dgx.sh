@@ -1,13 +1,15 @@
 #!/bin/bash
 #SBATCH --job-name=cuquantum
-#SBATCH --partition=dgx_normal_q
+#SBATCH --partition=a100_normal_q
+#SBATCH --constraint=dgx-A100
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
-#SBATCH --account=<your slurm account here>
+#SBATCH --account=arcadm
+##SBATCH --account=<your slurm account here>
 ## This requests 1 node from the dgx_normal_q partition, 1 gpu on that node, and 8 cores which provides 256GB memory
 
-module load containers/apptainer
+module load apptainer
 
 #Ensure shell variable USER is set correctly and that /globalscratch directory is set up.
 USER=`whoami`
@@ -16,7 +18,8 @@ USER=`whoami`
 #  This container was created on 11/01/2023 from Nvidia's docker registry using the following command:
 #  "apptainer pull cuquantum-appliance_23.06.sif docker://nvcr.io/nvidia/cuquantum-appliance:23.06"
 #  More information is here: https://catalog.ngc.nvidia.com/orgs/nvidia/containers/cuquantum-appliance
-CTNR=/common/containers/cuquantum-appliance_23.06.sif
+#CTNR=/common/containers/cuquantum-appliance_23.06.sif
+CTNR=/common/containers/cuquantum-appliance:25.03-x86_64.sif
 
 #Set bind options to map directories into the container
 BOPTS="--bind /home/$USER,/projects"
