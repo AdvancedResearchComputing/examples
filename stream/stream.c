@@ -91,7 +91,7 @@
  *          per array.
  */
 #ifndef STREAM_ARRAY_SIZE
-#   define STREAM_ARRAY_SIZE   10000000
+#   define STREAM_ARRAY_SIZE	10000000
 #endif
 
 /*  2) STREAM runs each kernel "NTIMES" times and reports the *best* result
@@ -184,7 +184,7 @@ static double	avgtime[4] = {0}, maxtime[4] = {0},
 		mintime[4] = {FLT_MAX,FLT_MAX,FLT_MAX,FLT_MAX};
 
 static char	*label[4] = {"Copy:      ", "Scale:     ",
-    "Add:       ", "Triad:q:     "};
+    "Add:       ", "Triad:     "};
 
 static double	bytes[4] = {
     2 * sizeof(STREAM_TYPE) * STREAM_ARRAY_SIZE,
