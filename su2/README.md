@@ -4,7 +4,7 @@ Through the initiative of users and developers around the world, SU2 is now a we
 
 ## Contents
 These are the files/directories included for this example
-1. `su2.slurm` is the slurm batch submit script for the tinkercliffs cluster with the A100 GPUs. User may have to change the account name based on what resources are available to them. 
+1. `su2.slurm` is the slurm batch submit script. User may have to change the account name based on what resources are available to them. 
 2. `tutorial_example` is the directory holding the SU2 Tutorial example files which are listed below.
     - `kenics_mixer_tutorial.cfg`
     - `Kenics_mixer_tutorial.geo`
@@ -12,7 +12,7 @@ These are the files/directories included for this example
 
 
 ## How to run
-The following are steps to run our SU2 example on tinkercliffs using the a100 gpus. This will give you access to all examples in our GitHub repo. Run these commands once you have logged into a cluster. 
+The following are steps to run our SU2 example. This will give you access to all examples in our GitHub repo. Run these commands once you have logged into a cluster. 
 Before you submit your batch script, you will need to change the account name to the account you have access to. This name can be found in your [ColdFront account](https://coldfront.arc.vt.edu/).
 ``` 
 git clone https://github.com/AdvancedResearchComputing/examples.git
