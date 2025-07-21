@@ -1,4 +1,4 @@
-# PALM
+# PALM [In Progress]
 
 This repository provides scripts and instructions to build and run the [PALM model system](https://palm-model.org/) on the ARC clusters at Virginia Tech.
 
