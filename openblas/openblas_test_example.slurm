@@ -10,7 +10,7 @@
 # [PLEASE CUSTOMIZE THIS SECTION WITH ATLEAST YOUR OWN ACCOUNT NAME AND SELECTION OF AN APPROPRIATE ARC CLUSTER AND PARTITION FOR THAT CLUSTER BASED ON YOUR NEEDS]
 ########################################
 #SBATCH --job-name=openblas_test_example          # Descriptive job name
-#SBATCH --account=HPCBIGDATA                      # SLURM account name (see your project allocation in Coldfront: https://coldfront.arc.vt.edu, and search for 'slurm_account_name' under the allocation)
+#SBATCH --account=<your_slurm_account_name>       # SLURM account name (see your project allocation in Coldfront: https://coldfront.arc.vt.edu, and search for 'slurm_account_name' under the allocation)
 #SBATCH --time=01:00:00                           # Walltime limit for the batch job (format: HH:MM:SS)
 #SBATCH --partition=normal_q                      # Partition/queue to submit batch job to (adjust as needed for the ARC cluster you are running the batch job on)
 
@@ -24,7 +24,7 @@
 
 # Load compiler and BLAS libraries
 module reset				                     # Reset all modules
-module load foss                                 # Loads GCC + OpenMPI + OpenBLAS, etc.
+module load foss                         # Loads GCC + OpenMPI + OpenBLAS, etc.
 
 # Set number of OpenMP threads based on --cpus-per-task=4
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
