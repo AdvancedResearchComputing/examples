@@ -10,11 +10,11 @@ This repository contains two SLURM batch job scripts:
    This script builds PALM in your ARC `/home` directory using the PALM version that we have already centrally installed on ARC.
    
    **Important:**  
-   - Users must edit the SLURM directives at the top of the script to match their account name and the desired ARC cluster and it's partition they want to use for their work. You can check your account name on ColdFront: https://coldfront.arc.vt.edu/ Look for 'slurm_account_name' under your project allocations. Additionally, refer to the ARC compute resource guide to select the cluster and it's partition: https://www.docs.arc.vt.edu/resources/compute.html
+   - Users must edit the SLURM directives at the top of the script to match their SLURM account name and the desired ARC cluster and it's partition they want to use for their work. You can check your SLURM account name on ColdFront: https://coldfront.arc.vt.edu/ Look for 'slurm_account_name' under your project allocations. Additionally, refer to the ARC compute resource guide to select the cluster and it's partition: https://www.docs.arc.vt.edu/resources/compute.html
    - This build script only needs to be run **once**, unless you want to rebuild PALM again from scratch.
 
 3. **`PALM_test_example.slurm`**  
-   This script runs a simple test example (`example_cbl`) to demonstrate PALM functionality on ARC. Like the build script, users should customize the SLURM directives for their ARC account and ARC cluster and it's partition.
+   This script runs a simple test example (`example_cbl`) to demonstrate PALM functionality on ARC. Like the build script, users should customize the SLURM directives for their account and ARC cluster and it's partition.
    
 ## How to Run
 
