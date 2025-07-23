@@ -10,14 +10,9 @@ module load VASP
 module list
 #
 echo "VASP_TINKERCLIFFS ROME: Normal beginning of execution."
-#
-#  Instead of the command
-#
-#  mpirun -np 4 vasp
-#
-#  we use the following command, which sets the stacksize to "unlimited":
-#
-mpirun -np 4 /bin/bash -c "ulimit -s unlimited; vasp_std"
+
+mpirun -np 4 vasp_std
+
 if [ $? -ne 0 ]; then
   echo "VASP_TINKERCLIFFS ROME: Run error!"
   exit 1
