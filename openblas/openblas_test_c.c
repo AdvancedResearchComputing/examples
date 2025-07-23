@@ -6,10 +6,9 @@
 
 int main() {
     // Set matrix size (square matrix)
-    int N = 100000;  // Adjust this to study scaling
+    int N = 100000;  // Adjust this to study scaling with different matrix sizes
     size_t matrix_size = (size_t)N * N;
 
-    printf("OPENBLAS Scaling Test\n");
     printf("Matrix size: %d x %d\n", N, N);
     printf("OpenMP threads: %d\n", omp_get_max_threads());
 
