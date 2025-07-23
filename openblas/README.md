@@ -17,8 +17,8 @@ This repository includes the following files:
    - Users must edit the SLURM directives at the top of the script to match their SLURM account name and the desired ARC cluster and it's partition they want to use for their work. You can check your SLURM account name on ColdFront: https://coldfront.arc.vt.edu/ Look for 'slurm_account_name' under your project allocations. Additionally, refer to the ARC compute resource guide to select the cluster and it's partition: https://www.docs.arc.vt.edu/resources/compute.html
 
 
-3. **`Scaling_cpu_per-task=16, Scaling_cpu_per-task=32, and Scaling_cpu_per-task=64`**
-   Screenshots from Grafana's node-utilization (obtained through dashboard.arc.vt.edu) showing OpenBLAS scaling on ARC compute node from 16->32->64 cores.
+3. **`Scaling_cpu_per-task=16.png, Scaling_cpu_per-task=32.png, and Scaling_cpu_per-task=64.png`**
+   Screenshots from Grafana's node-utilization (obtained through dashboard.arc.vt.edu) showing OpenBLAS scaling on a ARC compute node (OWL cluster's Milan node - number owlmln004) from 16->32->64 cores. 
    
 ## How to Run
 
