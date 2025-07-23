@@ -1,6 +1,6 @@
 # PALM
 
-This repository provides SLURM batch job scripts to build and run a test example demonstrating the usage of **[PALM](https://palm.muk.uni-hannover.de/trac/wiki/palm)** on ARC clusters. These scripts are designed to help users to 1) successfully build PALM in their ARC \home directory and 2) verify the build and run an example test case to grasp the entire PALM workflow on ARC which will eventually help them with their own customized workloads.
+This repository provides SLURM batch job scripts to demonstrate the usage of **[PALM](https://palm.muk.uni-hannover.de/trac/wiki/palm)** on ARC clusters. These scripts are designed to help users to 1) successfully build PALM in their ARC \home directory and 2) verify the build and run an example test case to grasp the entire PALM workflow on ARC which will eventually help them with their own customized workloads.
 
 ## Contents
 
