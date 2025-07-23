@@ -19,14 +19,14 @@
 #######################################
 #SBATCH --nodes=1                                 # Number of compute nodes to request for the batch job
 #SBATCH --ntasks-per-node=1                       # Number of tasks per node
-#SBATCH --cpus-per-task=4                         # CPUs per task
+#SBATCH --cpus-per-task=16                        # CPUs per task
 ########################## End of SLURM Directives for Batch Job #########################################
 
 # Load compiler and BLAS libraries
-module reset				                     # Reset all modules
-module load foss                         # Loads GCC + OpenMPI + OpenBLAS, etc.
+module reset				                             # Reset all modules
+module load foss                                 # Loads GCC + OpenMPI + OpenBLAS, etc.
 
-# Set number of OpenMP threads based on --cpus-per-task=4
+# Set number of OpenMP threads based on --cpus-per-task
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 #
@@ -34,14 +34,14 @@ echo "OPENBLAS: Beginning of execution."
 #
 
 # Compile the OpenBLAS test code #
-gcc -c -I$EBROOTOPENBLAS/include openblas_test_c.c
+gcc -fopenmp -c -I$EBROOTOPENBLAS/include openblas_test_c.c
 if [ $? -ne 0 ]; then
   echo "OPENBLAS: Compile error!"
   exit 1
 fi
 
 # Link the compiled object with OpenBLAS
-gcc -o openblas_test_c openblas_test_c.o -L$EBROOTOPENBLAS/lib -lopenblas
+gcc -fopenmp -o openblas_test_c openblas_test_c.o -L$EBROOTOPENBLAS/lib -lopenblas
 if [ $? -ne 0 ]; then
   echo "OPENBLAS: Linking error!"
   exit 1
@@ -60,3 +60,4 @@ rm openblas_test_c
 
 echo "OPENBLAS: End of execution."
 exit 0
+
