@@ -1,17 +1,14 @@
 # OpenBLAS
 
-This repository provides a test example to demonstrate the usage of **[OpenBLAS](https://www.openblas.net/)** on ARC clusters. It includes a SLURM batch job script (`openblas_test_example.slurm`) that, in turn, runs a test C program (`openblas_test_c.c`) containing various BLAS routines, using the OpenBLAS library installed on ARC clusters.
+This repository provides a test example to demonstrate the usage of **[OpenBLAS](https://www.openblas.net/)** on ARC clusters. It includes a SLURM batch job script (`openblas_test_example.slurm`) that, in turn, runs a test C program (`openblas_test_c.c`) containing a BLAS routine, using the OpenBLAS library installed on ARC clusters.
 
 ## Contents
 
 This repository includes the following files:
 
 1. **`openblas_test_c.c`**  
-   A C program that tests selected BLAS routines. It contains implementations for:
-   - Matrix-matrix multiplication (`dgemm`)
-   - Triangular matrix-matrix multiplication (`dtrmm`)
-   - Triangular matrix solve (`dtrsm`)
-   - Vector norm computation (`dnrm2`)
+   A C program that performs a simple matrix-matrix multiplication (`dgemm`) utilizing OpenBLAS. Since we test the entire setup with very large matrices, the C program also initializes large matrices in parallel using OpenMP to better scale across multiple CPU threads.
+
 
 2. **`openblas_test_example.slurm`**  
    A SLURM batch job script to compile and run the test C program using OpenBLAS on ARC clusters.  
