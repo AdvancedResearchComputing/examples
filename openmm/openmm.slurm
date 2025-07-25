@@ -1,13 +1,18 @@
 #! /bin/bash
 #
-#SBATCH -t 00:05:00
-#SBATCH -N1 --ntasks-per-node=1 --gres=gpu:1
-#SBATCH -p a100_dev_q
+#SBATCH --job-name=openmm_example
+#SBATCH --partition=a100_normal_q
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --gres=gpu:1
+#SBATCH --time=0-0:05:00
+#SBATCH --mem=1GB  #this is memory per node, total memory requested=40GB
+#SBATCH --account=personal
 #
 
 #
 module reset
-module load OpenMM/7.5.1-fosscuda-2020b
+module load OpenMM
 #
 
 
@@ -18,3 +23,6 @@ module load OpenMM/7.5.1-fosscuda-2020b
 #  Makefile to point to the module's directory $(EBROOTOPENMM)
 make HelloArgonInC
 ./HelloArgonInC
+
+echo "Done with Hello Argon Example"
+exit
