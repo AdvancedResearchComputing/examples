@@ -7,12 +7,12 @@ These are the files/directories included for this example
 2. `cp2k_internal_mpi.slurm` is the slurm batch submit script that runs mpi internally. User may have to change the account name based on what resources are available to them. 
 
 ## How to run
-The following are steps to run our CP2K example on Tinkercliffs. This will give you access to all examples in our GitHub repo. Run these commands once you have logged into a cluster. 
+The following are steps to run our CP2K external mpi example on Tinkercliffs. This will give you access to all examples in our GitHub repo. Run these commands once you have logged into a cluster. 
 Before you submit your batch script, you will need to change the account name to the account you have access to. This name can be found in your [ColdFront account](https://coldfront.arc.vt.edu/).
 ``` 
 git clone https://github.com/AdvancedResearchComputing/examples.git
 cd examples/cp2k
-sbatch cp2k.slurm 
+sbatch cp2k_external_mpi.slurm 
 ```
 
 ### Cluster and Partition Info
