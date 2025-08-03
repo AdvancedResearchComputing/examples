@@ -2,13 +2,13 @@
 #
 # SLURM Job Script to Compile, Run, and Demonstrate HDF5 File Operations on Tinkercliffs (AMD nodes)
 #
-#SBATCH -t 00:10:00             # Maximum runtime: 10 minutes
-#SBATCH -N1                     # Request 1 node
-#SBATCH --ntasks-per-node=1     # One process per node
-#SBATCH --cpus-per-task=4       # Four cores per process
-#SBATCH -p normal_q             # Use normal_q partition
-#SBATCH -A arcadm               # replace with your allocation name
-#SBATCH --constraint=amd        # Select AMD nodes of normal_q
+#SBATCH -t 00:10:00                     # Maximum runtime: 10 minutes
+#SBATCH -N1                             # Request 1 node
+#SBATCH --ntasks-per-node=1             # One process per node
+#SBATCH --cpus-per-task=4               # Four cores per process
+#SBATCH -p normal_q                     # Use normal_q partition
+#SBATCH -A <your_slurm_account_name>    # replace with your allocation name
+#SBATCH --constraint=amd                # Select AMD nodes of normal_q
 
 #############################################
 # Step 1: Environment Setup
