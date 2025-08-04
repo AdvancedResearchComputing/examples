@@ -17,6 +17,8 @@ module load CP2K
 #Set which container sif to use
 CTNR=/apps/arch/software/CP2K/2025.1/cp2k_2025.1.sif
 
-mpiexec -n $SLURM_NTASKS_PER_NODE apptainer run --nv -B "$PWD" -B "$TMPDIR" -B /cm --env PATH=$PATH --env LD_LIBRARY_PATH=$LD_LIBRARY_PATH $CTNR cp2k -i H2O-32.inp
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
+mpiexec -n $SLURM_NTASKS apptainer run --nv -B "$PWD" -B "$TMPDIR" -B /cm --env PATH=$PATH --env LD_LIBRARY_PATH=$LD_LIBRARY_PATH $CTNR cp2k -i H2O-32.inp
 
 echo "End of cp2k run"

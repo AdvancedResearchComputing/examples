@@ -1,10 +1,11 @@
 # CP2K
-CP2K molecular dynamics software, running via Apptainer container
+CP2K molecular dynamics software, running via Apptainer container. As noted by their [documentation](https://github.com/cp2k/cp2k-containers), MPI can be run within the container or outside of the container.
+It is important to note, that running MPI inside a container can only be done for a single compute node. For multi-node jobs, you must run MPI outside of the container. We provide both examples of this. 
 
 ## Contents
 These are the files/directories included for this example
-1. `cp2k_external_mpi.slurm` is the slurm batch submit script that runs mpi externally. User may have to change the account name based on what resources are available to them. 
-2. `cp2k_internal_mpi.slurm` is the slurm batch submit script that runs mpi internally. User may have to change the account name based on what resources are available to them. 
+1. `cp2k_external_mpi.slurm` is the slurm batch submit script that runs mpi outside of the container. User may have to change the account name based on what resources are available to them. 
+2. `cp2k_internal_mpi.slurm` is the slurm batch submit script that runs mpi inside the container. User may have to change the account name based on what resources are available to them. 
 
 ## How to run
 The following are steps to run our CP2K external mpi example on Tinkercliffs. This will give you access to all examples in our GitHub repo. Run these commands once you have logged into a cluster. 
