@@ -6,6 +6,7 @@ It is important to note, that running MPI inside a container can only be done fo
 These are the files/directories included for this example
 1. `cp2k_external_mpi.slurm` is the slurm batch submit script that runs mpi outside of the container. User may have to change the account name based on what resources are available to them. 
 2. `cp2k_internal_mpi.slurm` is the slurm batch submit script that runs mpi inside the container. User may have to change the account name based on what resources are available to them. 
+3. `H2O-32.inp` is the input file for CP2K.
 
 ## How to run
 The following are steps to run our CP2K external mpi example on Tinkercliffs. This will give you access to all examples in our GitHub repo. Run these commands once you have logged into a cluster. 
