@@ -1,12 +1,17 @@
 #!/bin/bash
 
+#SBATCH --job-name dalton_nompi
+#SBATCH --partition=normal_q
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=4
-#SBATCH --time=00:30:00
+#SBATCH --cpus-per-task=2
+#SBATCH --mem=2GB
+#SBATCH --time=00:10:00
+#SBATCH --account=personal
 
 #load modules
 module reset
-module load Dalton/2020-iomkl-2019b-nompi
+module load Dalton
 
 # Setting the variables:
 daltoninp=cc2dc_energy.dal
