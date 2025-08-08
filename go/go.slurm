@@ -5,7 +5,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
 #SBATCH --output=output.log
-#SBATCH --time=0-00:30:00
+#SBATCH --time=0-00:05:00
 
-module load Go/1.23.6
+module load Go
 go run main.go
