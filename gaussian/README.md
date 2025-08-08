@@ -24,6 +24,6 @@ The list of available resources and associated names of the paritions can be fou
 ### Notes
 Once you submit your slurm job, you are able to check the status of the job submission by typing `squeue`. 
 For other slurm commands options please refer to [ARC's documentation](https://www.docs.arc.vt.edu/usage/more-slurm.html#more-slurm) on Slurm.
-There will be a slurm text file generated that will contain any error messages (if they occur) and the gaussian output file is saved as guassian_$SLURM_JOB_ID.out.
+There will be a slurm text file generated that will contain any error messages (if they occur) and the gaussian output file is saved as gaussian_$SLURM_JOB_ID.out.
 The Gaussian software documentation can be found [here](https://www.gaussian.com/).
 
