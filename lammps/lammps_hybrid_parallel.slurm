@@ -5,24 +5,25 @@
 #SBATCH --account=personal
 #SBATCH --partition=normal_q
 #SBATCH --time=00:15:00
+#SBATCH --mem=1GB
 
 module reset
-module load LAMMPS/29Aug2024-foss-2023b-kokkos
+module load LAMMPS
 
 export OMP_NUM_THREADS=4            # Set OpenMP threads
 
 # Run LAMMPS with optimized mpirun settings and OMP suffix
 
-echo "LAMMPS_TINKERCLIFFS ROME: Normal beginning of execution."
+echo "LAMMPS: Normal beginning of execution."
 
 
-mpirun --map-by ppr:1:L3cache --bind-to l3cache -x OMP_NUM_THREADS  lmp -sf omp -pk omp $OMP_NUM_THREADS < input.in > output.txt
+mpirun --map-by ppr:1:L3cache --bind-to l3cache -x OMP_NUM_THREADS  lmp -sf omp -pk omp $OMP_NUM_THREADS < input.in > output_hybrid.txt
 
 if [ $? -ne 0 ]; then
-  echo "LAMMPS_TINKERCLIFFS ROME: Run error!"
+  echo "LAMMPS: Run error!"
   exit 1
 fi
 #
-echo "LAMMPS_TINKERCLIFFS ROME: Normal end of execution."
+echo "LAMMPS: Normal end of execution."
 exit 0
 

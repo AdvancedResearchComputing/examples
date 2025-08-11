@@ -3,8 +3,8 @@
 #SBATCH --partition=normal_q
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=1
-#SBATCH --output=output.log
+#SBATCH --cpus-per-task=64
+#SBATCH --output=output-%j.log
 #SBATCH --time=0-00:30:00
 
 module load CellRanger

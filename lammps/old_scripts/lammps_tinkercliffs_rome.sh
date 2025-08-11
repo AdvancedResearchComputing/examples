@@ -2,7 +2,8 @@
 #
 #SBATCH -t 00:05:00
 #SBATCH -N1 --ntasks-per-node=48
-#SBATCH -p dev_q
+#SBATCH -p normal_q
+#SBATCH --account=arcadm
 #
 
 #
