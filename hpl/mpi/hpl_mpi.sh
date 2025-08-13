@@ -6,6 +6,7 @@
 
 #Adjust runtime and number of nodes as needed
 #Doubling nodes increases runtime by ~sqrt(2)
+
 #SBATCH -t 2:00:00
 #SBATCH -N 1
 
@@ -39,7 +40,7 @@ gbpercore=2  #gb ram per core
 export OMP_NUM_THREADS=1
 
 #intel
-module reset; module load hpl/2.3-intel-2024a
+module reset; module load HPL/2.3-intel-2024a
 # echo "LOG: intel | mpi-only | launch with mpirun"
 # mpirun -np $hplnp xhpl
 echo "LOG: intel | mpi-only | launch with mpirun (map & bind to core)"
@@ -50,7 +51,7 @@ echo "LOG: intel | mpi-only | launch with srun (bind to cores)"
 srun -n $hplnp --cpu-bind=cores xhpl
 
 #gcc
-module reset; module load hpl/2.3-foss-2024a
+module reset; module load HPL/2.3-foss-2024a
 # echo "LOG: gcc   | mpi-only | launch with mpirun"
 # mpirun -np $hplnp -x OMP_NUM_THREADS=1 xhpl
 # echo "LOG: gcc   | mpi-only | launch with mpirun (bind to core)"
@@ -80,7 +81,7 @@ srun -n $hplnp --cpu-bind=cores xhpl
 # echo "cpu mask is: $mask"
 # 
 # #intel
-# module reset; module unload gcc; module load HPL/2.3-intel-2019b
+# module reset; module unload gcc; module load HPL/2.3-intel-2024a
 # export OMP_PROC_BIND=TRUE
 # export OMP_PLACES=cores
 # echo "LOG: intel | mpi+omp  | launch with mpirun"
@@ -91,7 +92,7 @@ srun -n $hplnp --cpu-bind=cores xhpl
 # srun -n $np --cpu-bind=mask_cpu=$mask xhpl
 # 
 # #gcc
-# module reset; module unload gcc; module load HPL/2.3-foss-2020a
+# module reset; module unload gcc; module load HPL/2.3-foss-2024a
 # #these break openblas for some reason - make sure they're unset
 # unset OMP_PROC_BIND; unset OMP_PLACES
 # echo "LOG: gcc   | mpi+omp  | launch with mpirun"
