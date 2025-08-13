@@ -43,14 +43,14 @@ mask=$( echo $mask | sed 's/,$//' )
 echo "cpu mask is: $mask"
 
 #intel
-module reset; module unload gcc; module load HPL/2.3-intel-2019b
+module reset; module unload gcc; module load HPL/2.3-intel-2024a
 echo "LOG: intel | mpi+omp  | launch with mpirun"
 mpirun -n $np -genv I_MPI_PIN_PROCESSOR_LIST="$( seq -s , 0 4 127 )" -genv I_MPI_PIN_DOMAIN=omp -genv OMP_NUM_THREADS=4 -genv OMP_PROC_BIND=TRUE -genv OMP_PLACES=cores xhpl
 echo "LOG: intel | mpi+omp  | launch with srun"
 srun -n $np --cpu-bind=mask_cpu=$mask xhpl
 
 #gcc
-module reset; module unload gcc; module load HPL/2.3-foss-2020a
+module reset; module unload gcc; module load HPL/2.3-foss-2024a
 #these break openblas for some reason - make sure they're unset
 unset OMP_PROC_BIND; unset OMP_PLACES
 echo "LOG: gcc   | mpi+omp  | launch with mpirun"
