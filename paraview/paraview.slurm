@@ -9,8 +9,7 @@
 #SBATCH --time=0-0:10:00
 #SBATCH --mem=1GB  #this is memory per node, total memory requested=40GB
 #SBATCH --qos=fal_l40s_normal_base #setting quality of serivce to base
-#SBATCH --account=arcadm
-##SBATCH --account=personal
+#SBATCH --account=personal
 
 module load ParaView
 
