@@ -3,10 +3,9 @@
 #SBATCH --job-name=gaussian_example
 #SBATCH --partition=normal_q
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=8
+#SBATCH --ntasks-per-node=4  # match nproc=4 in gaussian input file
 #SBATCH --cpus-per-task=1
 #SBATCH --time=0-0:05:00
-#SBATCH --mem=1GB  #this is memory per node, total memory requested=40GB
 #SBATCH --account=personal
 #
 
