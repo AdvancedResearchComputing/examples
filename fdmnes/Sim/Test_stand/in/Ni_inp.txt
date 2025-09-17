@@ -1,0 +1,42 @@
+! Indata file for the fdmnes program
+! Calculation of the Nickel L2 and L3 edges in Nickel fcc.
+! Multiple scatering with spinorbit
+! XMCD calculation.
+
+ Filout
+   Sim/Test_stand/Ni
+
+ Range
+ -5. 0.05 2.  0.2 5. 0.5 10. 1. 16. 2. 30.
+
+
+ Green
+ Edge
+ L23
+
+ Polarisation
+  1. 0. 0.
+  0. 0. 0.  0. 0. 1.        ! to get circular dichroism around the c axis.
+
+ Radius
+  3.0
+
+ Spinorbit
+ Density
+
+ Atom
+   28 1  3 2 5.0 3.0      ! 3d 5 up 3 down
+
+ Crystal
+     3.52387 3.52387  3.52387  90. 90. 90.   ! a, b, c, alpha, beta, gamma
+  1  0.0     0.0      0.0                    ! it, posx, posy, posz
+  1  0.5     0.5      0.0  
+  1  0.5     0.0      0.5  
+  1  0.0     0.5      0.5 
+
+ Convolution
+ Estart
+ -10
+
+ End
+

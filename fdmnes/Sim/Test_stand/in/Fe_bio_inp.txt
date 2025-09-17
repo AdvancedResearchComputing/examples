@@ -1,0 +1,47 @@
+! Indata file for DAFS calculation and comparison with data
+! The reflections indexes are red in the experimental data files
+! The not default atomic configuration is defined with "Atom_conf" for only some atoms.
+! The crystal structure is red in a pdb file. 
+
+ Filout
+ Sim/Test_stand/Fe_bio
+
+ Range
+ -5. 0.2  5.  0.5 10. 1. 20. 2. 40.
+
+ Radius
+  3.
+
+ Memory_save
+
+ Green
+
+ Dafs_exp										! keyword to give data reflexions included in the experimental files 
+      11.231547       3.519121     -71.823997   ! experimental orientation matrix
+      12.573563    -170.027649      -6.364535
+     -86.558281      -5.978752     -11.279972
+   0.											! rotation Angle / matrix
+  Sim/Test_stand/in/Fe_bio_exp1.txt
+  30.
+  Sim/Test_stand/in/Fe_bio_exp2.txt
+
+ Convolution
+
+ Z_absorber           ! Keyword for defining the atomic number of absorbing atoms
+  26
+
+ Atom_conf
+ 2 6 7  2 3 2  5.  4 1 1.    ! The atoms 6 and 7 in pdb file are 3d5 4p1
+ 1 11   2 3 2  5.5 4 1 0.5   ! The atom 11 is 3d5.5 4p0.5;     The other. are default
+
+ pdb_file            ! Keyword for reading of a pdb file
+ Sim/Test_stand/in/Fe_bio_struct.pdb
+
+ Experiment							! For comparison between simulation and theory one has to repeat the experimental files containing the data. 
+ Sim/Test_stand/in/Fe_bio_exp1.txt
+ Sim/Test_stand/in/Fe_bio_exp2.txt
+
+ Gen_shift
+  7108 7118 11
+
+ End

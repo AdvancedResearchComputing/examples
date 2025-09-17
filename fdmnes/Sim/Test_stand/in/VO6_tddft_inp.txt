@@ -1,0 +1,47 @@
+! Main indata file for fdmnes
+! Calculation on VO6 using the multiple scattering approach.
+! Use the TDDFT formalism, edge L23.
+
+ Filout
+   Sim/Test_stand/VO6_L23
+
+ Range
+ -1. 0.05 8. 0.5 30
+
+ SCF
+
+ Radius
+  3.0
+
+ Edge
+ L23
+
+ Green
+
+ TDDFT
+
+ lmax    ! Limitation of the spherical harmonics to save some times
+  2
+
+! Keyword to get an output file (_sd0) with the projection
+! of the density of state in the absorbing atom :
+ Density                 
+
+ Molecule    ! Description of the molecule (or cluster). There is no periodicity
+     2.16  2.16  2.16  90. 90. 90.    = a, b, c, alpha, beta, gamma
+ 23  0.0   0.0   0.0                  = Z, x, y, z
+  8  1.0   0.0   0.0   
+  8 -1.0   0.0   0.0 
+  8  0.0   1.0   0.0  
+  8  0.0  -1.0   0.0  
+  8  0.0   0.0   1.0  
+  8  0.0   0.0  -1.0  
+
+! keywords for the convolution
+ Convolution
+
+ Estart     ! To get the convoluted spectra starting at lower energy
+ -5.
+
+ End
+

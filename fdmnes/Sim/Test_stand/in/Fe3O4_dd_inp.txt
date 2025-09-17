@@ -1,0 +1,54 @@
+! FDMNES indata file.
+! Calculation of the xanes and RXS spectra in magnetite extracting the tensorial scattering
+! component already calculated in a previous step.
+! Calculation contains the E1-E1 and E2-E2 components but not the E1-E2 one.
+
+ Comment
+   Iron K edge in magnetite, high temperature, without E1-E2
+
+ Filout
+Sim/Test_stand/Fe3O4_E1E1_E2E2
+
+ Extract
+Sim/Test_stand/Fe3O4_bav.txt
+
+
+ Range
+ -5. 0.1 5. 0.2 10.  0.5 20. 1. 30. 2. 60. 4. 100.    		  
+
+ Green
+ E2E2
+
+ Radius
+  3.0
+
+ Self_abs
+ Double_cor
+
+ Dafs
+  0 0 2 1 1 45.
+  0 0 6 1 1 45.
+  4 4 4 1 1  0.
+
+ Atom_conf   ! To modify the electronic configuration, used to calculate the potential
+  2  1 2  2 3 2 5.5  4 1 0.5 ! number of atoms (2) , indices of the atoms (1 and 2 under Crystal),
+                             ! nb of orbitals (2) , (n,l,pop) of each orbital ( 3d5.5, 4p0.5)
+
+ Spgroup
+  227:1
+
+ Crystal
+        8.3940   8.3940   8.3940   90.0   90.0  90.0   
+ 26      .6250      .6250      .6250    ! Fe 16d           
+ 26      .0000      .0000      .0000    ! Fe  8a
+  8      .3800      .3800      .3800    ! O  32e
+
+ Convolution
+
+ Estart
+  -40.
+
+ End
+
+ 
+

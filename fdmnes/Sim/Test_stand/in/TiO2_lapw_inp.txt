@@ -1,0 +1,28 @@
+! Indata file for FDMNES
+
+ Comment
+ Ti K edge in rutile, using FLAPW potential
+
+ Filout
+Sim/Test_stand/TiO2_lapw
+
+Quadrupole
+
+ Range
+8. 0.2 13. 0.5 18. 1. 26. 2 40.
+
+ Radius
+  3.0
+
+ Trace
+ 1 1. 1. 0. 0. 0. 0.
+
+  Flapw
+Sim/Test_stand/in/TiO2.struct
+Sim/Test_stand/in/TiO2.vcoul
+Sim/Test_stand/in/TiO2.r2v
+Sim/Test_stand/in/TiO2.clmsum
+Sim/Test_stand/in/TiO2.ti1s
+
+ End
+

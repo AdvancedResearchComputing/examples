@@ -1,0 +1,59 @@
+! Indata file for Fdmnes
+! RXS with azimuthal scan and Xanes for Co-K edge in Ca3Co2O6.
+! Multiple scattering calculation with quadrupole component.
+! convolution of the scan file and selection of azimuth scan at a specific energy.
+
+ Comment
+   Co K edge in Ca3Co2O6 
+
+ Filout 
+  Sim/Test_stand/Ca3Co2O6
+
+ Range
+  -5.0 0.1 5.0  0.2  10. 0.5 20. 1. 40.0   
+
+ Radius
+  3.5
+
+ Green
+
+ Eimag
+ 0.1
+ Quadrupole
+ Density
+ Polarise
+
+ DAFS
+ 1 3 1  1 2  ! Sigma - Pi; The azimuth is not specified, thus a scan is performed
+ 1 3 1  2 1 
+
+ Atom
+  27 2  3 2 7. 4 0 2. 
+  20 0
+   8 0
+
+ Spgroup
+  R-3c:H
+
+ Crystal
+      9.061    9.061   10.367   90.   90.   120.   ! da Fjellvag et al. J. Sol. St. Chem. 124, 190 (1996)
+
+  1   0.0000   0.0000   0.2500    ! Co(2)  sym= 32 (6a)         
+  1   0.0000   0.0000   0.0000    ! Co(1)  sym= -3 (6b)
+  2   0.3690   0.0000   0.2500    ! Ca
+  3   0.1767   0.0238   0.1138    ! O
+  
+ Convolution
+
+ Selec_input
+ Sim/Test_stand/Ca3Co2O6_scan_conv.txt
+
+ Selec_output
+ Sim/Test_stand/Ca3Co2O6_scan_E20_conv.txt
+
+ Energy
+  2.
+
+ End
+
+ 

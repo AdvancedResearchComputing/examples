@@ -1,0 +1,31 @@
+ ! Indata file for FDMNES, Pu(VI)_HClO4
+
+ Filout
+Sim/Test_stand/Pu_HClO4_VI_M5
+
+ Range
+-4 0.05 4 0.1 10 0.2 15 1 40
+
+ Quadrupole
+
+ Green
+
+ Relativiste
+ Spinorbite
+
+ Edge
+  M5
+
+ Radius
+  3.5
+
+ Z_absorber
+  94
+
+ Cif_file
+ Sim/Test_stand/in/Pu(VI)_HClO4.cif
+
+ End
+
+
+

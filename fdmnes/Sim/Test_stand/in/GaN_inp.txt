@@ -1,0 +1,41 @@
+! Fdmnes indata file
+! Calculation of DAFS for the Ga K-edge in hexagonal GaN
+! in-plane diffraction 110
+! Green method, small cluster
+
+ Comment
+ Ga K edge in GaN
+
+ Filout
+  Sim/Test_stand/GaN
+
+ Energpho
+
+ Range
+   -5. 0.2 5. 0.5 10. 1. 20. 2. 70 
+
+ Radius
+   3.0
+
+ Green
+
+ DAFS
+  1 1 0  1 1 90.
+
+ Crystal
+     3.187         3.187         5.186  90.  90.  120.  = a, b, c, alpha, beta, gamma
+ 31  0.0           0.0           0.0           
+ 31  0.3333333333  0.6666666667  0.5   
+  7  0.00          0.00          0.375     
+  7  0.3333333333  0.6666666667  0.875   
+
+ Fprime
+ Fprime_ato
+ Convolution
+
+ End
+
+
+
+
+

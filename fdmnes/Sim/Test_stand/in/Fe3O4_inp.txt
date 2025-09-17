@@ -1,0 +1,51 @@
+! FDMNES indata file
+! Calculation of xanes and RXS spectra in magnetite at the Fe K-edge.
+! Unit mesh is described with the only non equivalent atoms and the use of
+! the known space group.
+! Multiple scattering calculation with quadrupole component and convolution.
+
+ Filout
+Sim/Test_stand/Fe3O4
+
+ Range
+  -5. 0.1 5. 0.2  10.  0.5 20. 1. 30. 2. 60. 4. 100.    		  
+
+ Radius
+  3.0
+ 
+ Green
+ quadrupole
+
+! To get the intensity corrected by the self_absosorption:
+ Self_abs
+
+! To add the correction when the measurement is on the max of the peak,
+! without integration on the rocking curve:
+ Double_cor
+
+ DAFS
+  0 0 2 1 1 45.    ! (h, k, l),  1 = sigma_in, 1 = sigma_out, azimuth (45.)
+  0 0 6 1 1 45.    !             2 would be pi
+  4 4 4 1 1  0.
+
+ Atom_conf   ! To modify the electronic configuration, used to calculate the potential
+  2  1 2  2 3 2 5.5  4 1 0.5 ! number of atoms (2) , indices of the atoms (1 and 2 under Crystal),
+                             ! nb of orbitals (2) , (n,l,pop) of each orbital ( 3d5.5, 4p0.5)
+
+ Spgroup
+  Fd-3m:1
+
+ Crystal
+      8.3940   8.3940   8.3940   90.0   90.0   90.0   
+
+  26   .6250    .6250    .6250    ! Fe 16d           
+  26   .0000    .0000    .0000    ! Fe  8a
+   8   .3800    .3800    .3800    ! O  32e
+
+ Convolution
+
+ Estart
+  -40.
+
+ End
+

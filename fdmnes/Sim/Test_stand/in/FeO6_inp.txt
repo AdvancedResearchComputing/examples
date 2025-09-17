@@ -1,0 +1,50 @@
+! Main indata file for fdmnes
+! Calculation on FeO6 using the multiple scattering approch
+! with convolution, comparison with an experimental spectra and fit.
+
+ Filout
+   Sim/Test_stand/FeO6
+
+ Range
+ -2.  0.1  2. 0.2  5. 0.5 20. 1. 50. 2. 80.
+
+ Radius
+  3.0
+
+ Green
+
+ Molecule
+     2.16  2.16  2.16  90. 90. 90.    = a, b, c, alpha, beta, gamma
+ 26  0.0   0.0   0.0                  = Z, x, y, z
+  8  1.0   0.0   0.0   
+  8 -1.0   0.0   0.0 
+  8  0.0   1.0   0.0  
+  8  0.0  -1.0   0.0  
+  8  0.0   0.0   1.0  
+  8  0.0   0.0  -1.0  
+
+! keywords for the convolution
+
+ Convolution
+ 
+ Estart
+ -10.
+
+! keywords for the comparison with the experiment and fit 
+
+ Experiment
+Sim/Test_stand/in/FeO6_exp.txt
+
+ Gen_shift
+ -6. -2. 21
+
+ Parameter
+   Par_abc
+   -10. 0. 3
+
+ Parameter
+   Par_Gamma_max
+   10. 15. 3
+
+ End
+

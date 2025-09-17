@@ -1,0 +1,66 @@
+! Indatafile for fdmnes
+! Case of the antiferromagnetic monoclinic V2O3, low temperature phase 
+! with the calculation of a RXS reflection with different polarization conditions.
+! An analysis of the spherical tensors is performed. 
+! The state density is also calculated.
+
+  Comment
+ Vanadium K-edge in V2O3, antiferromagnetic, monoclinic                                                                                           
+ 
+ Filout 
+  Sim/Test_stand/V2O3
+
+ Range
+ -10. 0.1 5. 0.2 10.0 0.5 20. 1.0 40. 2. 50.  
+
+ Radius
+  3.0
+
+ Green
+ Quadrupole
+ Density
+ Spherical
+
+ Convolution
+
+ Spinorbite
+ Axe_spin
+  -0.08909 0.  -0.15025
+
+ DAFS
+  1 1 1  1 1 0.
+  1 1 1  1 1 90.
+  1 1 1  1 2 0.
+  1 1 1  1 2 90.
+
+ Atom
+  23  3  3 2  2. 0.  4 0 1. 1.  4 1 0.5 0.5
+   8  0
+
+ Crystal
+    7.255     5.002     5.548   90.0  96.75  90.0   / a, b, c, alfa, beta, gamma
+ 1  0.3438    0.0008    0.2991    V8  
+ 1  0.6562    0.9992    0.7009    V6  
+ 1  0.8438    0.9992    0.2991    V3  
+ 1  0.1562    0.0008    0.7009    V7  
+-1  0.8438    0.5008    0.7991    V4  
+-1  0.1562    0.4992    0.2009    V5 
+-1  0.3438    0.4992    0.7991    V2  
+-1  0.6562    0.5008    0.2009    V1  
+
+ 2  0.4070    0.8450    0.6520    O 1 8f
+ 2  0.0930    0.8450    0.3480    O 2 8f
+ 2  0.5930    0.1550    0.3480    O 3 8f
+ 2  0.9070    0.1550    0.6520    O 4 8f
+ 2  0.9070    0.3450    0.1520    O 5 8f
+ 2  0.5930    0.3450    0.8480    O 6 8f
+ 2  0.0930    0.6550    0.8480    O 7 8f
+ 2  0.4070    0.6550    0.1520    O 8 8f
+ 2  0.2500    0.1910    0.0000    O 1 4e
+ 2  0.7500    0.8090    0.0000    O 2 4e
+ 2  0.7500    0.6910    0.5000    O 3 4e
+ 2  0.2500    0.3090    0.5000    O 4 4e
+
+ End
+
+

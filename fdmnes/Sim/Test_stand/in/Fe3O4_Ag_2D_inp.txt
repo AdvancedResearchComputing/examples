@@ -1,0 +1,82 @@
+! Indata file for resonant 2D diffraction
+! Magnetite film on Ag with Au cap layer
+
+Filout
+  Sim/Test_stand/Fe3O4_Ag_2D
+
+ Range
+  -2. 0.1 4. 0.2 5.  0.5  25. 1. 40. 2. 60.    		  
+
+ Radius
+  3.0
+
+ DAFS_2D    ! Specular truncation rod with operation mode
+   0 0  0.   0.01  5.   2 4 2 0 0  0. 180. 0.
+
+ Green
+ Quadrupole
+ 
+ Atom_B_iso  ! Thermic displacement = 8 pi^2 <u^2>, in 5th column
+
+ Spgroup
+  Fd-3m:1
+
+ Film
+       8.2900   8.2900   8.4540   90.0   90.0   90.0   
+  26   0.6250   0.6250   0.6250  10  ! Fe 16d           
+  26   0.0000   0.0000   0.0000  10  ! Fe  8a
+   8   0.3800   0.3800   0.3800  10  ! O  32e
+  
+ Film_thickness
+  72. 
+ 
+ Film_roughness
+ 2. 
+
+ Film_zero
+ 0.125
+ 
+ Film_shift
+ 2.4   
+
+ hkl_film
+ 
+ Bulk  
+     4.0675 4.0675 4.0675   90. 90. 90.    = a, b, c, alpha, beta, gamma  
+ 47  0.0    0.0    0.0           
+ 47  0.5    0.5    0.0    
+ 47  0.5    0.0    0.5    
+ 47  0.0    0.5    0.5    
+
+ Bulk_roughness
+ 0.8
+ 
+ Cap_layer
+    2.8837228875  2.8837228875  7.0636496   90. 90. 120.   
+ 79 0.            0.            0.            0.18
+ 79 0.6666666667  0.3333333333  0.3333333333  0.18
+ 79 0.3333333333  0.6666666667  0.6666666667  0.18
+ 
+ Cap_thickness
+ 20 
+ 
+ Cap_roughness
+  8 
+
+ Cap_B_iso
+  19.7392
+ 
+ Cap_shift
+ 2.70 
+ 
+ 
+ Convolution
+ Transpose_file
+  -1. 15.
+
+ Estart
+  -10.
+
+
+ End
+

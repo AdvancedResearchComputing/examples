@@ -1,0 +1,23 @@
+! Fdmnes indata file
+! Calculation of Chromium photoemission in Cr metal.
+! The convolution is performed on a spectra already calculated in a previous step.
+
+ Calculation
+   Sim/Test_stand/Cr.txt
+
+ Conv_out
+   Sim/Test_stand/Cr_photo_conv.txt
+
+ Convolution
+ 
+ Photoemission
+
+ Gamma_hole
+  0.7
+
+! Efermi
+ !-2.62
+
+ End
+
+

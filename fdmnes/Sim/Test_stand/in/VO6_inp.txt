@@ -1,0 +1,39 @@
+! Main indata file for fdmnes
+! Calculation on VO6 using the multiple scattering approach.
+
+ Filout
+Sim/Test_stand/VO6
+
+ Range
+ -5.  0.1  5. 0.5 20. 1. 40. 2. 60. 4. 100.
+
+ Radius
+  3.0
+
+
+ Green         ! Multiple Scattering Theory calculation
+
+! Keyword to get an output file (_sd0) with the projection
+! of the density of state in the absorbing atom :
+ Density                 
+
+ Quadrupole
+
+ Molecule    ! Description of the molecule (or cluster). There is no periodicity
+     2.16  2.16  2.16  90. 90. 90.    = a, b, c, alpha, beta, gamma
+ 23  0.0   0.0   0.0                  = Z, x, y, z
+  8  1.0   0.0   0.0   
+  8 -1.0   0.0   0.0 
+  8  0.0   1.0   0.0  
+  8  0.0  -1.0   0.0  
+  8  0.0   0.0   1.0  
+  8  0.0   0.0  -1.0  
+
+! keywords for the convolution
+ Convolution
+
+ Estart      ! To get a convolution spectra starting at lower energy
+ -10.
+
+ End
+

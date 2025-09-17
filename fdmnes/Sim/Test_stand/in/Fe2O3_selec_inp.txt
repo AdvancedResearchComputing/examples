@@ -1,0 +1,16 @@
+! Indata file for the selection of an azimuthal scan at a specific energy.
+! In a previous step, the scan was calculated at all energies.
+! This example stands for the Fe2O3 non magnetic structure.
+
+
+Selec_inp                  ! Input file name (calculated the convolution step).
+  Sim/Test_stand/Fe2O3_scan_conv.txt
+
+Selec_out                  ! Output file name.
+  Sim/Test_stand/Fe2O3_scan_E1_conv.txt
+
+Energy
+ 1. 
+
+End
+

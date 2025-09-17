@@ -1,0 +1,46 @@
+! Indata file for the fdmnes program
+! Calculation in Hematite 
+
+ Filout 
+  Sim/Test_stand/Fe2O3_scf
+
+ Range
+ -7.  0.1  7.  0.5  10. 1. 20. 2. 50.  
+
+ Green
+
+ Radius
+    3.0
+
+ Quadrupole
+
+ Density
+
+ SCF
+
+ DAFS
+ 1 1 1   1 2 0.
+ 2 2 2   1 1 0.
+ 
+ Crystal
+    5.4135   5.4135   5.4135    55.283 55.283 55.283    / ax, ay, az, alfa, beta, gamma
+ 26  0.105    0.105    0.105       Fe
+ 26  0.395    0.395    0.395       Fe
+ 26  0.605    0.605    0.605       Fe
+ 26  0.895    0.895    0.895       Fe
+  8  0.292    0.708    0.000       O 
+  8  0.708    0.000    0.292       O 
+  8  0.000    0.292    0.708       O 
+  8  0.208    0.792    0.500       O 
+  8  0.792    0.500    0.208       O 
+  8  0.500    0.208    0.792       O 
+
+ Convolution
+
+  End
+
+
+
+
+
+
