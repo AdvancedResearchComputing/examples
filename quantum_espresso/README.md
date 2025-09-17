@@ -1,6 +1,6 @@
 # Quantum ESPRESSO
 Quantum ESPRESSO is an integrated suite of Open-Source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials. For more detailed information about the software, here is the link to their website, [Quantum ESPRESSO](https://www.quantum-espresso.org/).
-The example we provide here uses planewaves to calculate the total energy and band structure of four simple systems: aluminum (Al), copper (Cu), nickel (Ni), and silicon (Si).
+The cpu_only example we provide here uses planewaves to calculate the total energy and band structure of four simple systems: aluminum (Al), copper (Cu), nickel (Ni), and silicon (Si).
 
 ## Contents
 There is a cpu_only and gpu examples (each in its own folder):
@@ -24,7 +24,7 @@ cd examples/quantum_espresso/cpu_only
 sbatch quantum_espresso.slurm
 ```
 
-To run the GPU version (works as is on Falcon, but may also run on Tinkercliffs, need to change the partition name if running on Tinkercliffs)
+To run the GPU version (works as is on Falcon, but may also run on Tinkercliffs but will need to change the partition name if running on Tinkercliffs):
 
 ```
 git clone https://github.com/AdvancedResearchComputing/examples.git
