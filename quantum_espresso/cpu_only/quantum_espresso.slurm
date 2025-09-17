@@ -11,7 +11,7 @@
 
 #
 module reset
-module load QuantumESPRESSO
+module load QuantumESPRESSO/7.4-foss-2024a
 #
 echo "Quantum ESPRESSO: Normal beginning of execution."
 #
