@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --account=arcadm
-#SBATCH --partition=l40s_normal_q
+#SBATCH --account=personal
+#SBATCH --partition=a30_normal_q
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
 #SBATCH --ntasks-per-node=1
