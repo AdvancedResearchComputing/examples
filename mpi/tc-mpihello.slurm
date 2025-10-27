@@ -19,7 +19,7 @@ export RUNDIR=$SLURM_SUBMIT_DIR
 cd $RUNDIR
 
 module reset
-module load foss
+module load foss/2025b
 
 echo "loaded modules are:"
 module list
