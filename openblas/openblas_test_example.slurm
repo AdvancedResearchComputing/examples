@@ -24,7 +24,7 @@
 
 # Load compiler and BLAS libraries
 module reset				                             # Reset all modules
-module load foss                                 # Loads GCC + OpenMPI + OpenBLAS, etc.
+module load foss/2025b                           # Loads GCC + OpenMPI + OpenBLAS, etc.
 
 # Set number of OpenMP threads based on --cpus-per-task
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
@@ -34,14 +34,14 @@ echo "OPENBLAS: Beginning of execution."
 #
 
 # Compile the OpenBLAS test code #
-gcc -fopenmp -c -I$EBROOTOPENBLAS/include openblas_test_c.c
+gcc -fopenmp -c openblas_test_c.c
 if [ $? -ne 0 ]; then
   echo "OPENBLAS: Compile error!"
   exit 1
 fi
 
 # Link the compiled object with OpenBLAS
-gcc -fopenmp -o openblas_test_c openblas_test_c.o -L$EBROOTOPENBLAS/lib -lopenblas
+gcc -fopenmp -o openblas_test_c openblas_test_c.o -lopenblas
 if [ $? -ne 0 ]; then
   echo "OPENBLAS: Linking error!"
   exit 1
