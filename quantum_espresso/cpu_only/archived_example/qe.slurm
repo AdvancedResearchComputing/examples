@@ -1,26 +1,27 @@
 #! /bin/bash
 #
-#SBATCH --job-name silicon
+#SBATCH --job-name pw_energy_bandstruct
 #SBATCH --partition=normal_q
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=8
+#SBATCH --ntasks-per-node=4
 #SBATCH --cpus-per-task=1
-#SBATCH --mem=8GB
-#SBATCH --time=00:10:00
+#SBATCH --mem=5GB
+#SBATCH --time=00:05:00
 #SBATCH --account=personal
 #
 
-#
 module reset
 module load QuantumESPRESSO/7.4-foss-2024a
 
 #
 echo "Quantum ESPRESSO: Normal beginning of execution."
 #
-
-mpirun -np $SLURM_NTASKS pw.x -i silicon.in > silicon.out
-
+./run_example
+if [ $? -ne 0 ]; then
+  echo "Quantum ESPRESSO: Run error!"
+  exit 1
+fi
+#
 echo "Quantum ESPRESSO: Normal end of execution."
-
 exit 0
 
