@@ -10,7 +10,7 @@
 #SBATCH --time=00:15:00                 # total run time limit (HH:MM:SS)
 
 module reset
-module load apptainer
+module load QuantumESPRESSO/7.4.1-NVHPC-24.9-CUDA-12.6.0
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
-apptainer run --nv -B "$TMPDIR" -B /projects /apps/common/software/QuantumESPRESSO/7.3.1/quantum_espresso-7.3.1.sif mpiexec -n $SLURM_NTASKS -x OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK pw.x -input ausurf.in -npool 2
+mpiexec -np $SLURM_NTASKS -x OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK pw.x -input ausurf.in -npool 2
