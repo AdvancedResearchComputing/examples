@@ -6,6 +6,8 @@
 #SBATCH --mem=500G
 #SBATCH --time=0:30:00
 
+# This script follows the Usage Example provided by the developers
+# https://github.com/ncbi/fcs/wiki/FCS-GX-quickstart#usage-examples
 module load apptainer
 cd $SLURM_SUBMIT_DIR
 
@@ -24,7 +26,7 @@ python3 ./fcs.py \
     --out-dir ./gx_out/ \
     --gx-db $GXDB_LOC/gxdb \
     --tax-id 4932
-
+    
 # clean the genome
 cat FCS_combo_test.fa | python3 ./fcs.py \
     --image /common/containers/fcs-gx.sif \
