@@ -31,7 +31,7 @@ This repository contains two SLURM batch job scripts:
   
 ## How to Run
 
-**After logging into an ARC cluster,** follow these steps:
+**After logging into an ARC cluster,** follow these steps in the working directory of your choice:
 
 1. Before submitting an FCS-GX batch job, you must download the fcs.py runner script from GitHub into your working directory:
 ```bash
@@ -39,7 +39,7 @@ curl -LO https://github.com/ncbi/fcs/raw/main/dist/fcs.py
 ```
 You only need to download this once unless NCBI updates the script.
 
-2. Submit a job to run the human genome example:
+2. Upload the provided example batch job scripts to your working directory, make appropriate changes with respect to your account name, partition etc. if necessary and then submit a job to run the human genome example:
 ```bash
 sbatch fcs-gx-hs1.slurm
 ```
