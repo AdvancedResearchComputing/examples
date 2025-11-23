@@ -21,7 +21,7 @@ module list
 # copy FCS-GX database to memory on the compute node (10 minutes)
 echo "copying FCS-GX database to local TMPFS mount in RAM"
 echo "start time: `date`"
-cp -r /common/data/ncbi/fcs-gx/2025-11-11/ $TMPFS
+cp -r /common/data/ncbi/fcs-gx/2025-11-11/gxdb $TMPFS
 echo "end time: `date`"
 
 GXDB_LOC=$TMPFS
