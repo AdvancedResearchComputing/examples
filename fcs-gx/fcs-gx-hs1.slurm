@@ -10,7 +10,7 @@ module load apptainer
 cd $SLURM_SUBMIT_DIR
 
 # copy FCS-GX database to memory on the compute node (10 minutes)
-cp -r /common/data/ncbi/fcs-gx/2025-11-11/ $TMPFS
+cp -r /common/data/ncbi/fcs-gx/2025-11-11/gxdb $TMPFS
 GXDB_LOC=$TMPFS
 
 # download the FASTA (930MB download: 3-5 minutes)
