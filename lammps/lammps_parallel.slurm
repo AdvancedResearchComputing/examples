@@ -5,10 +5,9 @@
 #SBATCH --account=personal
 #SBATCH --partition=normal_q
 #SBATCH --time=00:15:00
-#SBATCH --mem=1GB
 #
 module reset
-module load LAMMPS
+module load LAMMPS/29Aug2024-foss-2023b-kokkos
 #
 echo "LAMMPS: Normal beginning of execution."
 #
