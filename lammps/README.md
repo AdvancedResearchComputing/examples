@@ -4,24 +4,21 @@ model atoms or, more generically, as a parallel particle simulator at the atomic
 with new functionality.
 
 ## Contents
-These are the files/directories included for this example
-1. `lammps_hybrid_parallel.slurm` is the slurm batch submit script to run in a hybrid parallel fashion. User may have to change the account name based on what resources are available to them. 
-2. `lammps_parallel.slurm` is the slurm batch submit script to run in parallel. User may have to change the account name based on what resources are available to them. 
-3. `input.in` is the input file for the LAMMPS example.
+These are the files/directories included for this example:
+1. `cpu`
+    - `lammps_kokkos.slurm` is the slurm batch submit script to run in a parallel with Kokkos. User may have to change the account name based on what resources are available to them. 
+    - `lammps_openmp.slurm` is the slurm batch submit script to run in parallel with OpenMP. User may have to change the account name based on what resources are available to them. 
+    - `input.in` is the input file for the LAMMPS example.
+    - `system.data` is the data file for the calculation.
 
 ## How to run
 The following are steps to run the LAMMPS example on either Tinkercliffs or Owl cluster. This will give you access to all examples in our GitHub repo. Run these commands once you have logged into a cluster. 
 Before you submit your batch script, you will need to change the account name to the account you have access to. This name can be found in your [ColdFront account](https://coldfront.arc.vt.edu/).
 ```
 git clone https://github.com/AdvancedResearchComputing/examples.git
-cd examples/lammps
-sbatch lammps_parallel.slurm #for basic parallel 
+cd examples/lammps/cpu
+sbatch lammps_kokkos.slurm 
 ```
-If you want to run the hybrid parallel submit the other slurm batch script:
-```
-sbatch lammps_hybrid_parallel.slurm #hybird parallel setting OMP threads
-```
-
 ### Cluster and Partition Info
 LAMMPS is available on all ARC systems. 
 In order to run on other clusters or different partitions make sure you are logged into the cluster of choice, and then change the partition name to the parition you would like to use.
