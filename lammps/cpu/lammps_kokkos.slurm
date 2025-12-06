@@ -4,10 +4,10 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --account=personal
 #SBATCH --partition=normal_q
-#SBATCH --time=00:15:00
+#SBATCH --time=01:00:00
 #
 module reset
-module load LAMMPS/29Aug2024-foss-2023b-kokkos
+module load LAMMPS/29Aug2024_update2-foss-2024a-kokkos
 #
 echo "LAMMPS: Normal beginning of execution."
 #

@@ -10,9 +10,13 @@ These are the files/directories included for this example:
     - `lammps_openmp.slurm` is the slurm batch submit script to run in parallel with OpenMP. User may have to change the account name based on what resources are available to them. 
     - `input.in` is the input file for the LAMMPS example.
     - `system.data` is the data file for the calculation.
+2. `gpu`
+    - `lammps_gpu_falcon_a30.slurm` is the slurm batch submit script to run in a parallel with Kokkos + CUDA. User may have to change the account name based on what resources are available to them. 
+    - `input.in` is the input file for the LAMMPS example.
+    - `system.data` is the data file for the calculation.
 
 ## How to run
-The following are steps to run the LAMMPS example on either Tinkercliffs or Owl cluster. This will give you access to all examples in our GitHub repo. Run these commands once you have logged into a cluster. 
+The following are steps to run the LAMMPS `cpu` example on either Tinkercliffs or Owl cluster, and `gpu` on the Falcon cluster. This will give you access to all examples in our GitHub repo. Run these commands once you have logged into a cluster. 
 Before you submit your batch script, you will need to change the account name to the account you have access to. This name can be found in your [ColdFront account](https://coldfront.arc.vt.edu/).
 ```
 git clone https://github.com/AdvancedResearchComputing/examples.git

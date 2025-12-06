@@ -1,18 +1,19 @@
 #!/bin/bash
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=16
+#SBATCH --cpus-per-task=1
 #SBATCH --account=personal
-#SBATCH --partition=normal_q
+#SBATCH --partition=a30_normal_q
+#SBATCH --gres=gpu:1
 #SBATCH --time=01:00:00
 #
 module reset
-module load LAMMPS/29Aug2024_update2-foss-2024a-kokkos
+module load LAMMPS/29Aug2024_update2-foss-2024a-kokkos-CUDA-12.6.0
 #
 echo "LAMMPS: Normal beginning of execution."
 #
 export OMP_PROC_BIND=true
-mpirun -np $SLURM_NTASKS lmp -sf omp -pk omp $SLURM_CPUS_PER_TASK -in input.in
+mpirun -np $SLURM_NTASKS lmp -sf kk -k on g 1 -in input.in
 
 if [ $? -ne 0 ]; then
   echo "LAMMPS: Run error!"
@@ -21,4 +22,3 @@ fi
 #
 echo "LAMMPS: Normal end of execution."
 exit 0
-
