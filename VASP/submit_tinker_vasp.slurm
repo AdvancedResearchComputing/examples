@@ -6,12 +6,12 @@
 #SBATCH --time=00:15:00
 #
 module reset
-module load VASP
+module load VASP/6.5.1-intel2023a
 module list
 #
 echo "VASP_TINKERCLIFFS ROME: Normal beginning of execution."
 
-mpirun -np 4 vasp_std
+mpirun -np $SLURM_NTASKS vasp_std
 
 if [ $? -ne 0 ]; then
   echo "VASP_TINKERCLIFFS ROME: Run error!"
