@@ -7,7 +7,7 @@
 #SBATCH --time=01:00:00
 #
 module reset
-module load LAMMPS/29Aug2024_update2-foss-2024a-kokkos
+module load LAMMPS/22Jul2025-foss-2024a-kokkos
 #
 echo "LAMMPS: Normal beginning of execution."
 #
