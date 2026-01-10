@@ -43,34 +43,34 @@ LS-DYNA is compute-intensive and performance depends heavily on the CPU architec
 ### Tinkercliffs
 
 * **AMD Zen2 ("Rome"):**
-* Partition: `normal_q`
-* Constraint: `--constraint=amd`
-* Cores per Node: **128**
-* Executable: Uses **AVX2** (Auto-detected)
+  * Partition: `normal_q`
+  * Constraint: `--constraint=amd`
+  * Cores per Node: **128**
+  * Executable: Uses **AVX2** (Auto-detected)
 
 
 * **Intel Cascade Lake:**
-* Partition: `normal_q`
-* Constraint: `--constraint=intel`
-* Cores per Node: **96** 
-* Executable: Uses **AVX512** (Auto-detected)
+  * Partition: `normal_q`
+  * Constraint: `--constraint=intel`
+  * Cores per Node: **96** 
+  * Executable: Uses **AVX512** (Auto-detected)
 
 
 
 ### Owl
 
 * **AMD Zen4 ("Genoa"):**
-* Partition: `normal_q`
-* Constraint: `--constraint=genoa`
-* Cores per Node: **96**
-* Executable: Uses **AVX512** (Auto-detected)
+  * Partition: `normal_q`
+  * Constraint: `--constraint=genoa`
+  * Cores per Node: **96**
+  * Executable: Uses **AVX512** (Auto-detected)
 
 
 * **AMD Zen3 ("Milan"):**
-* Partition: `normal_q`
-* Constraint: `--constraint=milan`
-* Cores per Node: **64** (Standard) or **128** (Large/Huge Memory)
-* Executable: Uses **AVX2** (Auto-detected)
+  * Partition: `normal_q`
+  * Constraint: `--constraint=milan`
+  * Cores per Node: **64** (Standard) or **128** (Large/Huge Memory)
+  * Executable: Uses **AVX2** (Auto-detected)
 
 
 
