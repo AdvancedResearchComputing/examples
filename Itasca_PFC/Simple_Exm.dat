@@ -1,0 +1,76 @@
+; fname: cmlinear_simple.dat (3D)
+;
+;  Exercise the Linear contact model
+;=============================================================================
+; excerpt-mrls-start
+model new
+model large-strain on
+model title 'Balls in a box'
+; excerpt-mrls-end
+
+; Set the domain extent
+; excerpt-lrls-start
+model domain extent -10.0 10.0
+; excerpt-lrls-end
+
+; Modify the default slots of the Contact Model Assignment Table
+; Here we choose the linear contact model (with kn=1e6) for all contact types
+; excerpt-arqq-start
+contact cmat default model linear property kn 1.0e6
+; excerpt-arqq-end
+
+; Generate 30 balls in a box
+; excerpt-lkmk-start
+wall generate box -5.0 5.0 ;one-wall
+model random 10001
+ball generate radius 1.0 1.4 box -5.0 5.0 number 30
+; excerpt-lkmk-end
+
+; Assign ball density
+; excerpt-pipp-start
+ball attribute density 100.0
+; excerpt-pipp-end
+
+; Activate gravity
+; excerpt-iorr-start
+model gravity 10.0
+; excerpt-iorr-end
+
+;Save the initial state
+; excerpt-nmxx-start
+model save 'initial-state'
+; excerpt-nmxx-end
+
+; Solve for a given time and save the model
+; excerpt-ljjz-start
+model solve time 10.0
+model save 'caseA-nodamping'
+; excerpt-ljjz-end
+
+; Restore the initial state
+; excerpt-xdso-start
+model restore 'initial-state'
+; excerpt-xdso-end
+
+; Modify the default slots of the Contact Model Assignement Table
+; Newly created contacts will use these settings
+; excerpt-pejs-start
+contact cmat default model linear property ...
+                                  kn 1.0e6 ks 1.0e6 fric 0.25 dp_nratio 0.1
+; excerpt-pejs-end
+; Apply the CMAT to existing contacts as well
+; Note that the contact model will be overridden (and therefore all previous 
+; information will be lost)
+; excerpt-ueew-start
+contact cmat apply
+; excerpt-ueew-end
+
+; Solve for a given time and save the model
+; excerpt-rnsm-start
+model solve time 10.0
+model save 'caseB-damping'
+; excerpt-rnsm-end
+
+program quit
+;=============================================================================
+; eof: cmlinear_simple.dat (3D)
