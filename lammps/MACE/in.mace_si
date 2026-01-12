@@ -1,0 +1,27 @@
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+read_data       structure.data
+
+# --- MACE pair style ---
+pair_style      mace
+pair_coeff      * * finetuned_MACE.model-lammps.pt Si
+
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1
+
+timestep        0.001
+
+thermo          10
+thermo_style    custom step temp pe ke etotal
+
+# Initialize velocities
+velocity        all create 300.0 12345 mom yes rot no
+
+# Run a short MD
+fix             1 all nvt temp 300.0 300.0 0.1
+
+run             100
+
