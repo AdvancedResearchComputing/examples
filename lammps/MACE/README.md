@@ -2,6 +2,8 @@
 
 This directory contains a Slurm submission script for running **LAMMPS with a MACE (Machine-learning Atomic Cluster Expansion) potential** on a GPU-enabled node.
 
+MACE will only run on a single GPU. Multi-GPU acceleration is not currently support for the MACE-LAMMPS interface.
+
 ---
 
 ## What is MACE?
@@ -50,7 +52,7 @@ This is:
 
 ## Files in this directory
 
-- `submit_mace_si.sh`  
+- `lammps_mace.slurm`  
   Slurm submission script for running LAMMPS + MACE on GPU
 
 - `in.mace_si`  
@@ -61,12 +63,6 @@ This is:
 
 - `finetuned_MACE.model-lammps.pt`
   TorchScript model, trained MACE interatomic potential
-
-- `output.txt`  
-  Captured LAMMPS standard output
-
-- `mace_si.o`, `mace_si.e`  
-  Slurm stdout / stderr
 
 - *(Optional)* Diagnostic Slurm script (used previously)  
   This script prints:
@@ -84,17 +80,13 @@ This is:
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu:1
-#SBATCH --mem=10G
 #SBATCH --partition=a30_normal_q
-#SBATCH --job-name="lmp_mace_gpu"
-#SBATCH -o mace_si.o
+#SBATCH --job-name=lmp_mace_gpu
 #SBATCH -e mace_si.e
 
 
 module reset
 module load LAMMPS/28Oct2024-foss-2023a-kokkos-mace-CUDA-12.1.1
-
-cd "$SLURM_SUBMIT_DIR"
 
 echo "=== Job info ==="
 echo "PWD: $(pwd)"
@@ -125,7 +117,7 @@ echo
 
 echo "=== Running LAMMPS (MACE via PyTorch GPU; no Kokkos) ==="
 # IMPORTANT: no -k / no -sf kk
-lmp -in in.mace_si > output.txt
+mpirun -np $SLURM_NTASKS lmp -in in.mace_si > output.txt
 
 echo "=== Done ==="
 tail -n 50 output.txt || true

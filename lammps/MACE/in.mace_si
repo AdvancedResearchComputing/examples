@@ -6,7 +6,7 @@ atom_style      atomic
 read_data       structure.data
 
 # --- MACE pair style ---
-pair_style      mace
+pair_style      mace 
 pair_coeff      * * finetuned_MACE.model-lammps.pt Si
 
 neighbor        2.0 bin
