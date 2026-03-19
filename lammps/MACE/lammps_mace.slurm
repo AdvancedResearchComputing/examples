@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=mace_gpu
-#SBATCH --account=arcadm
+#SBATCH --account=personal
 #SBATCH --partition=a30_normal_q
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
