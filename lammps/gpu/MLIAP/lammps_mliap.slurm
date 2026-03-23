@@ -1,12 +1,10 @@
 #!/bin/bash
 #SBATCH --job-name=mliap
-#SBATCH --account=arcadm
-##SBATCH --account=personal
+#SBATCH --account=personal
 #SBATCH --partition=a100_normal_q
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu:1
-#SBATCH --qos=tc_a100_normal_short
 #SBATCH -t 1:00:00
 #
 

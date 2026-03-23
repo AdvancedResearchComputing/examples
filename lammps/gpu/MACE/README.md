@@ -3,6 +3,8 @@
 This directory contains a Slurm submission script for running **LAMMPS with a MACE (Machine-learning Atomic Cluster Expansion) potential** on a GPU-enabled node.
 
 MACE will only run on a single GPU. Multi-GPU acceleration is not currently support for the MACE-LAMMPS interface.
+If you need multiple GPUs, please see our [ML-IAP example](https://github.com/AdvancedResearchComputing/examples/tree/master/lammps/gpu/MLIAP). 
+The ML-IAP unified interface supports cuEquivariance acceleration, a multi-GPU inference, and atomic virials.
 
 ---
 
