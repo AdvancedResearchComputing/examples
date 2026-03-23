@@ -1,0 +1,110 @@
+LAMMPS (29 Aug 2024)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (src/comm.cpp:98)
+  using 1 OpenMP thread(s) per MPI task
+units           metal
+dimension       3
+boundary        p p p
+atom_style      atomic
+
+read_data       structure.data
+Reading data file ...
+  orthogonal box = (0 0 0) to (5.43 5.43 5.43)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  2 atoms
+  read_data CPU = 0.003 seconds
+
+# --- MACE pair style ---
+pair_style      mace
+pair_coeff      * * finetuned_MACE.model-lammps.pt Si
+
+neighbor        2.0 bin
+neigh_modify    delay 0 every 1
+
+timestep        0.001
+
+thermo          10
+thermo_style    custom step temp pe ke etotal
+
+# Initialize velocities
+velocity        all create 300.0 12345 mom yes rot no
+
+# Run a short MD
+fix             1 all nvt temp 300.0 300.0 0.1
+
+run             100
+
+CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Your simulation uses code contributions which should be cited:
+
+- Type Label Framework: https://doi.org/10.1021/acs.jpcb.3c08419
+
+@Article{Gissinger24,
+ author = {Jacob R. Gissinger, Ilia Nikiforov, Yaser Afshar, Brendon Waters, Moon-ki Choi, Daniel S. Karls, Alexander Stukowski, Wonpil Im, Hendrik Heinz, Axel Kohlmeyer, and Ellad B. Tadmor},
+ title = {Type Label Framework for Bonded Force Fields in LAMMPS},
+ journal = {J. Phys. Chem. B},
+ year =    2024,
+ volume =  128,
+ number =  13,
+ pages =   {3282–-3297}
+}
+
+CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
+
+Generated 0 of 0 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 14
+  ghost atom cutoff = 14
+  binsize = 7, bins = 1 1 1
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair mace, perpetual
+      attributes: full, newton on, ghost
+      pair build: full/bin/ghost
+      stencil: full/ghost/bin/3d
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 2.989 | 2.989 | 2.989 Mbytes
+   Step          Temp          PotEng         KinEng         TotEng    
+         0   300           -208.97132      0.038778044   -208.93254    
+        10   8385.401      -210.11423      1.0838982     -209.03033    
+        20   914.95526     -209.28755      0.11826725    -209.16929    
+        30   3879.2407     -209.97463      0.50143122    -209.4732     
+        40   2008.1978     -209.81138      0.25957994    -209.5518     
+        50   973.95954     -209.84322      0.12589415    -209.71733    
+        60   2650.5608     -210.10105      0.34261187    -209.75844    
+        70   142.64281     -209.85023      0.01843803    -209.8318     
+        80   2156.0436     -210.16729      0.27869051    -209.8886     
+        90   614.5013      -210.00305      0.079430527   -209.92362    
+       100   1072.1655     -210.12492      0.13858827    -209.98633    
+Loop time of 20.8451 on 1 procs for 100 steps with 2 atoms
+
+Performance: 0.414 ns/day, 57.903 hours/ns, 4.797 timesteps/s, 9.595 atom-step/s
+94.9% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 20.843     | 20.843     | 20.843     |   0.0 | 99.99
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0.00033383 | 0.00033383 | 0.00033383 |   0.0 |  0.00
+Output  | 0.00022699 | 0.00022699 | 0.00022699 |   0.0 |  0.00
+Modify  | 0.00083869 | 0.00083869 | 0.00083869 |   0.0 |  0.00
+Other   |            | 0.0002258  |            |       |  0.00
+
+Nlocal:              2 ave           2 max           2 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:            430 ave         430 max         430 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:              0 ave           0 max           0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:          298 ave         298 max         298 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 298
+Ave neighs/atom = 149
+Neighbor list builds = 0
+Dangerous builds = 0
+
+Total wall time: 0:00:23
