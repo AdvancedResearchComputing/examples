@@ -20,11 +20,13 @@ echo "LAMMPS: Normal beginning of execution."
 export TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD=1
 export OMP_PROC_BIND=true
 
-#Include the next line if you have a trained MACE model that needs to be converted into an ML-IAP checkpoint (.pt) file
+# Include the next line if you have a trained MACE model that needs to be converted into an ML-IAP checkpoint (.pt) file
 python /apps/arch/software/MACE/0.3.5-foss-2024a-CUDA-12.6.0-ASE-3.25.0/lib/python3.12/site-packages/mace/cli/create_lammps_model.py mace-omat-0-small.model --format=mliap
 
-#Include newton on and neigh half (or neigh full) to run ML-IAP with LAMMPS and KOKKOS
-mpirun -np $SLURM_NTASKS lmp -k on g $SLURM_JOB_GPUS -sf kk -pk kokkos newton on neigh half -in in.mliap
+# Include newton on and neigh half (or neigh full) to run ML-IAP with LAMMPS and KOKKOS
+# You will need to change the number of gpus to match --gres=gpu (g #gpus). This example uses one gpu (gpu 1)
+# Number of gpus == number of ntasks
+mpirun -np $SLURM_NTASKS lmp -k on g 1 -sf kk -pk kokkos newton on neigh half -in in.mliap
 
 if [ $? -ne 0 ]; then
   echo "LAMMPS: Run error!"
