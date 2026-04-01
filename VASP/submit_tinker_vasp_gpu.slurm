@@ -4,15 +4,15 @@
 #SBATCH --partition=a100_normal_q
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:2
-#SBATCH --ntasks-per-node=2
+#SBATCH --ntasks=2
 #SBATCH --cpus-per-task=8
 
 module reset
-module load VASP/6.5.1-OpenMPI-5.0.3-NVHPC-24.9-CUDA-12.6.0
+module load VASP/6.6.0-OpenMPI-5.0.3-NVHPC-24.9-CUDA-12.6.0
 module list
 
 # Instruct OpenMPI not to use some deprecated interfaces, particularly openib
-export OMPI_MCA_btl=^vader,tcp,openib,uct
+# export OMPI_MCA_btl=^vader,tcp,openib,uct
 
 echo "VASP_TINKERCLIFFS ROME: Normal beginning of execution."
 which vasp_std
@@ -25,4 +25,4 @@ echo " with ${SLURM_NTASKS_PER_NODE} tasks x ${SLURM_CPUS_PER_TASK} threads per 
 
 OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
-mpirun vasp_std
+mpirun -np $SLURM_NTASKS vasp_std
