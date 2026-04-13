@@ -4,7 +4,7 @@ Apptainer (formerly known as singularity) is a containerization software that wo
 
 Image files can be pulled from various container repositories including docker:
 
-# Apptainer on ARC
+## Apptainer on ARC
 
  — it runs without root, works with SLURM, and
 lets you bring your own software environment to any compute node.
