@@ -14,13 +14,12 @@ bring your own software environment to any compute node.
 
 **1. Root access and custom installs**:
 
-ARC's host system is shared — `sudo` and `apt-get` are not available to users. If your workflow depends on libraries or packages that require root to install, a container solves this. With `--fakeroot` you can install system libraries (`libGL`, `ffmpeg`, `libhdf5`), run installer scripts that need root, or compile software from source — anything that would normally require an admin, done inside your own container.
+ARC's host system is shared, `sudo` and `apt-get` are not available to users. If your workflow depends on libraries or packages that require root to install, a container solves this. With `--fakeroot` you can install system libraries (`libGL`, `ffmpeg`, `libhdf5`), run installer scripts that need root, or compile software from source, anything that would normally require an admin, done inside your own container.
 
 
 **2. Reproducible environment**:
 
-A container pins every layer of your stack, OS, Python version, CUDA, cuDNN, PyTorch, and every library on top. The environment you build today runs identically the same way in months from now. No surprises from `conda update`, no "it worked yesterday." this way your
-collaborators can reproduce your results years later
+A container pins every layer of your stack, OS, Python version, CUDA, cuDNN, PyTorch, and every library on top. The environment you build today runs identically the same way in months from now. No surprises from `conda update`, no "it worked yesterday." this way your collaborators can reproduce your results years later
 
 **3. Portability and sharing**:
 
@@ -62,7 +61,7 @@ module load apptainer
 | A100 | `a100_normal_q` | 80G |
 | H200 | `h200_normal_q` | 141G |
 
-see more [here](https://docs.arc.vt.edu/resources/gpu.html)
+see more info [here](https://docs.arc.vt.edu/resources/gpu.html)
 
 </details>
 
@@ -96,7 +95,7 @@ mkdir -p $APPTAINER_CACHEDIR
 
 ---
 
-## Basic usage
+## Basic usage sample
 
 **1. Interactive shell** — open a shell inside the container:
 
