@@ -1,7 +1,8 @@
 # Pull and Run a Prebuilt Image
 
-The simplest way to use Apptainer on ARC. No Dockerfile, no build step.
-Pull an image directly from Docker Hub and run it on a compute node in just 4 steps.
+The simplest way to use Apptainer on ARC — no Dockerfile, no build step.
+Pull any public image from Docker Hub and run it on a compute node.
+This example pulls and runs an official PyTorch container.
 
 ---
 
@@ -23,12 +24,12 @@ interact -A <your_account> --partition t4_normal_q --gres gpu:1 --time 2:00:00
 module load apptainer
 
 export APPTAINER_CACHEDIR=/scratch/$USER/apptainer_cache
-export APPTAINER_TMPDIR=/scratch/$USER/apptainer_tmp
+export APPTAINER_TMPDIR=/tmp
 mkdir -p $APPTAINER_CACHEDIR $APPTAINER_TMPDIR
 ```
 
-> Apptainer caches image layers during the pull. Pointing it at scratch prevents it from filling your home directory quota.
-> Add the two `export` lines to your `~/.bashrc` so they are always set.
+<!-- > Apptainer caches image layers during the pull. Pointing it at temp prevents it from filling your home directory quota.
+> Add the two `export` lines to your `~/.bashrc` so they are always set. -->
 
 ---
 

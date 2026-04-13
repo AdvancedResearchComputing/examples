@@ -14,7 +14,7 @@ bring your own software environment to any compute node.
 
 **1. Root access and custom installs**:
 
-ARC's host system is shared, `sudo` and `apt-get` are not available to users. If your workflow depends on libraries or packages that require root to install, a container solves this. With `--fakeroot` you can install system libraries (`libGL`, `ffmpeg`, `libhdf5`), run installer scripts that need root, or compile software from source, anything that would normally require an admin, done inside your own container.
+ARC's host system is shared, `sudo` and `apt-get` are not available to users. If your workflow depends on libraries or packages that require root to install, a container solves this. With `--fakeroot` you can install system libraries, run installer scripts that need root, or compile software from source, anything that would normally require an admin, done inside your own container. <!-- (`libGL`, `ffmpeg`, `libhdf5`) -->
 
 
 **2. Reproducible environment**:
@@ -74,7 +74,7 @@ Set these before pulling or building any image:
 ```bash
 export APPTAINER_CACHEDIR=/scratch/$USER/apptainer_cache
 export APPTAINER_TMPDIR=/tmp
-mkdir -p $APPTAINER_CACHEDIR
+mkdir -p $APPTAINER_CACHEDIR $APPTAINER_TMPDIR
 ```
 
 - `APPTAINER_CACHEDIR` → `/scratch` stores downloaded image layers

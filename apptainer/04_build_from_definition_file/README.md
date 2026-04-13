@@ -33,7 +33,7 @@ From: pytorch/pytorch:2.2.2-cuda12.1-cudnn8-runtime
 
 # %labels — metadata about the image
 %labels
-    Author yourname@vt.edu
+    Author xxx
     Version 1.0
 
 # %help — shown when you run: apptainer run-help my_image.sif

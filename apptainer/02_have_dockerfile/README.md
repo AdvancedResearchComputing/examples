@@ -69,7 +69,7 @@ export APPTAINER_TMPDIR=/tmp
 mkdir -p $APPTAINER_CACHEDIR
 ```
 
-> Add both `export` lines to your `~/.bashrc` so they are always set.
+<!-- > Add both `export` lines to your `~/.bashrc` so they are always set. -->
 
 ### Step 4 — Build the image
 
