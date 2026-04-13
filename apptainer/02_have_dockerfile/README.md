@@ -111,12 +111,3 @@ apptainer exec --nv \
     /projects/<your_project>/containers/my_image.sif \
     python3 /data/my_script.py
 ```
-
-### Step 6 — Submit a batch job
-
-Once you have tested interactively:
-
-```bash
-sbatch job.slurm
-```
-

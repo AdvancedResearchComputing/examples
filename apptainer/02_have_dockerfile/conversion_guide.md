@@ -80,7 +80,7 @@ The sample files in this folder show a complete, working conversion:
 
 **[`Dockerfile`](./Dockerfile)** — the original
 
-```dockerfile
+<!-- ```dockerfile
 FROM pytorch/pytorch:2.2.2-cuda12.1-cudnn8-runtime
 
 RUN apt-get update && apt-get install -y \
@@ -94,11 +94,11 @@ RUN pip install --no-cache-dir \
     scipy==1.13.0 \
     pandas==2.2.2 \
     matplotlib==3.8.4
-```
+``` -->
 
 **[`app.def`](./app.def)** — the converted definition file
 
-```singularity
+<!-- ```singularity
 Bootstrap: docker
 From: pytorch/pytorch:2.2.2-cuda12.1-cudnn8-runtime
 
@@ -132,7 +132,7 @@ From: pytorch/pytorch:2.2.2-cuda12.1-cudnn8-runtime
 ```
 
 If your converted `app.def` looks structurally similar to the example
-above, you are good to build.
+above, you are good to build. -->
 
 ---
 
