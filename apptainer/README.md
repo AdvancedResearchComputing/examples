@@ -19,12 +19,12 @@ ARC's host system is shared — `sudo` and `apt-get` are not available to users.
 
 **2. Reproducible environment**:
 
-A container pins every layer of your stack — OS, Python version, CUDA, cuDNN, PyTorch, and every library on top. The environment you build today runs identically the same way in months from now. No surprises from `conda update`, no "it worked yesterday." this way
+A container pins every layer of your stack, OS, Python version, CUDA, cuDNN, PyTorch, and every library on top. The environment you build today runs identically the same way in months from now. No surprises from `conda update`, no "it worked yesterday." this way your
 collaborators can reproduce your results years later
 
 **3. Portability and sharing**:
 
-Wrap your environment into one `.sif` file and ship it — anyone can run it instantly with no setup or installs on their end. Or pull a Docker image or Dockerfile from a collaborator or paper and run it directly on ARC.
+Wrap your environment into one `.sif` file and ship it, anyone can run it instantly with no setup or installs on their end. Or pull a Docker image or Dockerfile from a collaborator or paper and run it directly on ARC.
 
 **4. Isolation and complex installs**:
 
@@ -120,7 +120,7 @@ Use `--bind` to map a directory to a specific path inside the container.
 
 | # | I want to... | Folder |
 |---|---|---|
-| 1 | Pull and run any image from Docker Hub, NGC, or GHCR | [01_pull_and_run](./01_pull_and_run/) |
+| 1 | Pull and run any image from Docker Hub, NGC, or GHCR | [01_pull_and_run](./01_pull_and_run_image/) |
 | 2 | Use a Dockerfile I already have | [02_have_dockerfile](./02_have_dockerfile/) |
 | 3 | Customize a container interactively (sandbox + fakeroot) | [03_customize_container](./03_customize_container/) |
 | 4 | Build a container from a definition file | [04_build_from_definition_file](./04_build_from_definition_file/) |
