@@ -160,8 +160,6 @@ your scratch space. Your script reads and writes there as normal.
 | 2 | Use a Dockerfile I already have | [02_have_dockerfile](./02_have_dockerfile/) |
 | 3 | Customize a container interactively (sandbox + fakeroot) | [03_customize_container](./03_customize_container/) |
 | 4 | Build a container from a definition file | [04_build_from_definition_file](./04_build_from_definition_file/) |
-| 5 | Use an ARC prebuilt base image | [05_arc_prebuilt_images](./05_arc_prebuilt_images/) |
-| 6 | Run an MPI job in a container | [06_mpi_in_container](./06_mpi_in_container/) |
 
 ---
 
