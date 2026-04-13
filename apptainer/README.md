@@ -62,6 +62,8 @@ module load apptainer
 | A100 | `a100_normal_q` | 80G |
 | H200 | `h200_normal_q` | 141G |
 
+see more [here](https://docs.arc.vt.edu/resources/gpu.html)
+
 </details>
 
 ---
@@ -77,9 +79,9 @@ mkdir -p $APPTAINER_CACHEDIR
 ```
 
 - `APPTAINER_CACHEDIR` → `/scratch` stores downloaded image layers
-- `APPTAINER_TMPDIR` → `/tmp` is used for unpacking (scratch does not support the extended attributes Apptainer needs here)
+- `APPTAINER_TMPDIR` → `/tmp` is used for unpacking
 
-> Add both lines to your `~/.bashrc` so they are always set.
+<!-- > Add both lines to your `~/.bashrc` so they are always set. -->
 
 ---
 
