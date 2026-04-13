@@ -12,33 +12,24 @@ bring your own software environment to any compute node.
 
 ## Why use Apptainer?
 
-**1. Root access and custom installs**
+**1. Root access and custom installs**:
 
-ARC's host system is shared — you cannot run `sudo` or `apt-get` on it.
-Inside a container with `--fakeroot` you can: install system libraries
-(`libGL`, `ffmpeg`, `libhdf5`), run root-required installer scripts, or
-compile software from source. Anything that would normally require an admin can be done inside your own container.
+```markdown
+ARC's host system is shared — `sudo` and `apt-get` are not available to users. If your workflow depends on libraries or packages that require root to install, a container solves this. With `--fakeroot` you can install system libraries (`libGL`, `ffmpeg`, `libhdf5`), run installer scripts that need root, or compile software from source — anything that would normally require an admin, done inside your own container.
+```
 
-**2. Reproducible environment**
+**2. Reproducible environment**:
 
-A container pins every layer of your stack — OS, Python version, CUDA,
-cuDNN, PyTorch, and every library on top. The environment you build today
-runs identically six months from now. No surprises from `conda update`, no
-silent version drift, no "it worked yesterday." For published research, a
-`.def` file is a methods section for your software stack — reviewers and
+A container pins every layer of your stack — OS, Python version, CUDA, cuDNN, PyTorch, and every library on top. The environment you build today runs identically the same way in months from now. No surprises from `conda update`, no "it worked yesterday." this way
 collaborators can reproduce your results years later
 
-**3. Portability and sharing**
+**3. Portability and sharing**:
 
-Ship one `.sif` file — everyone gets the exact same environment, no
-exceptions. Pull a Docker image or Dockerfile from a paper or collaborator
-directly and run it without rebuilding.
+Wrap your environment into one `.sif` file and ship it — anyone can run it instantly with no setup or installs on their end. Or pull a Docker image or Dockerfile from a collaborator or paper and run it directly on ARC.
 
-**4. Isolation and complex installs**
+**4. Isolation and complex installs**:
 
-Each container is its own isolated environment. Different Python versions,
-conflicting libraries, and niche tools coexist without interfering.
-Do a complex install once, never repeat it.
+Each container is its own isolated environment. If you are working with conflicting libraries, different Python versions, or niche tools that are painful to install — do it once inside a container and never repeat it.
 
 ---
 
