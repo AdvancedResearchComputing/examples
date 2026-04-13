@@ -85,6 +85,17 @@ mkdir -p $APPTAINER_CACHEDIR
 
 ---
 
+## Choose your use case
+
+| # | I want to... | Folder |
+|---|---|---|
+| 1 | Pull and run any image from Docker Hub, NGC, or GHCR | [01_pull_and_run](./01_pull_and_run_image/) |
+| 2 | Use a Dockerfile I already have | [02_have_dockerfile](./02_have_dockerfile/) |
+| 3 | Customize a container interactively (sandbox + fakeroot) | [03_customize_container](./03_customize_container/) |
+| 4 | Build a container from a definition file | [04_build_from_definition_file](./04_build_from_definition_file/) |
+
+---
+
 ## Basic usage
 
 **1. Interactive shell** — open a shell inside the container:
@@ -112,20 +123,6 @@ apptainer exec --nv \
     my_image.sif \
     python3 /data/my_script.py
 ```
-
-Your `$HOME` and `/projects` are visible inside the container by default.
-Use `--bind` to map a directory to a specific path inside the container.
-
----
-
-## Choose your use case
-
-| # | I want to... | Folder |
-|---|---|---|
-| 1 | Pull and run any image from Docker Hub, NGC, or GHCR | [01_pull_and_run](./01_pull_and_run_image/) |
-| 2 | Use a Dockerfile I already have | [02_have_dockerfile](./02_have_dockerfile/) |
-| 3 | Customize a container interactively (sandbox + fakeroot) | [03_customize_container](./03_customize_container/) |
-| 4 | Build a container from a definition file | [04_build_from_definition_file](./04_build_from_definition_file/) |
 
 ---
 
