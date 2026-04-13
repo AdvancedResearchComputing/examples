@@ -1,13 +1,10 @@
 # Apptainer
 
-Apptainer (formerly known as singularity) is a containerization software that works well on HPC systems.
-
-Image files can be pulled from various container repositories including docker:
+Apptainer (formerly known as singularity) is a containerization software that works well on HPC systems. Image files can be pulled from various container repositories including docker.
 
 ## Apptainer on ARC
 
- — it runs without root, works with SLURM, and
-lets you bring your own software environment to any compute node.
+ — it runs without root, works with SLURM, and,lets you bring your own software environment to any compute node.
 
 If you have spent hours fighting a `pip install` or `conda install` that broke something else, needed a tool that is not in the module system, or wanted to share
 your exact working environment with a collaborator — this is for you.
