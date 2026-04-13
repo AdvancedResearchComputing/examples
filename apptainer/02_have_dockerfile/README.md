@@ -8,7 +8,7 @@ You have two options:
 
 ---
 
-## Option A — Build locally and pull on ARC
+## Option A — Build locally and pull image on ARC
 
 **On your local computer** (requires Docker):
 
@@ -26,10 +26,10 @@ workflow to pull and run the image on ARC.
 
 ---
 
-## Option B — Convert and build directly on ARC
+## Option B — Convert Dockerfile and build
 
 No Docker needed. Convert your Dockerfile to an Apptainer definition
-file and build it directly on ARC.
+file on local system and build it directly on ARC.
 
 ### Step 1 — Convert your Dockerfile
 
