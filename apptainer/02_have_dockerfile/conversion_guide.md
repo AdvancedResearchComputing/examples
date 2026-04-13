@@ -57,14 +57,14 @@ the container runs. If this section is missing, add it manually.
 %files
     requirements.txt /tmp/requirements.txt
 ```
-
+<!-- 
 This works if the file exists in the same directory when you run
 `apptainer build`. If you are building on ARC and the file is not
 there, either:
 
 - Place the file in the same directory as `app.def` before building, or
 - Replace `COPY` with a `wget` inside `%post` to download the file
-  from a URL
+  from a URL -->
 
 **5. `CMD` and `ENTRYPOINT` — optional**
 

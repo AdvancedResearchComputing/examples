@@ -21,7 +21,7 @@ docker push <your_dockerhub_user>/my_image:v1
 > so the image runs on ARC's x86 nodes:
 > `docker build --platform linux/amd64 -t <your_dockerhub_user>/my_image:v1 .`
 
-Once pushed, follow the **[01_pull_and_run](../01_pull_and_run/README.md)**
+Once pushed, follow the **[01_pull_and_run](../01_pull_and_run_image/)**
 workflow to pull and run the image on ARC.
 
 ---
