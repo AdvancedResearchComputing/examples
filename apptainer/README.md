@@ -14,9 +14,8 @@ bring your own software environment to any compute node.
 
 **1. Root access and custom installs**:
 
-```markdown
 ARC's host system is shared — `sudo` and `apt-get` are not available to users. If your workflow depends on libraries or packages that require root to install, a container solves this. With `--fakeroot` you can install system libraries (`libGL`, `ffmpeg`, `libhdf5`), run installer scripts that need root, or compile software from source — anything that would normally require an admin, done inside your own container.
-```
+
 
 **2. Reproducible environment**:
 
