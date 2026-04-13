@@ -27,7 +27,7 @@ Wrap your environment into one `.sif` file and ship it, anyone can run it instan
 
 **4. Isolation and complex installs**:
 
-Each container is its own isolated environment. If you are working with conflicting libraries, different Python versions, or niche tools that are painful to install — do it once inside a container and never repeat it.
+Each container is its own isolated environment. If you are working with conflicting libraries, different Python versions, or niche tools that are painful to install, do it once inside a container and never repeat it.
 
 ---
 
@@ -39,7 +39,7 @@ Each container is its own isolated environment. If you are working with conflict
 # CPU
 interact -A <your_account> --partition normal_q --time 2:00:00 --cpus-per-task 4
 
-# GPU
+# GPU (this example uses t4_normal_q, swap for any GPU partition you have access to)
 interact -A <your_account> --partition t4_normal_q --gres gpu:1 --time 2:00:00
 ```
 
