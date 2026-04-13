@@ -49,7 +49,7 @@ spython recipe Dockerfile app.def
 automatically.
 
 > **Review the output before building.**
-> See [CONVERSION_GUIDE.md](./CONVERSION_GUIDE.md) to verify what you
+> See [CONVERSION_GUIDE.md](./conversion_guide.md) to verify what you
 > got and compare against the sample `Dockerfile` and `app.def` in this
 > folder.
 
