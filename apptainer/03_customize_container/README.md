@@ -142,5 +142,4 @@ You can then use `my_custom.sif` in batch jobs like any other image.
 
 > **Tip:** Write down every command you ran in Steps 4 and 5.
 > Use them to build a `.def` file so the image is reproducible.
-> See [05_build_from_definition_file](../05_build_from_definition_file/).
-```
+> See [04_build_from_definition_file](../04_build_from_definition_file/).

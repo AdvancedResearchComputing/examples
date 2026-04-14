@@ -74,12 +74,14 @@ Set these before pulling or building any image:
 ```bash
 export APPTAINER_CACHEDIR=/scratch/$USER/apptainer_cache
 export APPTAINER_TMPDIR=/tmp
-mkdir -p $APPTAINER_CACHEDIR $APPTAINER_TMPDIR
+mkdir -p $APPTAINER_TMPDIR
 ```
 
 - `APPTAINER_CACHEDIR` → `/scratch` stores downloaded image layers
 - `APPTAINER_TMPDIR` → `/tmp` is used for unpacking
 
+>`Note: /scratch` is purged periodically — do not store `.sif` files or
+> sandboxes there long-term. Store them in `/projects/` instead.
 <!-- > Add both lines to your `~/.bashrc` so they are always set. -->
 
 ---
