@@ -33,25 +33,22 @@ file on local system and build it directly on ARC.
 
 ### Step 1 — Convert your Dockerfile
 
-Install `spython` on your local system
+On your local system, install `spython` and run the conversion:
 
 ```bash
 pip install spython
-```
-
-Run the conversion on your local system:
-
-```bash
 spython recipe Dockerfile app.def
 ```
 
-`spython` reads your `Dockerfile` and writes the equivalent `app.def`
-automatically.
+`spython` reads your `Dockerfile` and writes an equivalent `app.def` automatically.
 
-> **Review the output before building.**
-> See [CONVERSION_GUIDE.md](./conversion_guide.md) to verify what you
-> got and compare against the sample `Dockerfile` and `app.def` in this
-> folder.
+> **Always review the output before building** — see [CONVERSION_GUIDE.md](./CONVERSION_GUIDE.md)
+> to verify the result and compare against the sample files in this folder.
+>
+> **Heads up:** `spython` originates from the old Singularity project and has not been
+> actively maintained since 2024. It works for most common Dockerfiles, but may not
+> handle newer syntax or future Apptainer changes. For simple Dockerfiles, manual
+> conversion using the guide is often just as fast and more reliable long-term.
 
 ### Step 2 — Get a compute node
 
