@@ -1,0 +1,47 @@
+# example.def
+#
+# Build:
+#   apptainer build my_image.sif example.def
+#
+# Run:
+#   apptainer exec --nv my_image.sif python3 your_script.py
+#
+# Help:
+#   apptainer run-help my_image.sif
+
+Bootstrap: docker
+From: pytorch/pytorch:2.2.2-cuda12.1-cudnn8-runtime
+
+%post
+    apt-get update && apt-get install -y \
+        git \
+        wget \
+        build-essential \
+     && apt-get clean \
+     && rm -rf /var/lib/apt/lists/*
+
+    pip install --no-cache-dir \
+        numpy==1.26.4 \
+        scipy==1.13.0 \
+        pandas==2.2.2 \
+        matplotlib==3.8.4
+
+%environment
+    export PYTHONDONTWRITEBYTECODE=1
+    export PYTHONUNBUFFERED=1
+
+%labels
+    Author yourname@vt.edu
+    Version 1.0
+    Description PyTorch 2.2.2 + CUDA 12.1
+
+%help
+    PyTorch 2.2.2 + CUDA 12.1 with numpy, scipy, pandas, matplotlib.
+
+    Usage:
+        apptainer exec --nv my_image.sif python3 your_script.py
+
+    With data:
+        apptainer exec --nv \
+            --bind /projects/<your_project>:/data \
+            my_image.sif python3 /data/your_script.py
