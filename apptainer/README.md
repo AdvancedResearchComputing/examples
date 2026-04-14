@@ -80,7 +80,7 @@ mkdir -p $APPTAINER_TMPDIR
 - `APPTAINER_CACHEDIR` → `/scratch` stores downloaded image layers
 - `APPTAINER_TMPDIR` → `/tmp` is used for unpacking
 
->`Note: /scratch` is a temporary store and purged after some time, try no to store your `.sif` files or
+>`Note: /scratch` is a temporary store and purged after some time, try not to store your `.sif` files or
 > sandboxes there long-term. Store them in `/projects/` instead.
 <!-- > Add both lines to your `~/.bashrc` so they are always set. -->
 
