@@ -14,17 +14,21 @@ This repository includes the following example categories:
 1. **MPI (CPU-only)**
 
 `mpihello.c` – Basic MPI hello world program
+
 `tc-mpihello.slurm` – SLURM script for CPU-based MPI jobs for Tinkercliffs cluster 
 
 2. **MPI Quadrature (CPU parallel computation)**
 
 `mpi_quad.c` – MPI program to approximate π using numerical integration
+
 `tc-mpiquad.slurm` – SLURM script for distributed CPU computation for Tinkercliffs cluster 
 
 3. **MPI + CUDA (Multi-node GPU)**
 
 `mpi_cuda.cu` – Example demonstrating MPI with GPU acceleration
+
 `fl-mpicuda.slurm` – SLURM script for GPU-based MPI jobs for Falcon cluster 
+
 `Makefile` – Build instructions for CUDA + MPI code
 
 ## How to run
