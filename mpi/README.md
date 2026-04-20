@@ -19,17 +19,17 @@ This repository includes the following example categories:
 
 2. **MPI Quadrature (CPU parallel computation)**
 
-`mpi_quad.c` – MPI program to approximate π using numerical integration
+- `mpi_quad.c` – MPI program to approximate π using numerical integration
 
-`tc-mpiquad.slurm` – SLURM script for distributed CPU computation for Tinkercliffs cluster 
+- `tc-mpiquad.slurm` – SLURM script for distributed CPU computation for Tinkercliffs cluster 
 
 3. **MPI + CUDA (Multi-node GPU)**
 
-`mpi_cuda.cu` – Example demonstrating MPI with GPU acceleration
+- `mpi_cuda.cu` – Example demonstrating MPI with GPU acceleration
 
-`fl-mpicuda.slurm` – SLURM script for GPU-based MPI jobs for Falcon cluster 
+- `fl-mpicuda.slurm` – SLURM script for GPU-based MPI jobs for Falcon cluster 
 
-`Makefile` – Build instructions for CUDA + MPI code
+- `Makefile` – Build instructions for CUDA + MPI code
 
 ## How to run
 The following are steps to run our examples on Tinkercliffs and Falcon clusters. This will give you access to all examples in our GitHub repo. Run these commands once you have logged into a cluster. 
