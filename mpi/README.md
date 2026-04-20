@@ -42,14 +42,17 @@ cd examples/mpi
 **Choose an example**
 **Run MPI Hello World**
 ```
+cd mpi
 sbatch tc-mpihello.slurm
 ```
 **Run MPI Quadrature**
 ```
+cd mpi_quad
 sbatch tc-mpiquad.slurm
 ```
 **Run MPI + CUDA**
 ```
+cd mpi_cuda
 sbatch fl-mpicuda.slurm
 ```
 ### Cluster and Partition Info
