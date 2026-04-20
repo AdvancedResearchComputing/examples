@@ -13,9 +13,9 @@ These examples are intended to help users understand:
 This repository includes the following example categories:
 1. **MPI (CPU-only)**
 
-`mpihello.c` – Basic MPI hello world program
+- `mpihello.c` – Basic MPI hello world program
 
-`tc-mpihello.slurm` – SLURM script for CPU-based MPI jobs for Tinkercliffs cluster 
+- `tc-mpihello.slurm` – SLURM script for CPU-based MPI jobs for Tinkercliffs cluster 
 
 2. **MPI Quadrature (CPU parallel computation)**
 
