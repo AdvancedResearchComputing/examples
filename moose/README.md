@@ -12,10 +12,9 @@ The following are steps to run our MOOSE example. This example uses MOOSE from w
 
 ### CPU-only Conda Steps
 ```
-module load Miniforge3
-conda config --add channels https://conda.software.inl.gov/public
-conda config --add channels conda-forge
-conda create -n moose moose
+module load Miniforge3/25.11.0-1
+conda create -n moose
+conda install -c https://conda.software.inl.gov/public moose
 ```
 
 ### Run the code
