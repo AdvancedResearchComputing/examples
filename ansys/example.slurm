@@ -14,7 +14,7 @@
 #######################################
 #SBATCH --nodes=1                           # Number of nodes
 #SBATCH --ntasks-per-node=1                 # Number of tasks (processes) per node
-#SBATCH --cpus-per-task=8                   # Number of CPUs per task (threading)
+#SBATCH --cpus-per-task=3                   # Number of CPUs per task (threading)
 #SBATCH --mem=64G                           # Memory per node
 ########################## end of slurm options #########################################
 
@@ -25,7 +25,7 @@
 
 # Reset module system and load ANSYS
 module reset
-module load ANSYS
+module load ANSYS/2025R2
 
 # Echo job info
 echo "Running ANSYS Fluent with $SLURM_CPUS_PER_TASK CPUs"
