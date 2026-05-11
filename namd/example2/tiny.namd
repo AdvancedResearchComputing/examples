@@ -1,0 +1,40 @@
+structure          tiny.psf
+coordinates        tiny.pdb
+
+paraTypeCharmm	    on
+parameters          par_all22_prot.inp
+temperature         300
+seed                785639
+
+exclude             scaled1-4
+1-4scaling          1.0
+cutoff              12.
+switching           on
+switchdist          10.
+pairlistdist        13.5
+margin              0.001
+
+timestep            1.0
+nonbondedFreq       1
+fullElectFrequency  4  
+stepspercycle       20
+
+cellBasisVector1    16.8   0.   0.
+cellBasisVector2     0.   16.8  0.
+cellBasisVector3     0.    0   16.8
+cellOrigin           0.    0.   0. 
+
+PME                  on
+PMEGridSizeX         20
+PMEGridSizeY         20
+PMEGridSizeZ         20
+
+outputName          /tmp/tiny_out
+binaryoutput        no
+wrapwater           yes
+
+outputEnergies      100
+outputTiming        100
+
+numsteps            500
+
