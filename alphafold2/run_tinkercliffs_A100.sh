@@ -40,10 +40,9 @@ export ALPHAFOLD_HHBLITS_N_CPU=$SLURM_NTASKS
 export ALPHAFOLD_JACKHMMER_N_CPU=$SLURM_NTASKS
 echo "HHBLITS CPUS=$ALPHAFOLD_HHBLITS_N_CPU and HMMR CPUS=$ALPHAFOLD_JACKHMMER_N_CPU"
 
-TMPDIR=$TMPNVME
 echo "TMPDIR set to $TMPDIR"
 alphafold --model_preset=multimer \
-          --test_tmpdir=$TMPNVME \
+          --test_tmpdir=$TMPDIR \
           --fasta_paths=./$INPUTFASTA \
           --output_dir=./output \
           --max_template_date=3000-01-01
