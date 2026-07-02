@@ -4,7 +4,7 @@ This workflow runs a Simcenter STAR-CCM+ simulation in batch (non-GUI) mode on a
 
 The provided SLURM script has been verified to work with:
 
-- STAR-CCM+ version: 18.02.008
+- STAR-CCM+ version: 18.02.008 (newever versions are installed on the systems)
 - License mode: POD (-power -podkey) with FlexNet license server
 - Parallel scale: 4 MPI ranks (known-working configuration)
 
