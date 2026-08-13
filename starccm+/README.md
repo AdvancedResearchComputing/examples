@@ -34,7 +34,7 @@ The provided SLURM script has been verified to work with:
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=4
 #SBATCH --partition=normal_q
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 ```
 
 ## Resource Allocation
@@ -42,7 +42,7 @@ The provided SLURM script has been verified to work with:
 - Nodes: 1
 - MPI ranks: 4 (this is important — Check out the license tokens limits)
 - Walltime: 1 hour
-- Partition/Account: cluster-specific (normal_q, personal)
+- Partition/Account: cluster-specific (normal_q, <account_name_no_beaks>)
 
 ## Environment Setup
 
