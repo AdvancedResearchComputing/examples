@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 #SBATCH --partition=l40s_normal_q
 #SBATCH --time=1-0:00:00
 #SBATCH --nodes=1
