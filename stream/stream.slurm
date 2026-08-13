@@ -7,8 +7,7 @@
 #SBATCH --nodes=1
 #SBATCH --time=0-0:05:00
 #SBATCH --exclusive
-##SBATCH --account=<account_name_no_beaks>
-#SBATCH --account=arcadm
+#SBATCH --account=<account_name_no_beaks>
 
 arrsize="1500M" #array size
 #arrsize="2500M" #array size
