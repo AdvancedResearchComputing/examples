@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --account=personal                # your account allocation
+#SBATCH --account=<account_name_no_beaks>                # your account allocation
 #SBATCH --job-name=QuantumEspresso_gpu  # name of slurm job
 #SBATCH --partition=a30_normal_q        # partition
 #SBATCH --nodes=1                       # node count
