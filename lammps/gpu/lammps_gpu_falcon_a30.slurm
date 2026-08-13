@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=lammps_gpu
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 #SBATCH --partition=a30_normal_q
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
