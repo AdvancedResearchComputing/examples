@@ -4,7 +4,7 @@
 # Job Identification & Runtime         #
 ########################################
 #SBATCH --job-name=vtune-profile              # Job name
-#SBATCH --account=personal                    # Account name
+#SBATCH --account=<account_name_no_beaks>                    # Account name
 #SBATCH --time=01:00:00                       # Time limit (HH:MM:SS)
 #SBATCH --partition=normal_q                  # Partition name
 #SBATCH --output=job_output_%j.out            # Standard output file (%j = job ID)
