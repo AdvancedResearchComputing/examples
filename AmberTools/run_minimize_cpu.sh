@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 #SBATCH --job-name=amber_cpu_test
 #SBATCH --output=amber_cpu_test.out
 #SBATCH --ntasks-per-node=1
