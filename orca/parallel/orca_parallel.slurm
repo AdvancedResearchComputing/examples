@@ -5,7 +5,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=4
 #SBATCH --partition=normal_q
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 #
 
 #Load modules
