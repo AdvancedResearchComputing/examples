@@ -3,7 +3,7 @@
 #SBATCH -t 00:10:00
 #SBATCH -N1 --ntasks-per-node=1 # request 1 node with 1 core
 #SBATCH -p normal_q
-#SBATCH -A personal
+#SBATCH -A <account_name_no_beaks>
 #SBATCH --reservation=HPCMaintTesting
 
 #Load modules
