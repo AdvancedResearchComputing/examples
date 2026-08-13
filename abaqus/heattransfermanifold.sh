@@ -5,8 +5,8 @@
 #SBATCH --ntasks-per-node=16
 #SBATCH --cpus-per-task=1
 #SBATCH --time=1:00:00
-## Replace "personal" with the name of your slurm account
-#SBATCH --account=personal
+## Replace "<account_name_no_beaks>" with the name of your slurm account
+#SBATCH --account=<account_name_no_beaks>
 ## This job is intended for CPU nodes on either the Tinkercliffs or Owl clusters
 ## normal_q has multiple types of CPU nodes with differing features like "amd", "intel", or "avx512".
 ## We specify which node types to select with the "--constraint=" option as above
