@@ -1,6 +1,6 @@
 #!/bin/bash
 #########################################################################################
-#SBATCH --account=personal     # edit this to specify another Slurm account if desired
+#SBATCH --account=<account_name_no_beaks>     # edit this to specify another Slurm account if desired
 #SBATCH --partition=normal_q
 #SBATCH --time=0-0:10:00  # 10 minutes - more than enough for this helloworld job
 #SBATCH --ntasks-per-node=1
