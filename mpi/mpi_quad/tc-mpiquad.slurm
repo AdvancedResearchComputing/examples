@@ -6,7 +6,7 @@
 #SBATCH --nodes=2                     # number of nodes
 #SBATCH --ntasks-per-node=64          # MPI ranks per node
 #SBATCH --time=0-0:05:00              # walltime
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 
 echo "Starting MPI QUADRATURE job"
 
