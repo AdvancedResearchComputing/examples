@@ -13,7 +13,7 @@
 #SBATCH --ntasks-per-node=4
 #SBATCH --cpus-per-task=1
 #SBATCH --time=0-0:30:00
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 
 #load modules
 module reset
