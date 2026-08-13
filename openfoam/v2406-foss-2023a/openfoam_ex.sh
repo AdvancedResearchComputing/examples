@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 #SBATCH --partition=normal_q
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=4
