@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --account=personal            # Account allocation
+#SBATCH --account=<account_name_no_beaks>            # Account allocation
 #SBATCH --partition=a30_normal_q     # Partition of the cluster
 #SBATCH --nodes=1                   # Number of compute nodes
 #SBATCH --ntasks-per-node=2         # Number of processes
