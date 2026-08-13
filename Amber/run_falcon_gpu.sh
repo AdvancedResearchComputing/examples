@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=amber_md_gpu
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 #SBATCH --partition=l40s_normal_q
 #SBATCH --gres=gpu:3
 #SBATCH --nodes=1
