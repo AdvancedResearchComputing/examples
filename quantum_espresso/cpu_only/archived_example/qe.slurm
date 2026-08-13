@@ -7,7 +7,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=5GB
 #SBATCH --time=00:05:00
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 #
 
 module reset
