@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --account=personal                      # your account allocation
+#SBATCH --account=<account_name_no_beaks>                      # your account allocation
 #SBATCH --partition=normal_q                    # parition
 #SBATCH --job-name=FDMNES_test_suite            # name of job seen in the queue
 #SBATCH --nodes=1                               # node count
