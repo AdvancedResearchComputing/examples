@@ -7,7 +7,7 @@
 #SBATCH --nodes=2  # this requests 1 node
 #SBATCH --ntasks-per-node=64  # this requests 128 cores across 2 nodes
 #SBATCH --time=0-0:05:00 # wall clock time time [days-hh:mm:ss]
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 ##SBATCH --export=NONE # this makes sure the compute environment is clean
 
 
