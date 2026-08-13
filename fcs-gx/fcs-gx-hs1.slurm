@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=12
