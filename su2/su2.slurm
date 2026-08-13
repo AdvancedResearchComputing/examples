@@ -13,7 +13,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --time=0-0:30:00
 #SBATCH --mem=10GB  #this is memory per node, total memory requested=40GB
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 
 module reset
 module load SU2
