@@ -8,8 +8,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --time=0-0:05:00
 #SBATCH --mem=1GB  #this is memory per node, total memory requested=40GB
-##SBATCH --account=<account_name_no_beaks>
-#SBATCH --account=arcadm
+#SBATCH --account=<account_name_no_beaks>
 #
 
 #Load CUDA module
