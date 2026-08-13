@@ -78,7 +78,7 @@ This is:
 ```bash
 #!/bin/bash
 #SBATCH -t 1:00:00
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu:1
