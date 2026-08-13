@@ -3,7 +3,7 @@
 #SBATCH -N 1  #Number of nodes
 #SBATCH --ntasks-per-node=4
 #SBATCH --partition=normal_q
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 
 module reset
 module load STAR-CCM+/18.02.008
