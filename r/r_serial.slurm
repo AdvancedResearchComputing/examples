@@ -5,7 +5,7 @@
 #SBATCH --ntasks-per-node=2             # number of tasks per node
 #SBATCH --cpus-per-task=1               # cpu-cores per task (>1 if multi-threaded tasks)
 #SBATCH --time=00:15:00                 # total run time limit (HH:MM:SS)
-#SBATCH --account=personal              # your account allocation
+#SBATCH --account=<account_name_no_beaks>              # your account allocation
 
 ## Load all required modules.
 module reset
