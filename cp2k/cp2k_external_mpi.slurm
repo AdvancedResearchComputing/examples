@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 #SBATCH --job-name=cp2k_external
 #SBATCH --output=cp2k-external-%j.log
 #SBATCH --error=cp2k-external-%j.err
