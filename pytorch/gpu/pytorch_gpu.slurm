@@ -7,7 +7,7 @@
 #SBATCH --gres gpu:1
 #SBATCH --partition=a100_normal_q
 #SBATCH --qos=tc_a100_normal_base #Use qos command to specify scheduling priority
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 #
 
 #Load modules
