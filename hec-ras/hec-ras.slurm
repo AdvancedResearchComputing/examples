@@ -5,7 +5,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=8
 #SBATCH --time=00:30:00
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 
 module load HEC-RAS/6.6
 
