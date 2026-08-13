@@ -7,7 +7,7 @@
 #SBATCH --cpus-per-task=1                 # cpu-cores per task (>1 if multi-threaded tasks)
 #SBATCH --time=00:15:00                   # total run time limit (HH:MM:SS)
 #SBATCH --mem=5GB
-#SBATCH --account=personal                # your account allocation
+#SBATCH --account=<account_name_no_beaks>                # your account allocation
 
 ## Load modules, if any.
 module reset
