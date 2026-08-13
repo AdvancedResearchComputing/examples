@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 #SBATCH --job-name=skbio_distance
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
