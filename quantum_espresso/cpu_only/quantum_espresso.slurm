@@ -7,7 +7,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=8GB
 #SBATCH --time=00:10:00
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 #
 
 #
