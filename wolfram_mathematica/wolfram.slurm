@@ -6,7 +6,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
 #SBATCH --partition=normal_q
-#SBATCH --account=personal
+#SBATCH --account=<account_name_no_beaks>
 #
 
 #Load modules
