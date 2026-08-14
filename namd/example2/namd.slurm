@@ -11,7 +11,7 @@
 module reset
 module load NAMD/3.0.3-foss-2025b-mpi
 
-echo "NAMD_TINKERCLIFFS ROME: Normal beginning of execution."
+echo "NAMD: Normal beginning of execution."
 
 # Conv-host for MPI:
 #  Translates +pN-style conv-host options into
