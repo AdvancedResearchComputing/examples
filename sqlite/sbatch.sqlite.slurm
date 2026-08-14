@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=sqlite_job
 #SBATCH --time=00:10:00
-#SBATCH --account=arcadm
+#SBATCH --account=<account_name_no_beaks>
 #SBATCH --partition=normal_q
 ## Constraint not needed here.
 #### #SBATCH --constraint=amd

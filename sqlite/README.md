@@ -26,6 +26,24 @@ This code has been run on TC and on Owl.
 On both clusters, the normal_q is used.
 See the sbatch slurm script.
 
+As is the case for ALL examples, you must enter your account name
+in files so that the (Slurm) jobs will run with one of your valid
+accounts.
+
+In these codes, the text is:
+```
+account=<account_name_no_beaks>
+```
+You must change this to have a valid account for you.
+Say your account name is named hyper_performance, then you must change each
+occurrence of the above to:
+```
+account=hyper_performance
+```
+
+
+Steps:
+
 1. Place the three files in the same directory.
 2. Submit the job by typing on the command line:  _sbatch sbatch.sql.slurm_
 
