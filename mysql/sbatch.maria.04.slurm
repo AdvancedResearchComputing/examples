@@ -84,7 +84,7 @@ sleep 10
 # the source code; if not, alter the path to py314_mf_mariad
 # in the "source activate" command.
 # ME TRYING THINGS:  source activate /home/ckuhlman/env-python/tc/normal_q/amd-base-nodes/py314_mf_mariadb
-source activate ./py314_mf_mariadb
+source activate ./py314_mf_mariadb_tc_amd
 
 # Now run the python code. Two CLAs. 
 output_file=selected_records.tsv
