@@ -14,7 +14,7 @@
 # Load the modules.
 module purge
 module reset
-module load 
+module load Python/3.14.2-GCCcore-15.2.0
 
 # Always print the resources on which your job actually runs.
 echo " "
