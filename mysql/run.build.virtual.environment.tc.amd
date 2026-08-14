@@ -27,10 +27,10 @@ resources_request_command="--account=${account_name} \
 --nodes=1 --tasks-per-node=1 --cpus-per-task=1 \
 --time=2:00:00"
 
-ve_build_command="conda create -y -p  ./py314_mf_mariadb_tc_amd  python=3.14  mariadb  numpy  pandas matplotlib"
+ve_build_command="conda create -y -p ./py314_mf_mariadb_tc_amd python=3.14 mariadb numpy pandas matplotlib"
 
-operations_command="${change_directory_command} ; \
-${module_command} ; \
+operations_command="${change_directory_command}; \
+${module_command}; \
 ${ve_build_command}"
 
 echo "  change directory command : ${change_directory_command}"
@@ -41,7 +41,8 @@ echo " "
 echo "  resources request command : ${resources_request_command}"
 
 # This is the full monty.
-srun_command="srun $resources_request_command bash -c '$operations_command'"
+srun_command="srun $resources_request_command bash -c \"$operations_command\""
+## srun_command='srun $resources_request_command bash -c "$operations_command"'
 
 echo " "
 echo "  srun command : ${srun_command}"
