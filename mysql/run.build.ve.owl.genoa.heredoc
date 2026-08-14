@@ -1,0 +1,44 @@
+
+
+# ===========================
+# Variables to set.
+# If for TC, then constraint_name=amd; if for Owl, then constraint_name=avx512.
+# The avx512 for Owl means genoa nodes.
+# This will give you the biggest pool of nodes to run on.
+account_name=arcadm
+partition_name=normal_q
+constraint_name=avx512
+
+# ===========================
+# Portions of the command to generate.
+# This should all be automatic---assuming you want the
+# virtual environment in the current directory, which
+# we do.
+
+# We change to this directory on the compute node.
+change_directory_command="cd $PWD"
+
+module_command="module reset; module load Miniforge3/25.11.0-1"
+
+resources_request_command="--account=${account_name} \
+--partition=${partition_name} \
+--constraint=${constraint_name} \
+--nodes=1 --tasks-per-node=1 --cpus-per-task=1 \
+--time=2:00:00"
+
+ve_build_command="conda create -y -p ./py314_mf_mariadb_owl_genoa python=3.14 mariadb numpy pandas matplotlib"
+
+echo "  resources request command : ${resources_request_command}"
+echo "  change directory command : ${change_directory_command}"
+echo "  module command : ${module_command}"
+echo "  build ve command : ${ve_build_command}"
+
+# Execute the full command.
+# To build the virtual environment (VE).
+# This is all one command together.
+srun ${resources_request_command} bash << EOF
+${change_directory_command}
+${module_command}
+${ve_build_command}
+EOF
+
