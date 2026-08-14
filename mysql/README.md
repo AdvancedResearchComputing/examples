@@ -70,6 +70,7 @@ done in the sbatch slurm script:
 ### To Run the Code on TC
 
 We assume all files referred to here are in one directory.
+And that the root directory for the VE is in this directory, too.
 
 
 1. Create the VE.  This is done one time.
@@ -78,7 +79,21 @@ We assume all files referred to here are in one directory.
    - Type on the command line:  _sbatch sbatch.maria.04.tc.amd.slurm_
 
 
+### To Run the Code on TC
+
+We assume all files referred to here are in one directory.
+And that the root directory for the VE is in this directory, too.
+
+
+1. Create the VE.  This is done one time.
+   - Execute the command:  _./run.build.ve.owl.genoa.heredoc_
+2. Submit the job.  This is done any number of times.
+   - Type on the command line:  _sbatch sbatch.maria.04.owl.genoa.slurm_
+
+
 ### Outputs from Running the Slurm Job
+
+This output is geneated for each of the codes.
 
 Log information is written to the slurm output file.
 
