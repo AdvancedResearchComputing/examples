@@ -48,9 +48,9 @@ The former (running the server) takes several commands in the
 sbatch slurm script.
 The process of running the job fully is this---and it is all
 done in the sbatch slurm script:
-1. Start up the server.
-2. Wait for a bit to make sure it is running.
-3. Run your python (client) code.
+1. Start up the DBMS server instance.
+2. Wait for a bit to make sure the server is running.
+3. Run your python (client) code, which interacts with the DBMS.
 4. When the python code finishes, then shut down the DBMS server instance.
 
 
