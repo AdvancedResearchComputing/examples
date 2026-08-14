@@ -18,7 +18,7 @@ There are three files:
 1. _sbatch_sqlite.slurm_ : sbatch slurm script.
 2. _run.me_ : run script (because I like to separate slurm resource requests and env from
 code execution).
-3. _sqlite_driver.py : Python code that does simple database manipulations using Sqlite.
+3. _sqlite_driver.py_ : Python code that does simple database manipulations using Sqlite.
 
 ### To Run the Code
 
