@@ -99,13 +99,17 @@ And that the root directory for the VE is in this directory, too.
 
 ### Outputs from Running the Slurm Job
 
-This output is geneated for each of the codes.
+This output is geneated for each of the Slurm jobs.
 
 Log information is written to the slurm output file.
 
 There are two output files:
 1. _all_records.tsv_ : a tab separated value file of all DB table records.
 2. _selected_records.tsv_ : a tab separated value file of results of one DB query.
+
+For each of these two files, there is an _all_records.tsv.valid_ file
+and a _selected_records.tsv_ file, to "diff" with the results you generate.
+
 
 ### Aside
 
