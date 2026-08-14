@@ -75,8 +75,11 @@ And that the root directory for the VE is in this directory, too.
 
 1. Create the VE.  This is done one time.
    - Execute the command:  _./run.build.ve.tc.amd.heredoc_
+   - When this command completes ... it will take a while ... there
+     should be a directory py314_mf_mariadb_tc_amd.
 2. Submit the job.  This is done any number of times.
    - Type on the command line:  _sbatch sbatch.maria.04.tc.amd.slurm_
+   - When this job is done, there should be two output files.
 
 
 ### To Run the Code on Owl Cluster
@@ -87,8 +90,11 @@ And that the root directory for the VE is in this directory, too.
 
 1. Create the VE.  This is done one time.
    - Execute the command:  _./run.build.ve.owl.genoa.heredoc_
+   - When this command completes ... it will take a while ... there
+     should be a directory py314_mf_mariadb_owl_genoa.
 2. Submit the job.  This is done any number of times.
    - Type on the command line:  _sbatch sbatch.maria.04.owl.genoa.slurm_
+   - When this job is done, there should be two output files.
 
 
 ### Outputs from Running the Slurm Job
@@ -100,3 +106,11 @@ Log information is written to the slurm output file.
 There are two output files:
 1. _all_records.tsv_ : a tab separated value file of all DB table records.
 2. _selected_records.tsv_ : a tab separated value file of results of one DB query.
+
+### Aside
+
+You can diff the two sbatch slurm scripts _sbatch.maria.04.*slurm_ 
+and the two _run.build.ve*heredoc_ scripts
+to see how similar these two files are for the two clusters.
+You could make up one of each of these files to take CLAs 
+(command line arguments) so you only need one file of each type.
