@@ -4,7 +4,7 @@
 # Variables to set.
 # If for TC, then constraint_name=amd; if for Owl, then constraint_name=avx512.
 # This will give you the biggest pool of nodes to run on.
-account_name=arcadm
+account_name=<account_name_no_beaks>
 partition_name=normal_q
 constraint_name=amd
 
