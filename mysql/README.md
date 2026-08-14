@@ -67,7 +67,7 @@ done in the sbatch slurm script:
 
 
 
-### To Run the Code on TC
+### To Run the Code on TC Cluster
 
 We assume all files referred to here are in one directory.
 And that the root directory for the VE is in this directory, too.
@@ -79,7 +79,7 @@ And that the root directory for the VE is in this directory, too.
    - Type on the command line:  _sbatch sbatch.maria.04.tc.amd.slurm_
 
 
-### To Run the Code on TC
+### To Run the Code on Owl Cluster
 
 We assume all files referred to here are in one directory.
 And that the root directory for the VE is in this directory, too.
