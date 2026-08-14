@@ -58,7 +58,7 @@ done in the sbatch slurm script:
 ### Generic Setup and Run Steps
 
 As is the case for ALL examples, you must enter your account name
-in files so that the (Slurm) jobs will run with one of our valid
+in files so that the (Slurm) jobs will run with one of your valid
 accounts.
 
 In these codes, the text is:
