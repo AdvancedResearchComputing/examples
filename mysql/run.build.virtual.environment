@@ -1,0 +1,51 @@
+
+
+# ===========================
+# Variables to set.
+# If for TC, then constraint_name=amd; if for Owl, then constraint_name=avx512.
+# This will give you the biggest pool of nodes to run on.
+account_name=arcadm
+partition_name=normal_q
+constraint_name=amd
+
+# ===========================
+# Portions of the command to generate.
+# This should all be automatic---assuming you want the
+# virtual environment in the current directory, which
+# we do.
+
+# We change to this directory on the compute node.
+# Watch out:  a semicolon (below) cannot butt right up against this
+# string and hence the space after $PWD.
+change_directory_command="cd $PWD"
+
+module_command="module reset; module load Miniforge3/25.11.0-1"
+
+resources_request_command="--account=${account_name} \
+--partition=${partition_name} \
+--constraint=${constraint_name} \
+--nodes=1 --tasks-per-node=1 --cpus-per-task=1 \
+--time=2:00:00"
+
+ve_build_command="conda create -y -p  ./py314_mf_mariadb  python=3.14  mariadb  numpy  pandas matplotlib"
+
+operations_command="${change_directory_command} ; \
+${module_command} ; \
+${ve_build_command}"
+
+echo "  change directory command : ${change_directory_command}"
+echo "  module command : ${module_command}"
+echo "  build ve command : ${ve_build_command}"
+echo "  operations (total) command : ${operations_command}"
+echo " "
+echo "  resources request command : ${resources_request_command}"
+
+# This is the full monty.
+srun_command="srun $resources_request_command bash -c '$operations_command'"
+
+echo " "
+echo "  srun command : ${srun_command}"
+
+# Execute the full command.
+# To build the virtual environment (VE).
+${srun_command}
