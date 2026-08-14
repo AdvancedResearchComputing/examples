@@ -75,6 +75,7 @@ account=hyper_performance
 For this example, this will be in two _sbatch.maria.04*slurm_ files
 and two _run.build.ve.*.heredoc_ files.
 
+The steps:
 
 1. Setup (done once)
    - We must build a VE for the particular (cluster, constraint).
