@@ -57,6 +57,25 @@ done in the sbatch slurm script:
 
 ### Generic Setup and Run Steps
 
+As is the case for ALL examples, you must enter your account name
+in files so that the (Slurm) jobs will run with one of our valid
+accounts.
+
+In these codes, the text is:
+```
+account=<account_name_no_beaks>
+```
+You must change this to have a valid account for you.
+Say my account is named hyper_performance, then you must change each
+occurrence of the above to:
+```
+account=hyper_performance
+```
+
+For this example, this will be in two _sbatch.maria.04*slurm_ files
+and two _run.build.ve.*.heredoc_ files.
+
+
 1. Setup (done once)
    - We must build a VE for the particular (cluster, constraint).
       - Here we have one VE for (TC, amd) and one VE for (Owl, avx512).
