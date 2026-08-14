@@ -66,7 +66,7 @@ In these codes, the text is:
 account=<account_name_no_beaks>
 ```
 You must change this to have a valid account for you.
-Say my account is named hyper_performance, then you must change each
+Say your account name is named hyper_performance, then you must change each
 occurrence of the above to:
 ```
 account=hyper_performance
