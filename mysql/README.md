@@ -81,6 +81,15 @@ The steps:
    - We must build a VE for the particular (cluster, constraint).
       - Here we have one VE for (TC, amd) and one VE for (Owl, avx512).
       - We only do this step one time; once the VE is built for each cluster, it can be used over and over.
+      - The activities are:
+          - Request resources from Slurm for the compute node, partition, and node type 
+            that you want the VE to be made on.
+          - ssh over to the Slurm-provided compute node.
+          - Change directory to the same directory you are on in your $HOME,
+            but now on compute node.
+          - Set up modules to build a conda virtual envirornment (VE).
+          - Build the VE.
+          - Unwind back to the login node.
 2. Run (done any number of times)
    - We submit the sbatch slurm script.
 
