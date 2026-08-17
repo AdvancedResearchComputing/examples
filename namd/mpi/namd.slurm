@@ -3,7 +3,8 @@
 #SBATCH --account=<slurm_account_name>
 #SBATCH --partition=normal_q
 #SBATCH --nodes=1
-#SBATCH --ntasks=16
+#SBATCH --ntasks=4
+#SBATCH --cpus-per-task=1
 #SBATCH -t 1:00:00
 
 
@@ -15,9 +16,12 @@ echo "NAMD: Normal beginning of execution."
 
 # Conv-host for MPI:
 #  Translates +pN-style conv-host options into
-# mpirun -npN options.
 
-charmrun namd3 +p$SLURM_NTASKS tiny.namd
+# Can use charmrun, which submits mpirun
+#charmrun namd3 +p$SLURM_NTASKS tiny.namd
+
+# Or you can use mpirun directly
+mpirun -np $SLURM_NTASKS tiny.namd
 
 if [ $? -ne 0 ]; then
   echo "NAMD: Run error."
