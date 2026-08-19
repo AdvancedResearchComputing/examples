@@ -36,6 +36,8 @@ Get onto a compute node, set the environment, and make/build the executable.
 
 Before starting, note the directory you are in that contains these files; call it _dir01_.
 
+Add your account and remove `arcadm` in step 1.
+
 1. `interact --account=arcadm --time=2:00:00 --ntasks=1  --ntasks-per-node=1 --cpus-per-task=1  --partition=normal_q  --constraint=amd`
 2. You are now on the compute node.
 3. Change directory on the compute node to where your code is:  `cd dir01`.
