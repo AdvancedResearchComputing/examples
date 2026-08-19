@@ -39,10 +39,10 @@ Before starting, note the directory you are in that contains these files; call i
 1. `interact --account=arcadm --time=2:00:00 --ntasks=1  --ntasks-per-node=1 --cpus-per-task=1  --partition=normal_q  --constraint=amd`
 2. You are now on the compute node.
 3. Change directory on the compute node to where your code is:  `cd dir01`.
-4. module reset
-5. module load intel/2024a
-6. make -f makefile.02.intel.mpiicpx
-7. This should produce an executable file named mpi.simple02.intel.
+4. `module reset`
+5. `module load intel/2024a`
+6. `make -f makefile.02.intel.mpiicpx`
+7. This should produce an executable file named `mpi.simple02.intel` in the same directory as these other files.
 8. Type `exit` to log off of the compute node.
 
 ##### To Run Code
