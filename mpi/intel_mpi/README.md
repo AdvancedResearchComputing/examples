@@ -8,7 +8,7 @@ The MPI implementation is Intel.
 ### Files
 
 1. _main02.C_:  This is the MPI C++ code.
-2. _makefile.02.intel.mpiicpx:  The makefile used to build the executable from source.
+2. _makefile.02.intel.mpiicpx_:  The makefile used to build the executable from source.
   This uses the Intel MPI compiler and MPI library.
 3. _sbatch.mpi.intel.02.tc.amd.slurm_:  The sbatch slurm script used once the code is compiled.
   This uses the Intel MPI library.
