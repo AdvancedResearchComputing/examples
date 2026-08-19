@@ -8,7 +8,7 @@ The MPI implementation is MPICH.
 ### Files
 
 1. _main02.C_:  This is the MPI C++ code.
-2. _makefile.02.mpich.mpi:  The makefile used to build the executable from source.
+2. _makefile.02.mpich.mpi_:  The makefile used to build the executable from source.
   This uses the MPICH MPI compiler and MPI library.
 3. _sbatch.mpi.mpich.02.tc.amd.slurm_:  The sbatch slurm script used once the code is compiled.
   This uses the MPICH MPI library.
