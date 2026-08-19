@@ -27,16 +27,25 @@ Two command line arguments:
 
 ### Process
 
+Note:  You have to run the code on the same type of compute node on which the C++
+code was built.
+
 ##### To Build the Executable
 
-Set the environment and make the executable:
+Get onto a compute node, set the environment, and make/build the executable.
 
-1. module reset
-2. module load intel/2024a
-3. make -f makefile.02.intel.mpiicpx
+Before starting, note the directory you are in that contains these files; call it _dir01_.
 
-This should produce an executable file named mpi.simple02.intel.
+1. `interact --account=arcadm --time=2:00:00 --ntasks=1  --ntasks-per-node=1 --cpus-per-task=1  --partition=normal_q  --constraint=amd`
+2. You are now on the compute node.
+3. Change directory on the compute node to where your code is:  `cd dir01`.
+4. module reset
+5. module load intel/2024a
+6. make -f makefile.02.intel.mpiicpx
+7. This should produce an executable file named mpi.simple02.intel.
+8. Type `exit` to log off of the compute node.
 
 ##### To Run Code
 
-sbatch sbatch.mpi.intel.02.tc.amd.slurm
+`sbatch sbatch.mpi.intel.02.tc.amd.slurm`
+
