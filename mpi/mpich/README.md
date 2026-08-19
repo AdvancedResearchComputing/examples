@@ -44,11 +44,9 @@ Add your account and remove `arcadm` in step 1.
 4. `module reset`
 5. `module load MPICH/4.3.0-GCC-14.2.0`
 6. `make -f makefile.02.mpich.mpi`
-7. This should produce an executable file named mpi.simple02.intel.
-8. Type `exit` to log off of the compute node.
-
-This should produce an executable file named mpi.simple02.mpich.
+7. This should produce an executable file named `mpi.simple02.mpich`.
 It should be located with the other files in this example.
+8. Type `exit` to log off of the compute node.
 
 ##### To Run Code
 
