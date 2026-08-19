@@ -1,14 +1,16 @@
 # MPI:  Two Processes Sending Messages Back and Forth
 
 This example uses two MPI processes.
-The send a user-specified number of messages back and forth.
+The processes send a user-specified number of messages back and forth.
+
+The MPI implementation is MPICH.
 
 ### Files
 
-_main02.C_:  This is the MPI C++ code.
-_makefile.02.mpich.mpi:  The makefile used to build the executable from source.
+1. _main02.C_:  This is the MPI C++ code.
+2. _makefile.02.mpich.mpi:  The makefile used to build the executable from source.
   This uses the MPICH MPI compiler and MPI library.
-_sbatch.mpi.mpich.02.tc.amd.slurm_:  The sbatch slurm script used once the code is compiled.
+3. _sbatch.mpi.mpich.02.tc.amd.slurm_:  The sbatch slurm script used once the code is compiled.
   This uses the MPICH MPI library.
 
 Two valid output files.  Your results may vary only because of the
