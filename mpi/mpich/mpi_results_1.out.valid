@@ -1,0 +1,403 @@
+  Number of MPI processes total : 2
+  My MPI process rank : 1
+
+ ------------------
+iteration counter: 1;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 2;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 3;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 4;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 5;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 6;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 7;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 8;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 9;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 10;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 11;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 12;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 13;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 14;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 15;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 16;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 17;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 18;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 19;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 20;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 21;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 22;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 23;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 24;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 25;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 26;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 27;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 28;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 29;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 30;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 31;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 32;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 33;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 34;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 35;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 36;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 37;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 38;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 39;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 40;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 41;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 42;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 43;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 44;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 45;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 46;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 47;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 48;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 49;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 50;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 51;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 52;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 53;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 54;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 55;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 56;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 57;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 58;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 59;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 60;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 61;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 62;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 63;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 64;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 65;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 66;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 67;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 68;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 69;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 70;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 71;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 72;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 73;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 74;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 75;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 76;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 77;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 78;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 79;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 80;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 81;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 82;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 83;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 84;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 85;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 86;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 87;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 88;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 89;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 90;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 91;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 92;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 93;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 94;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 95;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 96;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 97;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 98;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 99;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 100;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 101;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 102;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 103;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 104;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 105;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 106;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 107;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 108;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 109;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 110;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 111;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 112;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 113;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 114;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 115;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 116;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 117;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 118;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 119;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 120;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 121;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 122;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 123;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 124;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 125;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 126;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 127;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 128;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 129;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 130;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 131;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 132;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 133;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 134;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 135;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 136;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 137;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 138;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 139;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 140;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 141;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 142;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 143;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 144;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 145;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 146;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 147;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 148;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 149;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 150;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 151;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 152;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 153;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 154;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 155;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 156;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 157;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 158;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 159;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 160;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 161;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 162;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 163;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 164;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 165;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 166;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 167;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 168;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 169;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 170;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 171;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 172;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 173;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 174;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 175;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 176;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 177;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 178;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 179;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 180;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 181;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 182;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 183;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 184;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 185;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 186;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 187;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 188;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 189;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 190;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 191;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 192;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 193;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 194;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 195;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 196;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 197;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 198;   my_rank: 1;   SENT from rank: 1;   TO rank: 0
+ ------------------
+iteration counter: 199;   my_rank: 1;   RECEIVED by rank: 1;   FROM rank: 0
+ ------------------
+iteration counter: 200;   my_rank: 1;   SENT from rank: 1;   TO rank: 0

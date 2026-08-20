@@ -1,0 +1,37 @@
+#### Aug 2024.
+#### At VT, on TC cluster.
+#### Process:
+####     1. module load foss/2023b
+####     2. make -f makefile.XXX clean
+####     3. make -f makefile.XXX
+
+### For development or running compilations:
+### MPICXX=mpicxx -g -fopenmp -pthread
+### For production mode.
+### MPICXX=mpicxx -O2 -fopenmp -pthread
+
+## To get OpenMP with compile, do:  mpiicc /Qopenmp test.c
+## See https://www.intel.com/content/www/us/en/docs/mpi-library/developer-guide-windows/2021-6/compiling-an-mpi-program.html
+## See https://www.intel.com/content/www/us/en/docs/mpi-library/developer-guide-windows/2021-6/running-an-mpi-openmp-program.html
+## See https://www.intel.com/content/www/us/en/docs/mpi-library/developer-reference-linux/2021-16/overview.html
+
+## Some sayuse -pthread and some -lpthread.??
+
+MPICXX=mpiicpx -O2 -qopenmp -lpthread
+
+CPPFLAGS=-DX86 -D_FILE_OFFSET_BITS=64 -D_LARGE_FILES=1
+
+#### ----------------------------------
+## Modules needed to compile.
+## Load outside of this makefile.
+
+### ------------------------------
+.C.o:
+	$(MPICXX) $(CPPFLAGS) -c $(LDFLAGS) $<
+
+mpi.simple02.intel: main02.C
+	$(MPICXX) -o $@ $^ $(CPPFLAGS) $(LDFLAGS)
+##      mv $@ ../bin/
+
+clean:
+	rm mpi.simple02.intel *.o
