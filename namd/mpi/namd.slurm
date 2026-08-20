@@ -21,7 +21,7 @@ echo "NAMD: Normal beginning of execution."
 #charmrun namd3 +p$SLURM_NTASKS tiny.namd
 
 # Or you can use mpirun directly
-mpirun -np $SLURM_NTASKS tiny.namd
+mpirun -np $SLURM_NTASKS namd3 tiny.namd
 
 if [ $? -ne 0 ]; then
   echo "NAMD: Run error."
