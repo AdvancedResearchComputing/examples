@@ -3,38 +3,33 @@ NAMD is a parallel molecular dynamics code designed for high-performance simulat
 
 ## Contents
 These are the files/directories included for this example
-1. `example1`
-    - `namd.slurm` is the slurm batch script.
-    - `par_all27_prot_lipid.inp`
-    - `ubq_wb.pdb`
-    - `ubq_wb.psf`
-    - `ubq_wb_eq.conf` NAMD config file
-2. `gpu`
+1. `gpu`
     - `namd_gpu.slurm` is the slurm batch script.
-    - `par_all22_prot.inp`
-    - `tiny.namd` NAMD config file
-    - `tiny.pdb` NAMD pdb file
-    - `tiny.psf` 
-3. `mpi`
+    - `par_all22_prot.inp` is the force-field parameter file (CHARMM22 protein)
+    - `tiny.namd` NAMD configuration file
+    - `tiny.pdb` is the PDB protein data bank coordinate file
+    - `tiny.psf` is the PSF protein structure file
+2. `mpi`
     - `namd.slurm` is the slurm batch script.
-    - `par_all22_prot.inp`
-    - `tiny.namd` NAMD config file
-    - `tiny.pdb` NAMD pdb file
-    - `tiny.psf` 
-4. `multicore`
+    - `par_all22_prot.inp` is the force-field parameter file (CHARMM22 protein)
+    - `tiny.namd` NAMD configuration file
+    - `tiny.pdb` is the PDB protein data bank coordinate file
+    - `tiny.psf` is the PSF protein structure file
+3. `multicore`
     - `namd_multicore.slurm` is the slurm batch script.
-    - `par_all22_prot.inp`
-    - `tiny.namd` NAMD config file
-    - `tiny.pdb` NAMD pdb file
-    - `tiny.psf` 
+    - `par_all22_prot.inp` is the force-field parameter file (CHARMM22 protein)
+    - `tiny.namd` NAMD configuration file
+    - `tiny.pdb` is the PDB protein data bank coordinate file
+    - `tiny.psf` is the PSF protein structure file
 
+All of these examples are the same, just run in different ways with different versions of NAMD 3.0.3.
 
 ### MPI Notes
 This version enables MPI for NAMD 3.0.3. With this version, you can run multiple MPI tasks across multiple nodes, but no multithreading
-(i.e. you can only run with --cpus-per-task=1).
+(i.e. you can only run with `--cpus-per-task=1`).
 
 ### Multicore Notes
-This multicore version enables multithreading (i.e. you can run with multiple cpus per task --cpus-per-task>1).
+This multicore version enables multithreading (i.e. you can run with multiple cpus per task `--cpus-per-task=N` where N>1).
 This version can only be run on a single node! 
 
 ### GPU version Notes
@@ -57,7 +52,7 @@ Before you submit your batch script, you will need to change the account name to
 git clone https://github.com/AdvancedResearchComputing/examples.git
 cd examples
 cd namd/multicore
-sbatch namd-multicore.slurm 
+sbatch namd_multicore.slurm 
 ```
 
 ### Cluster and Partition Info
