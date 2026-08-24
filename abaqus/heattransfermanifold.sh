@@ -5,17 +5,15 @@
 #SBATCH --ntasks-per-node=16
 #SBATCH --cpus-per-task=1
 #SBATCH --time=1:00:00
-## Replace "<account_name_no_beaks>" with the name of your slurm account
-#SBATCH --account=<account_name_no_beaks>
+#SBATCH --account=<slurm_account_name>
 ## This job is intended for CPU nodes on either the Tinkercliffs or Owl clusters
 ## normal_q has multiple types of CPU nodes with differing features like "amd", "intel", or "avx512".
 ## We specify which node types to select with the "--constraint=" option as above
 
 module reset
-module load ABAQUS/2024
+module load ABAQUS/2026
 
 # /scratch/<username> is preferred place for staging and running jobs
-cd $SLURM_SUBMIT_DIR
 echo "working in `pwd`"
 
 #echo "Current license availability is:"

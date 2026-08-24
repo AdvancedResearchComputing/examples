@@ -1,10 +1,9 @@
 #!/bin/bash
-######################## start of slurm options #########################################
 ########################################
 # Job Identification & Runtime         #
 ########################################
 #SBATCH --job-name=ansys-fluent-example     # Job name
-#SBATCH --account=<account_name_no_beaks>                  # Account name
+#SBATCH --account=<slurm_account_name>      # Account name
 #SBATCH --time=01:00:00                     # Time limit (HH:MM:SS)
 #SBATCH --partition=normal_q                # Partition name
 #SBATCH --output=job_output_%j.out          # Standard output file (%j = job ID)
@@ -16,12 +15,9 @@
 #SBATCH --ntasks-per-node=1                 # Number of tasks (processes) per node
 #SBATCH --cpus-per-task=3                   # Number of CPUs per task (threading)
 #SBATCH --mem=64G                           # Memory per node
-########################## end of slurm options #########################################
 
 # Description: SLURM job script to run ANSYS Fluent using a journal file
 # Usage: sbatch example.slurm
-
-#########################################################################################
 
 # Reset module system and load ANSYS
 module reset
