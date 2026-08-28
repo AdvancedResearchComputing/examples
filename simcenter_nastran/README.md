@@ -18,10 +18,9 @@ sbatch nastran.slurm
 
 #Options in batch script
 There are a few varibles that you may need to set depending on your calculation:
-
-1.`dmp=` Distributed memory parallel (DMP) processing, number of MPI tasks 
-2.`smp=` Shared memory parallel (SMP) processing, number of cores/threads per task
-3.`hosts=` This is a colon seperated list of the nodes that are allocated to the job, only needed for multi-node jobs but doesn't hurt to keep in for single node jobs
+1. `dmp=` Distributed memory parallel (DMP) processing, number of MPI tasks 
+2. `smp=` Shared memory parallel (SMP) processing, number of cores/threads per task
+3. `hosts=` This is a colon seperated list of the nodes that are allocated to the job, only needed for multi-node jobs but doesn't hurt to keep in for single node jobs
 
 ### License server
 
