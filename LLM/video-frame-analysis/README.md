@@ -1,6 +1,6 @@
 # Video Frame Analysis with the ARC LLM API
 
-This example demonstrates how to analyze a video using the ARC LLM API.
+This example demonstrates how to analyze a video data using the ARC LLM API.
 
 The ARC LLM API might not currently accept native `video_url` multimodal
 content. Instead, this script:
@@ -14,7 +14,7 @@ content. Instead, this script:
 
 The script automatically reduces image quality, resolution, and eventually
 frame count when necessary to keep the request below the configured payload
-budget. (but the experiment we have tested this scripts a very good accuracy)
+budget. (but we have tested this script with several sample video content and it gives a very good accuracy)
 
 ## Requirements
 
