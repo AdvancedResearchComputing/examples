@@ -9,9 +9,9 @@ These are the files/directories used for this example:
 1. `af3_cpu.slurm` is the Slurm batch script for the CPU data pipeline. Each CPU array element processes one FASTA input without requesting a GPU.
 2. `af3_gpu_batched.slurm` is the Slurm batch script for GPU inference. Each GPU batch processes several inputs sequentially on one GPU.
 3. `af3_fasta_list.txt` contains one FASTA path per line, with no blank lines. Absolute paths are recommended.
-4. `fasta2json.py` converts FASTA inputs to AlphaFold3 JSON format. Obtain it from the existing ARC example or the [AlphaFold3 tools repository](https://github.com/snufoodbiochem/Alphafold3_tools) if it is not included. Preserve the converter's attribution.
+4. `fasta2json.py` converts FASTA inputs to AlphaFold3 JSON format. Obtain it from the existing ARC example.
 5. Example FASTA files provide inputs for testing the workflow.
-6. `archived_examples`, if included, holds older scripts and additional examples.
+
 
 ## How to run
 
@@ -62,7 +62,7 @@ The GPU script must use:
 CPU_JOB_ID="${CPU_JOB_ID:-}"
 ```
 
-Remove any old hard-coded dependency from the public example. Replace `123456` below with the CPU array job ID returned in step 2:
+Replace `123456` below with the CPU array job ID returned in step 2:
 
 ```bash
 sbatch --dependency=afterok:123456 \
