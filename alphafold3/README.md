@@ -11,8 +11,8 @@ This two-stage example calls the ARC-provided AlphaFold3 container directly so t
 CPU data pipeline and GPU inference can be submitted as separate Slurm jobs:
 
 ```
-af3_cpu.slurm` : data pipeline only  (--norun_inference)      [CPU only]
-af3_gpu.slurm` : inference only      (--norun_data_pipeline)  [1 GPU]
+af3_cpu.slurm : data pipeline only  (--norun_inference)      [CPU only]
+af3_gpu.slurm : inference only      (--norun_data_pipeline)  [1 GPU]
 ```
 
 Separating the stages avoids having to reserve a GPU while AlphaFold3 is performing
