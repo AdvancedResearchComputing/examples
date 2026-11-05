@@ -76,4 +76,6 @@ Edit `state` and `questions` in `request.json`; keep `model` as `local-decision`
 
 The synthetic research summary example should select `energy`, assign a high probability to `reports-results`, and score relevance near index `3`. These are expected results, not a verified run of this new request. Decisions can be incorrect; the model does not verify the study's claims.
 
+You can adapt this example to other [GGUF decision models](https://huggingface.co/collections/ggml-org/decision-models). Review the model’s requirements and update `run.sh` and `request.json` as needed.
+
 See [ARC's llama.cpp guide](https://docs.arc.vt.edu/ai/031_llama.cpp.html) and the [official decision-model collection](https://huggingface.co/collections/ggml-org/decision-models).
