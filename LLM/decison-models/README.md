@@ -12,9 +12,9 @@ Use a System One decision model when you need a structured judgment about an inp
 
 You define the possible answers; the model returns decisions and probabilities rather than a written response. Check accuracy on representative examples before automating decisions.
 
-**Try ARC's hosted API first** if you want to use a decision model without managing a GPU job. See the [decision-model overview](https://docs.arc.vt.edu/ai/011_llm_api_arc_vt_edu.html#decision-models), [API limits](https://docs.arc.vt.edu/ai/011_llm_api_arc_vt_edu.html#decisions), [example request](https://docs.arc.vt.edu/ai/011_llm_api_arc_vt_edu.html#decisions-example), and [dataset-labeling example](https://docs.arc.vt.edu/ai/011_llm_api_arc_vt_edu.html#labeling-a-dataset-with-a-decision-model).
+**Use the API first** if you want to use a decision model without managing a GPU job. See the [decision-model overview](https://docs.arc.vt.edu/ai/011_llm_api_arc_vt_edu.html#decision-models), [API limits](https://docs.arc.vt.edu/ai/011_llm_api_arc_vt_edu.html#decisions), [example request](https://docs.arc.vt.edu/ai/011_llm_api_arc_vt_edu.html#decisions-example), and [dataset-labeling example](https://docs.arc.vt.edu/ai/011_llm_api_arc_vt_edu.html#labeling-a-dataset-with-a-decision-model).
 
-Use the Slurm example below when you need to run your own compatible GGUF model or control its GPU resources and server settings. The hosted API requires your API key; this Slurm example does not.
+Use the Slurm example below when you need to run your own compatible GGUF model or control some settings. The hosted API requires your API key; this Slurm example does not.
 
 ## 1. Get a model
 
