@@ -1,6 +1,6 @@
 # Decision models with Slurm
 
-Run a GGUF decision model with llama.cpp on one ARC GPU. The job reads `request.json`, saves the answers, and stops the server.
+Run a GGUF decision model with llama.cpp on one Falcon A30 GPU. The job reads a `request.json`, saves the answers, and stops the server.
 
 ## When to use a decision model
 
@@ -12,13 +12,13 @@ Use a System One decision model when you need a structured judgment about an inp
 
 You define the possible answers; the model returns decisions and probabilities rather than a written response. Check accuracy on representative examples before automating decisions.
 
-**Use the API first** if you want to use a decision model without managing a GPU job. See the [decision-model overview](https://docs.arc.vt.edu/ai/011_llm_api_arc_vt_edu.html#decision-models), [API limits](https://docs.arc.vt.edu/ai/011_llm_api_arc_vt_edu.html#decisions), [example request](https://docs.arc.vt.edu/ai/011_llm_api_arc_vt_edu.html#decisions-example), and [dataset-labeling example](https://docs.arc.vt.edu/ai/011_llm_api_arc_vt_edu.html#labeling-a-dataset-with-a-decision-model).
+**Use the API first** : if you want to use a decision model without submitting a job. See the [decision-model overview](https://docs.arc.vt.edu/ai/011_llm_api_arc_vt_edu.html#decision-models), [API limits](https://docs.arc.vt.edu/ai/011_llm_api_arc_vt_edu.html#decisions), [example request](https://docs.arc.vt.edu/ai/011_llm_api_arc_vt_edu.html#decisions-example), and [dataset-labeling example](https://docs.arc.vt.edu/ai/011_llm_api_arc_vt_edu.html#labeling-a-dataset-with-a-decision-model).
 
 Use the Slurm example below when you need to run your own compatible GGUF model or control some settings. The hosted API requires your API key; this Slurm example does not.
 
 ## 1. Get a model
 
-You can a download GGUF in any directory or better use this example below (/models), this example uses D3-mini Q8_0 (about 5.16 GB) from hugging face.
+You can download a GGUF in any directory or better still use this example below (/models), this example uses D3-mini Q8_0 (about 5.16 GB) from hugging face.
 
 ```bash
 ssh falcon2.arc.vt.edu
@@ -75,5 +75,7 @@ Edit `state` and `questions` in `request.json`; keep `model` as `local-decision`
 | `score` | A fractional, zero-based scale position; read its `legend` |
 
 The synthetic research summary example should select `energy`, assign a high probability to `reports-results`, and score relevance near index `3`. These are expected results, not a verified run of this new request. Decisions can be incorrect; the model does not verify the study's claims.
+
+You can adapt this example to other [GGUF decision models](https://huggingface.co/collections/ggml-org/decision-models). Review the model’s requirements and update `run.sh` and `request.json` as needed.
 
 See [ARC's llama.cpp guide](https://docs.arc.vt.edu/ai/031_llama.cpp.html) and the [official decision-model collection](https://huggingface.co/collections/ggml-org/decision-models).
