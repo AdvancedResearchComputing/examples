@@ -24,7 +24,7 @@ model="${1:?Usage: sbatch run.sh /full/path/model.gguf}"
   exit 1
 }
 
-# Allow ARC's container to read the model directory.
+# Allow container to read the model directory.
 model="$(readlink -f "$model")"
 export APPTAINER_BINDPATH="${APPTAINER_BINDPATH:+$APPTAINER_BINDPATH,}$(dirname "$model")"
 
@@ -37,7 +37,7 @@ if curl --noproxy '*' --silent --max-time 1 "$url/health" >/dev/null 2>&1; then
   exit 1
 fi
 
-# D3's full prompt must fit in the processing batch.
+# full prompt must fit in the processing batch.
 llama-server --model "$model" --alias local-decision \
   --host 127.0.0.1 --port "$port" \
   --n-gpu-layers 99 --threads "$SLURM_CPUS_PER_TASK" \
