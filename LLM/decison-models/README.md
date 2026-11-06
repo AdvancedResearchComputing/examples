@@ -1,6 +1,6 @@
 # Decision models with Slurm
 
-Run a GGUF decision model with llama.cpp on one Falcon A30 GPU. The job reads a `request.json`, saves the answers, and stops the server.
+Run a GGUF decision model with llama.cpp on one Falcon v100 GPU. The job reads a `request.json`, saves the answers, and stops the server.
 
 ## When to use a decision model
 
@@ -50,7 +50,7 @@ cd ~/decision-models
 sbatch -A <slurm_allocation_name> run.sh "$PWD/models/d3-mini.gguf"
 ```
 
-Replace `<slurm_allocation_name>` with your Slurm allocation account. `run.sh` selects A30 and loads the CUDA 12 module automatically. Pass a different GGUF's full path to change models. The example is text only, with a 4096-token context and processing batch; D3's complete prompt, including questions and options, must fit.
+Replace `<slurm_allocation_name>` with your Slurm allocation account. `run.sh` selects v100 and loads the CUDA 12 module. Pass a different GGUF's full path to change models. The example is text only, with a 4096-token context and processing batch; D3's complete prompt, including questions and options, must fit.
 
 ## 3. Check results
 
