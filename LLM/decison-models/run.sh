@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --account=<slurm_allocation_name>
-#SBATCH --partition=a30_normal_q
+#SBATCH --partition=v100_normal_q
 #SBATCH --job-name=decision-model
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
